@@ -15,6 +15,7 @@ import Frame from './components/Frame';
 import GetToday from './components/GetToday';
 import ClientReview from './components/ClientReview';
 import Pricing from './components/Pricing';
+import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
@@ -30,8 +31,7 @@ function App() {
       <ClientReview/>
       <Pricing/>
       <Frame />
-
-      {/* <Templates/> */}
+      <Footer/>
     </div>
   );
 }

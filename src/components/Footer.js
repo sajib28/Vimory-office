@@ -6,7 +6,7 @@ class Footer extends Component {
             <footer id="footer">
                 <div className="col-md-6">
                     <div className="footer-menu">
-                        <ul>
+                        <ul className="list-inline">
                             <li><a href="/">About us</a></li>
                             <li><a href="/">Privacy policy</a></li>
                             <li><a href="/">Terms & Condition</a></li>
@@ -16,8 +16,12 @@ class Footer extends Component {
                 </div>
                 <div className="col-md-6">
                     <div className="social-icon">
-                        <ul>
+                        <ul className="list-inline">
                             <li><a href="/">Follows Us: </a></li>
+                            <li><a href="/"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="/"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="/"><i class="fab fa-linkedin-in"></i></a></li>
+                            
                         </ul>
                     </div>
                 </div>
