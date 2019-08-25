@@ -1,0 +1,552 @@
+/*theme Setting*/
+@font-face {
+  font-family: 'helveticaregular';
+  src: url("../../assets/fonts/helvetica-webfont.woff2") format("woff2"), url("../../assets/fonts/helvetica-webfont.ttf") format("ttf"), url("../../assets/fonts/helvetica-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "helveticaregular";
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "helveticaregular";
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+p,
+span {
+  font-family: "helveticaregular";
+  font-size: 20px;
+  line-height: 25px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-family: "helveticaregular";
+}
+
+.section-header {
+  padding-bottom: 25px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.title h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.pic-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(1, 1, 1, 0.4);
+}
+
+.mobile-frame {
+  position: relative;
+}
+
+.mobile-frame .mobile-frame-content {
+  position: absolute;
+  top: 33px;
+  left: 37px;
+  z-index: 99;
+}
+
+.back-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#appFeature h2 {
+  letter-spacing: 3px;
+}
+
+#getToday {
+  background-image: url("../img/get-today-bg.png");
+  padding: 150px 0 150px;
+  position: relative;
+}
+
+#getToday h2 {
+  font-size: 90px;
+  line-height: 108px;
+  font-stretch: 40%;
+  font-weight: bold;
+  position: relative;
+  width: 1072px;
+  z-index: 1;
+  letter-spacing: 5px;
+  margin: 0 auto;
+  display: block;
+  text-align: left;
+}
+
+#getToday h2:before {
+  content: "Get it Today";
+  position: absolute;
+  font-size: 185px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  color: rgba(238, 235, 207, 0.14);
+  letter-spacing: 5px;
+}
+
+#getToday p {
+  font-size: 20px;
+  line-height: 25px;
+  color: #fff;
+  margin-top: 90px;
+  text-align: justify;
+}
+
+#getToday ul {
+  margin-top: 100px;
+}
+
+#getToday ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+#getToday ul li:first-child {
+  margin-right: 22px;
+}
+
+#getToday ul li img {
+  width: 230px;
+}
+
+#getToday .mobile-frame {
+  float: right;
+}
+
+#mainMenu {
+  padding: 25px 0;
+}
+
+#mainMenu .nav-item .nav-link {
+  font-size: 18px;
+  color: #fff;
+}
+
+#mainMenu .nav-item .nav-link.active,
+#mainMenu .nav-item .nav-link:hover {
+  color: #0C89D5;
+}
+
+#review {
+  background: #f8f8f8;
+}
+
+#intro {
+  background-image: url("../img/intro-bg.png");
+  padding: 250px 0 200px;
+}
+
+#intro h1 {
+  color: #0C89D5;
+  font-size: 70px;
+  line-height: 84px;
+  margin-bottom: 30px;
+  text-align: justify;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+#intro p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+#intro ul {
+  margin-top: 100px;
+}
+
+#intro ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+#intro ul li:first-child {
+  margin-right: 50px;
+}
+
+/*Start Common photo background Section*/
+.photo-area {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  padding: 0;
+}
+
+.photo-area .title {
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.photo-area .title .title-inner {
+  width: 100%;
+}
+
+.photo-area .title .title-inner h2 {
+  font-size: 90px;
+  line-height: 108px;
+  font-stretch: 40%;
+  font-weight: bold;
+  z-index: 1;
+  letter-spacing: 4px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.photo-area .title .title-inner h2:before {
+  position: absolute;
+  font-size: 200px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+  color: rgba(238, 235, 207, 0.14);
+  letter-spacing: 4px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.content-area {
+  padding: 140px 0;
+}
+
+.content-area .photo-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content-area .photo-content h3 {
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 54px;
+  letter-spacing: 5px;
+}
+
+.content-area .photo-content p {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #000;
+  text-align: justify;
+}
+
+/*Start Common photo background Section*/
+/*Start Filter section*/
+#template {
+  background-image: url("../img/template-bg.jpg");
+}
+
+#template h2:before {
+  content: "Templates";
+}
+
+/*End Filter section*/
+/*Start slide section*/
+#Slide {
+  padding: 0;
+}
+
+#Slide .photo-area {
+  background-image: url("../img/slide-bg.jpg");
+}
+
+#Slide h2:before {
+  content: "Slide";
+}
+
+#Slide .content-area .mobile-frame {
+  float: right;
+}
+
+/*End Slide section*/
+/*Start Photo Edit section*/
+#photoEdit {
+  padding: 0;
+}
+
+#photoEdit .photo-area {
+  background-image: url("../img/photo-edit-bg.jpg");
+}
+
+#photoEdit .photo-area h2:before {
+  content: "Photo Edit";
+}
+
+#photoEdit .content-area ul li {
+  font-size: 18px;
+  line-height: 35px;
+  padding-left: 10px;
+  text-indent: -10px;
+}
+
+#photoEdit .content-area ul li i {
+  padding-right: 8px;
+  font-size: 12px;
+}
+
+/*End Photo Edit section*/
+/*Start Effect section*/
+#effect {
+  padding: 0;
+}
+
+#effect .photo-area {
+  background-image: url("../img/effect-bg.jpg");
+}
+
+#effect .photo-area h2:before {
+  content: "Effect";
+}
+
+/*End Effect section*/
+/*Start Frame section*/
+#frame {
+  padding: 0;
+}
+
+#frame .photo-area {
+  background-image: url("../img/frame-bg.jpg");
+}
+
+#frame h2:before {
+  content: "Frame";
+}
+
+#frame .content-area .mobile-frame {
+  float: right;
+}
+
+/*End Frame section*/
+/*Start Filter section*/
+#filter .photo-area {
+  background-image: url("../img/filter-bg.jpg");
+}
+
+#filter h2:before {
+  content: "Filter";
+}
+
+/*End Filter section*/
+/*Start Filter section*/
+#getInTouch {
+  background-image: url("../img/get-in-touch-bg.png");
+}
+
+#getInTouch .title {
+  display: inherit;
+  min-height: inherit;
+}
+
+#getInTouch .title h2:before {
+  content: "Get In Touch";
+  font-size: 175px;
+}
+
+/*End Filter section*/
+/*Client Review Css*/
+#review h2 {
+  margin-bottom: 40px;
+}
+
+#review .slick-slider {
+  margin-top: 80px;
+  padding-bottom: 50px;
+}
+
+#review .slick-slider .slick-dots {
+  bottom: 0;
+}
+
+#review .slick-slider .slick-dots li button::before {
+  font-size: 12px;
+}
+
+#review .slick-slider h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#review .slick-slider p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+#review .slick-slider span {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+#review .slick-slider ul.review-icon {
+  margin: 30px 0 10px;
+}
+
+#review .slick-slider ul.review-icon li {
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 20px;
+}
+
+#review .slick-slider ul.review-icon li i {
+  color: #0C89D5;
+}
+
+/*End Client Review Css*/
+/*Start pricing Review Css*/
+#pricing {
+  background-image: url("../img/pricing-bg.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 1100px;
+}
+
+#pricing .title-inner {
+  color: #fff;
+}
+
+#pricing .title-inner h2:before {
+  content: "Our Pricing Plan";
+  font-size: 140px;
+}
+
+#pricing .price-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#pricing .price-container .price-panel {
+  background: #fff;
+  margin: 0 85px;
+  border-radius: 20px;
+  border: 1px solid #707070;
+  -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+#pricing .price-container .price-panel .price-inner {
+  padding: 50px;
+}
+
+#pricing .price-container .price-panel .price-inner h4 {
+  margin-top: 30px;
+}
+
+#pricing .price-container .price-panel .price-inner .cost {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+#pricing .price-container .price-panel .price-inner .cost span {
+  margin-top: -10px;
+  display: block;
+  margin-left: 0;
+  font-weight: 100;
+  margin-right: 15px;
+  float: left;
+  font-size: 35px;
+}
+
+#pricing .price-container .price-panel .price-inner .btn {
+  background: #04A3DD;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 0 45px;
+  height: 46px;
+  line-height: 42px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  clear: both;
+  margin-top: 35px;
+}
+
+/*End pricing Review Css*/
+/*# sourceMappingURL=main.css.map */
