@@ -91,12 +91,23 @@ class Header extends Component {
                             <li className="nav-item">
                                 <Link
                                     activeClass="active"
-                                    to="Slide"
+                                    to="faqs"
                                     spy={true}
                                     smooth={true}
                                     offset={57}
                                     duration={500}
-                                    className="nav-link">Slide
+                                    className="nav-link">FAQs
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link
+                                    activeClass="active"
+                                    to="getInTouch"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={57}
+                                    duration={500}
+                                    className="nav-link">Contact Us
                                 </Link>
                             </li>
                         </ul>
