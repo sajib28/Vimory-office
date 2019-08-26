@@ -15,6 +15,7 @@ import Frame from './components/Frame';
 import GetToday from './components/GetToday';
 import ClientReview from './components/ClientReview';
 import Pricing from './components/Pricing';
+import GetInTouch from './components/GetInTouch';
 import Footer from './components/Footer';
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <ClientReview/>
       <Pricing/>
       <Frame />
+      <GetInTouch/>
       <Footer/>
     </div>
   );

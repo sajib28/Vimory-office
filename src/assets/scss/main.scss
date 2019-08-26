@@ -114,6 +114,67 @@ section {
     }
 }
 
+/*Start Common css for Apps logo*/
+.apps-logo {
+    list-style-type: none;
+
+    li {
+        display: inline-block;
+
+        a {
+            display: block;
+        }
+    }
+}
+
+/*End Common css for Apps logo*/
+
+/*Start Common Photo with content Section*/
+.photo-with-content {
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+
+        .title-inner {
+            width: 100%;
+
+            h2 {
+                font-size: 90px;
+                line-height: 108px;
+                font-stretch: 40%;
+                font-weight: bold;
+                z-index: 1;
+                letter-spacing: 4px;
+                margin: 0 auto;
+                display: block;
+                text-align: center;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    font-size: 200px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: -1;
+                    color: rgba(238, 235, 207, .14);
+                    letter-spacing: 4px;
+                    font-weight: bold;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/*End photo with content Section*/
 .back-img {
     background-repeat: no-repeat;
     // background-attachment: fixed;
@@ -449,26 +510,6 @@ section {
 
 /*End Filter section*/
 
-/*Start Filter section*/
-#getInTouch {
-    background-image: url("../img/get-in-touch-bg.png");
-
-    .title {
-        display: inherit;
-        min-height: inherit;
-
-        h2 {
-            &:before {
-                content: "Get In Touch";
-                font-size: 175px;
-            }
-        }
-    }
-
-}
-
-/*End Filter section*/
-
 /*Client Review Css*/
 #review {
     h2 {
@@ -529,19 +570,27 @@ section {
 /*Start pricing Review Css*/
 #pricing {
     background-image: url("../img/pricing-bg.jpg");
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    min-height: 1100px;
 
     .title-inner {
         color: $white;
+        margin-bottom: 100px;
 
         h2 {
             &:before {
                 content: "Our Pricing Plan";
                 font-size: 140px;
             }
+        }
+
+        h5 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 80px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 24px;
         }
     }
 
@@ -605,7 +654,100 @@ section {
 
 /*End pricing Review Css*/
 
+/*Start Get in Touch Css*/
+#getInTouch {
+    background-image: url("../img/get-in-touch-bg.png");
+    background-size: auto;
 
+    .pic-overlay {
+        background: rgba(1, 1, 1, 0.5);
+    }
+
+    .title-inner {
+        color: $white;
+        margin-bottom: 100px;
+
+        h2 {
+            &:before {
+                content: "Get In Touch";
+                font-size: 180px;
+                top: -10px;
+            }
+        }
+    }
+
+    .contact-info {
+        h3 {
+            color: #fff;
+            font-size: 24px;
+            margin: 0px 0 25px;
+        }
+
+        .weblink {
+            margin: 40px 0 40px;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: $white;
+
+            }
+        }
+
+        .apps-logo {
+            margin-top: 70px;
+
+            li {
+                &:first-child {
+                    margin-right: 22px;
+                }
+
+                img {
+                    width: 190px;
+                }
+            }
+
+        }
+    }
+
+    .contact-form {
+
+        .form-group {
+            margin-top: 25px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        input,
+        textarea,
+        button {
+            border-radius: 17px;
+            height: 56px;
+            border: 2px solid #0C89D5;
+            box-shadow: none;
+            background: none;
+            color: #fff !important;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: $body-font;
+        }
+
+        textarea {
+            height: 220px;
+        }
+
+        button {
+            background: #0584D1;
+            border: none;
+            height: 42px;
+            padding: 0 40px;
+        }
+    }
+}
+
+/*End  Get in Touch Css*/
 /*Start Footer Css*/
 #footer {
     background: $footer-bg;
@@ -614,6 +756,7 @@ section {
     .footer-menu {
         ul {
             margin-left: -15px;
+
             li {
                 padding: 0 15px;
                 color: #fff;

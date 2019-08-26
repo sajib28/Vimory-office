@@ -4,7 +4,7 @@ import priceImg2 from '../assets/img/price-img-2.png';
 class Pricing extends Component {
     render() {
         return (
-            <section id="pricing" className="photo-area">
+            <section id="pricing" className="photo-with-content">
                 <div className="pic-overlay"></div>
                 <div className="container">
                     <div className="row">

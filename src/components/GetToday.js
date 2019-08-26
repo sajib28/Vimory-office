@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import appleStore from '../assets/img/apple-app-store.png';
-import googlePlay from '../assets/img/apple-app-store.png';
+import googlePlay from '../assets/img/google-play.png';
 import mobileFrame from '../assets/img/mobile-frame.png';
 import mobileFrameToday from '../assets/img/mobile-frame-get-today.png';
 class GetToday extends Component {
