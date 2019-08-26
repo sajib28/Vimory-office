@@ -49,6 +49,7 @@ ul {
 
 a {
   font-family: "helveticaregular";
+  text-decoration: none;
 }
 
 .section-header {
@@ -549,4 +550,59 @@ section {
 }
 
 /*End pricing Review Css*/
+/*Start Footer Css*/
+#footer {
+  background: #161D24;
+  padding: 38px 0;
+}
+
+#footer .footer-menu ul {
+  margin-left: -15px;
+}
+
+#footer .footer-menu ul li {
+  padding: 0 15px;
+  color: #fff;
+  font-size: 15px;
+  border-right: 1px solid #fff;
+}
+
+#footer .footer-menu ul li:last-child {
+  border-right: none;
+}
+
+#footer .footer-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  line-height: 32px;
+}
+
+#footer .social-icon ul li {
+  display: inline-block;
+}
+
+#footer .social-icon ul li a.follows {
+  text-decoration: none;
+}
+
+#footer .social-icon ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 15px;
+  line-height: 32px;
+}
+
+#footer .social-icon ul li a i {
+  width: 32px;
+  height: 32px;
+  background: #1DA1F2;
+  text-align: center;
+  border-radius: 50%;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 32px;
+  font-size: 16px;
+}
+
+/*End Footer Css*/
 /*# sourceMappingURL=main.css.map */

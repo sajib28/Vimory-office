@@ -17,6 +17,8 @@ $black:#000;
 $grey-white:#ddd;
 $grey-black:#f8f8f8;
 $blue:#0C89D5;
+$footer-bg:#161D24;
+$social-icon:#1DA1F2;
 
 @mixin transition($args...) {
     -webkit-transition: $args;
@@ -69,6 +71,7 @@ ul {
 
 a {
     font-family: $body-font;
+    text-decoration: none;
 }
 
 .section-header {
@@ -601,3 +604,67 @@ section {
 }
 
 /*End pricing Review Css*/
+
+
+/*Start Footer Css*/
+#footer {
+    background: $footer-bg;
+    padding: 38px 0;
+
+    .footer-menu {
+        ul {
+            margin-left: -15px;
+            li {
+                padding: 0 15px;
+                color: #fff;
+                font-size: 15px;
+                border-right: 1px solid $white;
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    line-height: 32px;
+
+                }
+            }
+        }
+    }
+
+
+    .social-icon {
+        ul {
+            li {
+                display: inline-block;
+
+                a.follows {
+                    text-decoration: none;
+                }
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    padding: 0 15px;
+                    line-height: 32px;
+
+                    i {
+                        width: 32px;
+                        height: 32px;
+                        background: $social-icon;
+                        text-align: center;
+                        border-radius: 50%;
+                        text-align: center;
+                        border-radius: 50%;
+                        line-height: 32px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*End Footer Css*/
