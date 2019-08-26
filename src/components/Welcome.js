@@ -20,6 +20,7 @@ class Welcome extends Component {
                             stories & profile video and Instagram feed & story.</p>
 
                         <ul>
+                        
                             <li><a href="/"><img src={appleStore} alt="" /></a></li>
                             <li><a href="/"><img src={googlePlay} alt="" /></a></li>
                         </ul>
