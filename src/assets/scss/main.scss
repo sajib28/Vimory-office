@@ -20,6 +20,7 @@ $blue:#0C89D5;
 $footer-bg:#161D24;
 $social-icon:#1DA1F2;
 
+/*All Cross browser CSS3 mixins*/
 @mixin transition($args...) {
     -webkit-transition: $args;
     -moz-transition: $args;
@@ -28,6 +29,23 @@ $social-icon:#1DA1F2;
     transition: $args;
 }
 
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-transition: $radius;
+    -o-transition: $radius;
+}
+
+@mixin box-shadow($left, $top, $radius, $color) {
+    box-shadow: $left $top $radius $color;
+    -webkit-box-shadow: $left $top $radius $color;
+    -moz-box-shadow: $left $top $radius $color;
+    -ms-transition: $left $top $radius $color;
+    -o-transition: $left $top $radius $color;
+}
+
+/*End All Cross browser CSS3 mixins*/
 body {
     font-family: $body-font;
     margin: 0;
@@ -43,6 +61,8 @@ h6 {
     font-family: $heading-font;
     margin: 0 0 15px 0;
     padding: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 h2 {
@@ -602,15 +622,47 @@ section {
         .price-panel {
             background: $white;
             margin: 0 85px;
-            border-radius: 20px;
+            @include border-radius(20px);
             border: 1px solid #707070;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            width: 330px;
+            @include transition(all 0.3s ease-in-out);
+
+
+            &:hover {
+                background: #0584D1;
+            }
+
+            &:hover .price-inner {
+
+                h5,
+                h4,
+                p {
+                    color: $white;
+                }
+
+                a {
+                    background: none;
+                    border: 2px solid #fff;
+                }
+
+            }
 
             .price-inner {
-                padding: 50px;
+                padding: 35px 50px;
+
+                h5 {
+                    margin-top: 25px;
+                    letter-spacing: 2px;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    @include transition(all 0.3s ease-in-out);
+                }
 
                 h4 {
-                    margin-top: 30px;
+                    margin-top: 25px;
+                    font-size: 24px;
+                    @include transition(all 0.3s ease-in-out);
                 }
 
                 .cost {
@@ -619,6 +671,7 @@ section {
                     letter-spacing: 3px;
                     margin-top: 30px;
                     display: inline-block;
+                    @include transition(all 0.3s ease-in-out);
 
                     span {
                         margin-top: -10px;
@@ -634,15 +687,17 @@ section {
                 .btn {
                     background: #04A3DD;
                     color: $white;
-                    border-radius: 20px;
+                    @include border-radius(20px);
                     font-size: 20px;
                     padding: 0 45px;
-                    height: 46px;
+                    height: 45px;
                     line-height: 42px;
                     font-weight: bold;
                     letter-spacing: 2px;
                     clear: both;
                     margin-top: 35px;
+                    @include transition(all 0.3s ease-in-out);
+                    border: 2px solid #04A3DD;
                 }
 
             }
@@ -723,7 +778,7 @@ section {
         input,
         textarea,
         button {
-            border-radius: 17px;
+            @include border-radius(17px);
             height: 56px;
             border: 2px solid #0C89D5;
             box-shadow: none;
@@ -798,9 +853,8 @@ section {
                         height: 32px;
                         background: $social-icon;
                         text-align: center;
-                        border-radius: 50%;
+                        @include border-radius(50%);
                         text-align: center;
-                        border-radius: 50%;
                         line-height: 32px;
                         font-size: 16px;
                     }

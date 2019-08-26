@@ -24,20 +24,19 @@ class Pricing extends Component {
                                 <div className="price-panel">
                                     <div className="overlay"></div>
                                     <div className="price-inner">
-                                    <img src={priceImg1} alt=""/>
-                                        <h4>Resubscribe Now</h4>
-                                        
+                                        <img src={priceImg1} alt="" />
                                         <h5>Monthly Plan</h5>
+                                        <h4>Resubscribe Now</h4>
                                         <p className="cost"><span>$</span> 2.99</p>
                                         <a className="btn" href="/">Buy Now</a>
                                     </div>
                                 </div>
                                 <div className="price-panel">
                                     <div className="price-inner">
-                                        <img src={priceImg2} alt=""/>
+                                        <img src={priceImg2} alt="" />
+                                        <h5>Annual plan</h5>
                                         <h4>Resubscribe Now</h4>
-                                        <h5>Monthly Plan</h5>
-                                        <p className="cost"><span>$</span> 2.99</p>
+                                        <p className="cost"><span>$</span>19.99</p>
                                         <a className="btn" href="/">Buy Now</a>
                                     </div>
                                 </div>

@@ -6,6 +6,8 @@
   font-style: normal;
 }
 
+/*All Cross browser CSS3 mixins*/
+/*End All Cross browser CSS3 mixins*/
 body {
   font-family: "helveticaregular";
   margin: 0;
@@ -21,6 +23,8 @@ h6 {
   font-family: "helveticaregular";
   margin: 0 0 15px 0;
   padding: 0;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 h2 {
@@ -555,17 +559,51 @@ section {
   background: #fff;
   margin: 0 85px;
   border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-transition: 20px;
+  -o-transition: 20px;
   border: 1px solid #707070;
   -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
           box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  width: 330px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#pricing .price-container .price-panel:hover {
+  background: #0584D1;
+}
+
+#pricing .price-container .price-panel:hover .price-inner h5,
+#pricing .price-container .price-panel:hover .price-inner h4,
+#pricing .price-container .price-panel:hover .price-inner p {
+  color: #fff;
+}
+
+#pricing .price-container .price-panel:hover .price-inner a {
+  background: none;
+  border: 2px solid #fff;
 }
 
 #pricing .price-container .price-panel .price-inner {
-  padding: 50px;
+  padding: 35px 50px;
+}
+
+#pricing .price-container .price-panel .price-inner h5 {
+  margin-top: 25px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #pricing .price-container .price-panel .price-inner h4 {
-  margin-top: 30px;
+  margin-top: 25px;
+  font-size: 24px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #pricing .price-container .price-panel .price-inner .cost {
@@ -574,6 +612,8 @@ section {
   letter-spacing: 3px;
   margin-top: 30px;
   display: inline-block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #pricing .price-container .price-panel .price-inner .cost span {
@@ -590,14 +630,21 @@ section {
   background: #04A3DD;
   color: #fff;
   border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-transition: 20px;
+  -o-transition: 20px;
   font-size: 20px;
   padding: 0 45px;
-  height: 46px;
+  height: 45px;
   line-height: 42px;
   font-weight: bold;
   letter-spacing: 2px;
   clear: both;
   margin-top: 35px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #04A3DD;
 }
 
 /*End pricing Review Css*/
@@ -662,6 +709,10 @@ section {
 #getInTouch .contact-form textarea,
 #getInTouch .contact-form button {
   border-radius: 17px;
+  -webkit-border-radius: 17px;
+  -moz-border-radius: 17px;
+  -ms-transition: 17px;
+  -o-transition: 17px;
   height: 56px;
   border: 2px solid #0C89D5;
   -webkit-box-shadow: none;
@@ -733,8 +784,11 @@ section {
   background: #1DA1F2;
   text-align: center;
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-transition: 50%;
+  -o-transition: 50%;
   text-align: center;
-  border-radius: 50%;
   line-height: 32px;
   font-size: 16px;
 }
