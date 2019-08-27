@@ -34,7 +34,7 @@ class Header extends Component {
     }
 
     scrollToTop = () => {
-        scroll.scrollToTop();
+        scroll.scrollToTop(300);
     };
 
     render() {
@@ -47,7 +47,7 @@ class Header extends Component {
                 className={this.state.scrollingLock ? 'fixedClass navbar navbar-expand-lg navbar-light header-area' : 'absoluteClass navbar navbar-expand-lg navbar-light header-area'}>
                 <div className="container">
                     <Link to="/" href="index.html" className="navbar-brand">
-                     <img src={logo} alt="Vimory Logo"/>
+                        <img src={logo} alt="Vimory Logo" />
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navtogglerItemItem"
                         aria-controls="navtogglerItemItem" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +62,7 @@ class Header extends Component {
                                     spy={true}
                                     smooth={true}
                                     offset={0}
-                                    duration={500}
+                                    duration={2000}
                                     className="nav-link">Home
                                 </Link>
                             </li>
@@ -73,7 +73,7 @@ class Header extends Component {
                                     spy={true}
                                     smooth={true}
                                     offset={0}
-                                    duration={500}
+                                    duration={2000}
                                     className="nav-link">Features
                                 </Link>
                             </li>
@@ -84,7 +84,7 @@ class Header extends Component {
                                     spy={true}
                                     smooth={true}
                                     offset={0}
-                                    duration={500}
+                                    duration={3000}
                                     className="nav-link">Pricing
                                 </Link>
                             </li>
@@ -94,8 +94,8 @@ class Header extends Component {
                                     to="faqs"
                                     spy={true}
                                     smooth={true}
-                                    offset={57}
-                                    duration={500}
+                                    offset={60}
+                                    duration={3000}
                                     className="nav-link">FAQs
                                 </Link>
                             </li>
@@ -105,8 +105,8 @@ class Header extends Component {
                                     to="getInTouch"
                                     spy={true}
                                     smooth={true}
-                                    offset={57}
-                                    duration={500}
+                                    offset={60}
+                                    duration={3000}
                                     className="nav-link">Contact Us
                                 </Link>
                             </li>

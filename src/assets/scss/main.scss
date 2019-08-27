@@ -11,7 +11,7 @@
 
 $heading-font:'helveticaregular';
 $body-font: 'helveticaregular';
-$theme-color:#1bac91;
+$theme-color:#0584D1;
 $white:#fff;
 $black:#000;
 $grey-white:#ddd;
@@ -37,12 +37,12 @@ $social-icon:#1DA1F2;
     -o-transition: $radius;
 }
 
-@mixin box-shadow($left, $top, $radius, $color) {
-    box-shadow: $left $top $radius $color;
-    -webkit-box-shadow: $left $top $radius $color;
-    -moz-box-shadow: $left $top $radius $color;
-    -ms-transition: $left $top $radius $color;
-    -o-transition: $left $top $radius $color;
+@mixin box-shadow($left, $top, $blur, $color) {
+    box-shadow: $left $top $blur $color;
+    -webkit-box-shadow: $left $top $blur $color;
+    -moz-box-shadow: $left $top $blur $color;
+    -ms-transition: $left $top $blur $color;
+    -o-transition: $left $top $blur $color;
 }
 
 /*End All Cross browser CSS3 mixins*/
@@ -68,13 +68,13 @@ h6 {
 h2 {
     font-size: 50px;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 h3 {
     font-size: 25px;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 p,
@@ -123,6 +123,38 @@ section {
     background: rgba(1, 1, 1, .40);
 }
 
+/*Back To Top Css*/
+#backTop {
+    right: 30px;
+    position: fixed;
+    z-index: 999999;
+    bottom: 130px;
+
+    .back-top {
+        color: #fff;
+        background: $theme-color;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+        border-radius: 50%;
+        display: none;
+        @include transition(all 0.3s ease-in-out);
+        cursor: pointer;
+
+        &.active {
+            @include transition(all 0.3s ease-in-out);
+            display: block;
+
+
+        }
+    }
+
+
+}
+
+/*End Back To Top Css*/
 .mobile-frame {
     position: relative;
 
@@ -132,6 +164,14 @@ section {
         left: 37px;
         z-index: 99;
     }
+}
+
+.section-title {
+    h2 {
+        margin: 0 0 30px;
+    }
+
+    margin:0 0 60px;
 }
 
 /*Start Common css for Apps logo*/
@@ -291,12 +331,7 @@ section {
 }
 
 // end Navbar css
-// Customer Review Css
-#review {
-    background: $white;
-}
 
-// End Customer Reviw Css
 #intro {
     background-image: url("../img/intro-bg.png");
     padding: 250px 0 200px;
@@ -378,7 +413,7 @@ section {
 }
 
 .content-area {
-    padding: 140px 0;
+    padding: 80px 0;
 
     .photo-content {
         display: flex;
@@ -414,6 +449,12 @@ section {
         &:before {
             content: "Templates";
         }
+    }
+}
+
+#threedSlider {
+    img {
+        @include box-shadow(0, 0, 20px, rgba(0, 0, 0, 1));
     }
 }
 
@@ -517,6 +558,8 @@ section {
 /*End Frame section*/
 /*Start Filter section*/
 #filter {
+    padding: 0;
+
     .photo-area {
         background-image: url("../img/filter-bg.jpg");
     }
@@ -526,18 +569,82 @@ section {
             content: "Filter";
         }
     }
+
+    .tab-content {
+        .react-tabs__tab-panel--selected {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .react-tabs__tab-list {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            border: 0;
+            margin: 40px auto 0;
+
+            .react-tabs__tab {
+                border: 0;
+
+                &.react-tabs__tab--selected {
+                    span {
+                        color: $theme-color;
+                    }
+                }
+
+                img {
+                    display: block;
+                }
+
+                span {
+                    display: block;
+                    font-size: 20px;
+                    line-height: 30px;
+                    margin-top: 15px;
+                }
+            }
+
+            #react-tabs-0,
+            #react-tabs-2,
+            #react-tabs-4,
+            #react-tabs-6,
+            #react-tabs-8 {
+                .img-hover {
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+
+            #react-tabs-0 {
+                .img-hover {
+                    &:after {
+                        background: rgba(#CF3C3C, .36);
+                    }
+                }
+            }
+
+        }
+    }
 }
 
 /*End Filter section*/
 
 /*Client Review Css*/
 #review {
-    h2 {
-        margin-bottom: 40px;
-    }
+    background: $white;
+
+    h2 {}
 
     .slick-slider {
-        margin-top: 80px;
         padding-bottom: 50px;
 
         .slick-dots {
@@ -630,7 +737,7 @@ section {
 
 
             &:hover {
-                background: #0584D1;
+                background: rgba(#0584D1, .75);
             }
 
             &:hover .price-inner {
@@ -708,6 +815,49 @@ section {
 }
 
 /*End pricing Review Css*/
+
+/*Start Faqs Css*/
+#faqs {
+    .accordion-menu {
+        .card {
+            border: 0;
+
+            .card-header {
+                background: #0584D1;
+                height: 50px;
+                margin-bottom: 30px;
+                @include border-radius(14x);
+                @include box-shadow(0, 3px, 6px, rgba(0, 0, 0, .16));
+
+                h5 {
+                    color: $white;
+                    height: 50px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    line-height: 22px;
+                    letter-spacing: 1px;
+
+                }
+
+                i {
+                    float: right;
+                }
+            }
+
+            .card-body {
+                p {
+                    font-size: 15px;
+                    line-height: 22px;
+                }
+            }
+
+
+        }
+
+    }
+}
+
+/*End Faqs Css*/
 
 /*Start Get in Touch Css*/
 #getInTouch {
@@ -805,6 +955,7 @@ section {
 /*End  Get in Touch Css*/
 /*Start Footer Css*/
 #footer {
+    position: relative;
     background: $footer-bg;
     padding: 38px 0;
 

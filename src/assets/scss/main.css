@@ -30,13 +30,13 @@ h6 {
 h2 {
   font-size: 50px;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 h3 {
   font-size: 25px;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 p,
@@ -83,6 +83,36 @@ section {
   background: rgba(1, 1, 1, 0.4);
 }
 
+/*Back To Top Css*/
+#backTop {
+  right: 30px;
+  position: fixed;
+  z-index: 999999;
+  bottom: 130px;
+}
+
+#backTop .back-top {
+  color: #fff;
+  background: #0584D1;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  border-radius: 50%;
+  display: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#backTop .back-top.active {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: block;
+}
+
+/*End Back To Top Css*/
 .mobile-frame {
   position: relative;
 }
@@ -92,6 +122,14 @@ section {
   top: 33px;
   left: 37px;
   z-index: 99;
+}
+
+.section-title {
+  margin: 0 0 60px;
+}
+
+.section-title h2 {
+  margin: 0 0 30px;
 }
 
 /*Start Common css for Apps logo*/
@@ -251,10 +289,6 @@ section {
   color: #0C89D5;
 }
 
-#review {
-  background: #fff;
-}
-
 #intro {
   background-image: url("../img/intro-bg.png");
   padding: 250px 0 200px;
@@ -342,7 +376,7 @@ section {
 }
 
 .content-area {
-  padding: 140px 0;
+  padding: 80px 0;
 }
 
 .content-area .photo-content {
@@ -380,6 +414,14 @@ section {
 
 #template h2:before {
   content: "Templates";
+}
+
+#threedSlider img {
+  box-shadow: 0 0 20px black;
+  -webkit-box-shadow: 0 0 20px black;
+  -moz-box-shadow: 0 0 20px black;
+  -ms-transition: 0 0 20px black;
+  -o-transition: 0 0 20px black;
 }
 
 /*End Filter section*/
@@ -460,6 +502,10 @@ section {
 
 /*End Frame section*/
 /*Start Filter section*/
+#filter {
+  padding: 0;
+}
+
 #filter .photo-area {
   background-image: url("../img/filter-bg.jpg");
 }
@@ -468,14 +514,77 @@ section {
   content: "Filter";
 }
 
+#filter .tab-content .react-tabs__tab-panel--selected {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#filter .tab-content .react-tabs__tab-list {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border: 0;
+  margin: 40px auto 0;
+}
+
+#filter .tab-content .react-tabs__tab-list .react-tabs__tab {
+  border: 0;
+}
+
+#filter .tab-content .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected span {
+  color: #0584D1;
+}
+
+#filter .tab-content .react-tabs__tab-list .react-tabs__tab img {
+  display: block;
+}
+
+#filter .tab-content .react-tabs__tab-list .react-tabs__tab span {
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 15px;
+}
+
+#filter .tab-content .react-tabs__tab-list #react-tabs-0 .img-hover,
+#filter .tab-content .react-tabs__tab-list #react-tabs-2 .img-hover,
+#filter .tab-content .react-tabs__tab-list #react-tabs-4 .img-hover,
+#filter .tab-content .react-tabs__tab-list #react-tabs-6 .img-hover,
+#filter .tab-content .react-tabs__tab-list #react-tabs-8 .img-hover {
+  position: relative;
+}
+
+#filter .tab-content .react-tabs__tab-list #react-tabs-0 .img-hover:after,
+#filter .tab-content .react-tabs__tab-list #react-tabs-2 .img-hover:after,
+#filter .tab-content .react-tabs__tab-list #react-tabs-4 .img-hover:after,
+#filter .tab-content .react-tabs__tab-list #react-tabs-6 .img-hover:after,
+#filter .tab-content .react-tabs__tab-list #react-tabs-8 .img-hover:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#filter .tab-content .react-tabs__tab-list #react-tabs-0 .img-hover:after {
+  background: rgba(207, 60, 60, 0.36);
+}
+
 /*End Filter section*/
 /*Client Review Css*/
-#review h2 {
-  margin-bottom: 40px;
+#review {
+  background: #fff;
 }
 
 #review .slick-slider {
-  margin-top: 80px;
   padding-bottom: 50px;
 }
 
@@ -572,7 +681,7 @@ section {
 }
 
 #pricing .price-container .price-panel:hover {
-  background: #0584D1;
+  background: rgba(5, 132, 209, 0.75);
 }
 
 #pricing .price-container .price-panel:hover .price-inner h5,
@@ -648,6 +757,46 @@ section {
 }
 
 /*End pricing Review Css*/
+/*Start Faqs Css*/
+#faqs .accordion-menu .card {
+  border: 0;
+}
+
+#faqs .accordion-menu .card .card-header {
+  background: #0584D1;
+  height: 50px;
+  margin-bottom: 30px;
+  border-radius: 14x;
+  -webkit-border-radius: 14x;
+  -moz-border-radius: 14x;
+  -ms-transition: 14x;
+  -o-transition: 14x;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -ms-transition: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -o-transition: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+#faqs .accordion-menu .card .card-header h5 {
+  color: #fff;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+#faqs .accordion-menu .card .card-header i {
+  float: right;
+}
+
+#faqs .accordion-menu .card .card-body p {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+/*End Faqs Css*/
 /*Start Get in Touch Css*/
 #getInTouch {
   background-image: url("../img/get-in-touch-bg.png");
@@ -738,6 +887,7 @@ section {
 /*End  Get in Touch Css*/
 /*Start Footer Css*/
 #footer {
+  position: relative;
   background: #161D24;
   padding: 38px 0;
 }

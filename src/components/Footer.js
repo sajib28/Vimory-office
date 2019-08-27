@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+// import BackTop from './BackTop';
 class Footer extends Component {
     render() {
         return (
@@ -29,6 +29,7 @@ class Footer extends Component {
                         </div>
                     </div>
                 </div>
+                {/* <BackTop/> */}
             </footer>
         )
     }
