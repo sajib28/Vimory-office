@@ -9,7 +9,7 @@ class TabCom extends Component {
     render() {
         return (
             <div>
-                <Tabs defaultIndex={0} onSelect={index => console.log(index)}>
+                <Tabs defaultIndex={0}>
 
                     <div className="tab-content">
                         <TabPanel><div className="col-md-5">
@@ -45,7 +45,7 @@ class TabCom extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                <img src={mobileFrameFilter} alt="" />
+                                    <img src={mobileFrameFilter} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@ class TabCom extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                <img src={mobileFrameFilter} alt="" />
+                                    <img src={mobileFrameFilter} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -86,9 +86,9 @@ class TabCom extends Component {
                         <TabList>
                             <Tab><div className="img-hover"><img src={tabIconImg} alt="Aglow" /></div><span>Aglow</span></Tab>
                             <Tab><div className="img-hover"><img src={tabIconImg} alt="Tring" /></div><span>Tring</span></Tab>
-                            <Tab><img src={tabIconImg} alt="Duotone" /><span>Duotone</span></Tab>
-                            <Tab><img src={tabIconImg} alt="Floral" /><span>Floral</span></Tab>
-                            <Tab><img src={tabIconImg} alt="Sunday" /><span>Sunday</span></Tab>
+                            <Tab><div className="img-hover"><img src={tabIconImg} alt="Duotone" /></div><span>Duotone</span></Tab>
+                            <Tab><div className="img-hover"><img src={tabIconImg} alt="Floral" /></div><span>Floral</span></Tab>
+                            <Tab><div className="img-hover"><img src={tabIconImg} alt="Sunday" /></div><span>Sunday</span></Tab>
                         </TabList>
                     </div>
                 </Tabs>
