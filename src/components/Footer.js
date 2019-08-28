@@ -13,6 +13,7 @@ class Footer extends Component {
                                     <li><a href="/">Privacy policy</a></li>
                                     <li><a href="/">Terms & Condition</a></li>
                                     <li><a href="/">Blog</a></li>
+                                   
                                 </ul>
                             </div>
                         </div>

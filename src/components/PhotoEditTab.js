@@ -5,7 +5,8 @@ import mobileFrameEffect from '../assets/img/mobile-frame-effect.png';
 import tabIconImg from '../assets/img/filter-img-icon.png';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
-class TabCom extends Component {
+import svgImg from '../assets/img/icon/test.svg';
+class PhotoEditTab extends Component {
     render() {
         return (
             <div>
@@ -84,11 +85,11 @@ class TabCom extends Component {
                             </div>
                         </TabPanel>
                         <TabList>
-                            <Tab><div id="filter-1" className="img-hover"><img src={tabIconImg} alt="Aglow" /></div><span>Aglow</span></Tab>
-                            <Tab><div id="filter-2" className="img-hover"><img src={tabIconImg} alt="Tring" /></div><span>Tring</span></Tab>
-                            <Tab><div id="filter-3" className="img-hover"><img src={tabIconImg} alt="Duotone" /></div><span>Duotone</span></Tab>
-                            <Tab><div id="filter-4" className="img-hover"><img src={tabIconImg} alt="Floral" /></div><span>Floral</span></Tab>
-                            <Tab><div id="filter-5" className="img-hover"><img src={tabIconImg} alt="Sunday" /></div><span>Sunday</span></Tab>
+                            <Tab><div className="img-hover"><img src={svgImg} alt="Aglow" /></div><span>Aglow</span></Tab>
+                            <Tab><div className="img-hover"><img src={tabIconImg} alt="Tring" /></div><span>Tring</span></Tab>
+                            <Tab><div className="img-hover"><img src={tabIconImg} alt="Duotone" /></div><span>Duotone</span></Tab>
+                            <Tab><div className="img-hover"><img src={tabIconImg} alt="Floral" /></div><span>Floral</span></Tab>
+                            <Tab><div className="img-hover"><img src={tabIconImg} alt="Sunday" /></div><span>Sunday</span></Tab>
                         </TabList>
                     </div>
                 </Tabs>
@@ -96,4 +97,4 @@ class TabCom extends Component {
         )
     }
 }
-export default TabCom;
+export default PhotoEditTab;

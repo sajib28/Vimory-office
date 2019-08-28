@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import mobileFrame from '../assets/img/mobile-frame.png';
 import mobileFrameEffect from '../assets/media/sample-video.mp4';
+//import CommonTab from '../components/tab/CommonTab';
+import PhotoEditTab from './PhotoEditTab';
+
 class PhotoEdit extends Component {
     render() {
         return (
@@ -23,15 +26,14 @@ class PhotoEdit extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="photo-content">
-                                <div className="col-md-5">
+                            <PhotoEditTab/>
+                            {/* <CommonTab alt="Photo Edit"/> */}
+                                {/* <div className="col-md-5">
                                     <div className="mobile-frame">
                                         <img src={mobileFrame} alt="" />
                                         <div className="mobile-frame-content">
                                             <video controls autoPlay>
-                                                <source src={mobileFrameEffect} type="video/mp4"/>
-                                                                                       
-</video>
-                                                    
+                                                <source src={mobileFrameEffect} type="video/mp4"/></video> 
                                         </div>
                                     </div>
                                         </div>
@@ -45,14 +47,14 @@ class PhotoEdit extends Component {
                                                 <li><i className="far fa-clone"></i>Vimory gives you the power  to focus on a specific area of your photo.</li>
                                                 <li><i className="far fa-clone"></i>So many filters to enhance your look.</li>
                                             </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                        </div> */}
                             </div>
                         </div>
+                    </div>
+                </div>
             </section>
-                    // End Effect Section
-                    )
-                }
-            }
+            // End Effect Section
+        )
+    }
+}
 export default PhotoEdit;

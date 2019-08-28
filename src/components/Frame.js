@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import mobileFrameImage from '../assets/img/frame-img.png';
+import FrameSlider from './Frame/FrameSlider';
 class Frame extends Component {
     render() {
         return (
@@ -11,7 +11,7 @@ class Frame extends Component {
                             <div className="col-md-12">
                                 <div className="title">
                                     <div className="title-inner">
-                                    <h2>Frame</h2>
+                                        <h2>Frame</h2>
                                     </div>
                                 </div>
                             </div>
@@ -28,7 +28,7 @@ class Frame extends Component {
                                 </div>
                                 <div className="col-md-5">
                                     <div className="mobile-frame">
-                                        <img src={mobileFrameImage} alt="" />
+                                        <FrameSlider />
                                     </div>
                                 </div>
                             </div>
@@ -36,6 +36,7 @@ class Frame extends Component {
                     </div>
                 </div>
             </section>
+
             // End Frame Section
         )
     }

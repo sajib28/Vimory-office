@@ -24,10 +24,13 @@ class GetToday extends Component {
                             </ul>
                         </div>
                         <div className="col-md-6">
-                            <div className="mobile-frame">
-                                <img src={mobileFrame} alt="" />
-                                <div className="mobile-frame-content">
-                                    <img src={mobileFrameToday} alt="" />
+                            <div className="circle-animation">
+                                <div className="solar-system"><div className="orbit mercury-orbit"></div><div className="mercury-spin"><div id="mercury"></div></div><div className="orbit venus-orbit"></div><div className="venus-spin"><div id="venus"></div></div><div className="orbit earth-orbit"></div><div className="earth-spin"><div className="orbit moon-orbit"></div><div className="moon-spin"><div id="moon"></div></div></div></div>
+                                <div className="mobile-frame">
+                                    <img src={mobileFrame} alt="" />
+                                    <div className="mobile-frame-content">
+                                        <img src={mobileFrameToday} alt="" />
+                                    </div>
                                 </div>
                             </div>
                         </div>

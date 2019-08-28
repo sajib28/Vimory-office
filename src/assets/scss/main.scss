@@ -8,7 +8,6 @@
     font-style: normal;
 
 }
-
 $heading-font:'helveticaregular';
 $body-font: 'helveticaregular';
 $theme-color:#0584D1;
@@ -234,6 +233,85 @@ section {
     }
 }
 
+/* common Tab content css*/
+.tab-content-info {
+    display: flex;
+}
+
+.tab-content {
+    .react-tabs__tab-panel--selected {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .react-tabs__tab-list {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        border: 0;
+        margin: 40px auto 0;
+
+        .react-tabs__tab {
+            border: 0;
+            margin: 0 50px;
+
+            &.react-tabs__tab--selected {
+                span {
+                    color: $theme-color;
+                }
+                
+                .img-hover {
+                    position: relative;
+
+                    &:after {
+                        background: none;
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        @include border-radius(10px);
+                    }
+                }
+            }
+
+            img {
+                display: block;
+                @include border-radius(10px);
+            }
+
+            span {
+                display: block;
+                font-size: 20px;
+                line-height: 30px;
+                margin-top: 15px;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+            
+            .img-hover {
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    @include border-radius(10px);
+                }
+            }
+        }
+          
+    }
+}
+
+/* Common Tab content css*/
 /*End photo with content Section*/
 .back-img {
     background-repeat: no-repeat;
@@ -550,7 +628,8 @@ section {
 
     .content-area {
         .mobile-frame {
-            float: right;
+           width: 418px;
+           float:right;
         }
     }
 }
@@ -569,505 +648,386 @@ section {
             content: "Filter";
         }
     }
+}
 
-    .tab-content {
-        .react-tabs__tab-panel--selected {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+/*End Filter section*/
 
-        .react-tabs__tab-list {
-            display: block;
-            margin: 0 auto;
-            text-align: center;
-            border: 0;
-            margin: 40px auto 0;
+/*Client Review Css*/
+#review {
+    background: $white;
 
-            .react-tabs__tab {
-                border: 0;
-                margin: 0 50px;
+    h2 {}
 
-                &.react-tabs__tab--selected {
-                    span {
-                        color: $theme-color;
-                    }
-                    &#react-tabs-2,
-                    &#react-tabs-4,
-                    &#react-tabs-6,
-                    &#react-tabs-8 {
-                        .img-hover {
-                            &:after {
-                                background: none;
-                            }
-                        }
-                    }
-                    &#react-tabs-0{
-                        .img-hover {
-                            &:after {
-                                background: none;
-                            }
-                        }
+    .slick-slider {
+        padding-bottom: 50px;
+
+        .slick-dots {
+            bottom: 0;
+
+            li {
+                button {
+                    &::before {
+                        font-size: 12px;
                     }
                 }
-                        img {
-                            display: block;
-                            @include border-radius(10px);
-                        }
 
-                        span {
-                            display: block;
-                            font-size: 20px;
-                            line-height: 30px;
-                            margin-top: 15px;
-                        }
-
-                        &:focus {
-                            box-shadow: none;
-                        }
-                    }
-
-                    #react-tabs-0,
-                    #react-tabs-2,
-                    #react-tabs-4,
-                    #react-tabs-6,
-                    #react-tabs-8 {
-                        .img-hover {
-                            position: relative;
-
-                            &:after {
-                                content: '';
-                                position: absolute;
-                                top: 0;
-                                bottom: 0;
-                                left: 0;
-                                right: 0;
-                                @include border-radius(10px);
-                            }
-                        }
-                    }
-
-                    #react-tabs-0 {
-                        .img-hover {
-                            &:after {
-                                background: rgba(#3C55CF, .36);
-                            }
-                        }
-                    }
-
-                    #react-tabs-2 {
-                        .img-hover {
-                            &:after {
-                                background: rgba(#CF3C3C, .36);
-                            }
-                        }
-                    }
-
-                    #react-tabs-4 {
-                        .img-hover {
-                            &:after {
-                                background: rgba(#CFC53C, .36);
-                            }
-                        }
-                    }
-
-                    #react-tabs-6 {
-                        .img-hover {
-                            &:after {
-                                background: rgba(#3CCF59, .36);
-                            }
-                        }
-                    }
-
-                    #react-tabs-8 {
-                        .img-hover {
-                            &:after {
-                                background: rgba(#3C55CF, .36);
-                            }
-                        }
-                    }
-
-                }
             }
         }
 
-        /*End Filter section*/
+        h3 {
+            font-size: 22px;
+            font-weight: bold;
+        }
 
-        /*Client Review Css*/
-        #review {
+        p {
+            font-size: 16px;
+            line-height: 25px;
+            margin-bottom: 20px;
+        }
+
+        span {
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        ul.review-icon {
+            margin: 30px 0 10px;
+
+            li {
+                display: inline-block;
+                padding: 0 5px;
+                font-size: 20px;
+
+                i {
+                    color: $blue;
+                }
+            }
+        }
+    }
+
+}
+
+/*End Client Review Css*/
+/*Start pricing Review Css*/
+#pricing {
+    background-image: url("../img/pricing-bg.jpg");
+
+    .title-inner {
+        color: $white;
+        margin-bottom: 100px;
+
+        h2 {
+            &:before {
+                content: "Our Pricing Plan";
+                font-size: 140px;
+            }
+        }
+
+        h5 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 80px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    .price-container {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+
+        .price-panel {
             background: $white;
+            margin: 0 85px;
+            @include border-radius(20px);
+            border: 1px solid #707070;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            width: 330px;
+            @include transition(all 0.3s ease-in-out);
 
-            h2 {}
 
-            .slick-slider {
-                padding-bottom: 50px;
-
-                .slick-dots {
-                    bottom: 0;
-
-                    li {
-                        button {
-                            &::before {
-                                font-size: 12px;
-                            }
-                        }
-
-                    }
-                }
-
-                h3 {
-                    font-size: 22px;
-                    font-weight: bold;
-                }
-
-                p {
-                    font-size: 16px;
-                    line-height: 25px;
-                    margin-bottom: 20px;
-                }
-
-                span {
-                    font-size: 14px;
-                    line-height: 19px;
-                }
-
-                ul.review-icon {
-                    margin: 30px 0 10px;
-
-                    li {
-                        display: inline-block;
-                        padding: 0 5px;
-                        font-size: 20px;
-
-                        i {
-                            color: $blue;
-                        }
-                    }
-                }
+            &:hover {
+                background: rgba(#0584D1, .75);
             }
 
-        }
+            &:hover .price-inner {
 
-        /*End Client Review Css*/
-        /*Start pricing Review Css*/
-        #pricing {
-            background-image: url("../img/pricing-bg.jpg");
-
-            .title-inner {
-                color: $white;
-                margin-bottom: 100px;
-
-                h2 {
-                    &:before {
-                        content: "Our Pricing Plan";
-                        font-size: 140px;
-                    }
+                h5,
+                h4,
+                p {
+                    color: $white;
                 }
+
+                a {
+                    background: none;
+                    border: 2px solid #fff;
+                }
+
+            }
+
+            .price-inner {
+                padding: 35px 50px;
 
                 h5 {
-                    font-size: 22px;
+                    margin-top: 25px;
+                    letter-spacing: 2px;
                     font-weight: bold;
-                    margin-top: 80px;
+                    letter-spacing: 2px;
+                    @include transition(all 0.3s ease-in-out);
                 }
 
-                p {
-                    font-size: 18px;
-                    line-height: 24px;
+                h4 {
+                    margin-top: 25px;
+                    font-size: 24px;
+                    @include transition(all 0.3s ease-in-out);
                 }
-            }
 
-            .price-container {
-                display: flex;
-                align-content: center;
-                justify-content: center;
-
-                .price-panel {
-                    background: $white;
-                    margin: 0 85px;
-                    @include border-radius(20px);
-                    border: 1px solid #707070;
-                    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-                    width: 330px;
+                .cost {
+                    font-size: 40px;
+                    font-weight: bold;
+                    letter-spacing: 3px;
+                    margin-top: 30px;
+                    display: inline-block;
                     @include transition(all 0.3s ease-in-out);
 
-
-                    &:hover {
-                        background: rgba(#0584D1, .75);
-                    }
-
-                    &:hover .price-inner {
-
-                        h5,
-                        h4,
-                        p {
-                            color: $white;
-                        }
-
-                        a {
-                            background: none;
-                            border: 2px solid #fff;
-                        }
-
-                    }
-
-                    .price-inner {
-                        padding: 35px 50px;
-
-                        h5 {
-                            margin-top: 25px;
-                            letter-spacing: 2px;
-                            font-weight: bold;
-                            letter-spacing: 2px;
-                            @include transition(all 0.3s ease-in-out);
-                        }
-
-                        h4 {
-                            margin-top: 25px;
-                            font-size: 24px;
-                            @include transition(all 0.3s ease-in-out);
-                        }
-
-                        .cost {
-                            font-size: 40px;
-                            font-weight: bold;
-                            letter-spacing: 3px;
-                            margin-top: 30px;
-                            display: inline-block;
-                            @include transition(all 0.3s ease-in-out);
-
-                            span {
-                                margin-top: -10px;
-                                display: block;
-                                margin-left: 0;
-                                font-weight: 100;
-                                margin-right: 15px;
-                                float: left;
-                                font-size: 35px;
-                            }
-                        }
-
-                        .btn {
-                            background: #04A3DD;
-                            color: $white;
-                            @include border-radius(20px);
-                            font-size: 20px;
-                            padding: 0 45px;
-                            height: 45px;
-                            line-height: 42px;
-                            font-weight: bold;
-                            letter-spacing: 2px;
-                            clear: both;
-                            margin-top: 35px;
-                            @include transition(all 0.3s ease-in-out);
-                            border: 2px solid #04A3DD;
-                        }
-
-                    }
-                }
-
-            }
-
-        }
-
-        /*End pricing Review Css*/
-
-        /*Start Faqs Css*/
-        #faqs {
-            .accordion-menu {
-                .card {
-                    border: 0;
-
-                    .card-header {
-                        background: #0584D1;
-                        height: 50px;
-                        margin-bottom: 30px;
-                        @include border-radius(14x);
-                        @include box-shadow(0, 3px, 6px, rgba(0, 0, 0, .16));
-
-                        h5 {
-                            color: $white;
-                            height: 50px;
-                            font-size: 18px;
-                            font-weight: bold;
-                            line-height: 22px;
-                            letter-spacing: 1px;
-
-                        }
-
-                        i {
-                            float: right;
-                        }
-                    }
-
-                    .card-body {
-                        p {
-                            font-size: 15px;
-                            line-height: 22px;
-                        }
-                    }
-
-
-                }
-
-            }
-        }
-
-        /*End Faqs Css*/
-
-        /*Start Get in Touch Css*/
-        #getInTouch {
-            background-image: url("../img/get-in-touch-bg.png");
-            background-size: auto;
-
-            .pic-overlay {
-                background: rgba(1, 1, 1, 0.5);
-            }
-
-            .title-inner {
-                color: $white;
-                margin-bottom: 100px;
-
-                h2 {
-                    &:before {
-                        content: "Get In Touch";
-                        font-size: 180px;
-                        top: -10px;
-                    }
-                }
-            }
-
-            .contact-info {
-                h3 {
-                    color: #fff;
-                    font-size: 24px;
-                    margin: 0px 0 25px;
-                }
-
-                .weblink {
-                    margin: 40px 0 40px;
-
-                    a {
+                    span {
+                        margin-top: -10px;
                         display: block;
-                        text-decoration: none;
-                        color: $white;
-
+                        margin-left: 0;
+                        font-weight: 100;
+                        margin-right: 15px;
+                        float: left;
+                        font-size: 35px;
                     }
                 }
 
-                .apps-logo {
-                    margin-top: 70px;
-
-                    li {
-                        &:first-child {
-                            margin-right: 22px;
-                        }
-
-                        img {
-                            width: 190px;
-                        }
-                    }
-
-                }
-            }
-
-            .contact-form {
-
-                .form-group {
-                    margin-top: 25px;
-
-                    &:first-child {
-                        margin-top: 0;
-                    }
-                }
-
-                input,
-                textarea,
-                button {
-                    @include border-radius(17px);
-                    height: 56px;
-                    border: 2px solid #0C89D5;
-                    box-shadow: none;
-                    background: none;
-                    color: #fff !important;
-                    font-size: 16px;
+                .btn {
+                    background: #04A3DD;
+                    color: $white;
+                    @include border-radius(20px);
+                    font-size: 20px;
+                    padding: 0 45px;
+                    height: 45px;
+                    line-height: 42px;
                     font-weight: bold;
-                    font-family: $body-font;
+                    letter-spacing: 2px;
+                    clear: both;
+                    margin-top: 35px;
+                    @include transition(all 0.3s ease-in-out);
+                    border: 2px solid #04A3DD;
                 }
 
-                textarea {
-                    height: 220px;
-                }
-
-                button {
-                    background: #0584D1;
-                    border: none;
-                    height: 42px;
-                    padding: 0 40px;
-                }
             }
         }
 
-        /*End  Get in Touch Css*/
-        /*Start Footer Css*/
-        #footer {
-            position: relative;
-            background: $footer-bg;
-            padding: 38px 0;
+    }
 
-            .footer-menu {
-                ul {
-                    margin-left: -15px;
+}
 
-                    li {
-                        padding: 0 15px;
-                        color: #fff;
-                        font-size: 15px;
-                        border-right: 1px solid $white;
+/*End pricing Review Css*/
 
-                        &:last-child {
-                            border-right: none;
-                        }
+/*Start Faqs Css*/
+#faqs {
+    .accordion-menu {
+        .card {
+            border: 0;
 
-                        a {
-                            color: $white;
-                            text-decoration: none;
-                            line-height: 32px;
+            .card-header {
+                background: #0584D1;
+                height: 50px;
+                margin-bottom: 30px;
+                @include border-radius(14x);
+                @include box-shadow(0, 3px, 6px, rgba(0, 0, 0, .16));
 
-                        }
-                    }
+                h5 {
+                    color: $white;
+                    height: 50px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    line-height: 22px;
+                    letter-spacing: 1px;
+
+                }
+
+                i {
+                    float: right;
+                }
+            }
+
+            .card-body {
+                p {
+                    font-size: 15px;
+                    line-height: 22px;
                 }
             }
 
 
-            .social-icon {
-                ul {
-                    li {
-                        display: inline-block;
+        }
 
-                        a.follows {
-                            text-decoration: none;
-                        }
+    }
+}
 
-                        a {
-                            color: $white;
-                            text-decoration: none;
-                            padding: 0 15px;
-                            line-height: 32px;
+/*End Faqs Css*/
 
-                            i {
-                                width: 32px;
-                                height: 32px;
-                                background: $social-icon;
-                                text-align: center;
-                                @include border-radius(50%);
-                                text-align: center;
-                                line-height: 32px;
-                                font-size: 16px;
-                            }
-                        }
+/*Start Get in Touch Css*/
+#getInTouch {
+    background-image: url("../img/get-in-touch-bg.png");
+    background-size: auto;
+
+    .pic-overlay {
+        background: rgba(1, 1, 1, 0.5);
+    }
+
+    .title-inner {
+        color: $white;
+        margin-bottom: 100px;
+
+        h2 {
+            &:before {
+                content: "Get In Touch";
+                font-size: 180px;
+                top: -10px;
+            }
+        }
+    }
+
+    .contact-info {
+        h3 {
+            color: #fff;
+            font-size: 24px;
+            margin: 0px 0 25px;
+        }
+
+        .weblink {
+            margin: 40px 0 40px;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: $white;
+
+            }
+        }
+
+        .apps-logo {
+            margin-top: 70px;
+
+            li {
+                &:first-child {
+                    margin-right: 22px;
+                }
+
+                img {
+                    width: 190px;
+                }
+            }
+
+        }
+    }
+
+    .contact-form {
+
+        .form-group {
+            margin-top: 25px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        input,
+        textarea,
+        button {
+            @include border-radius(17px);
+            height: 56px;
+            border: 2px solid #0C89D5;
+            box-shadow: none;
+            background: none;
+            color: #fff !important;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: $body-font;
+        }
+
+        textarea {
+            height: 220px;
+        }
+
+        button {
+            background: #0584D1;
+            border: none;
+            height: 42px;
+            padding: 0 40px;
+        }
+    }
+}
+
+/*End  Get in Touch Css*/
+
+/*Start Footer Css*/
+#footer {
+    position: relative;
+    background: $footer-bg;
+    padding: 38px 0;
+
+    .footer-menu {
+        ul {
+            margin-left: -15px;
+
+            li {
+                padding: 0 15px;
+                color: #fff;
+                font-size: 15px;
+                border-right: 1px solid $white;
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    line-height: 32px;
+
+                }
+            }
+        }
+    }
+
+
+    .social-icon {
+        ul {
+            li {
+                display: inline-block;
+
+                a.follows {
+                    text-decoration: none;
+                }
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    padding: 0 15px;
+                    line-height: 32px;
+
+                    i {
+                        width: 32px;
+                        height: 32px;
+                        background: $social-icon;
+                        text-align: center;
+                        @include border-radius(50%);
+                        text-align: center;
+                        line-height: 32px;
+                        font-size: 16px;
                     }
                 }
             }
         }
+    }
+}
 
-        /*End Footer Css*/
+/*End Footer Css*/

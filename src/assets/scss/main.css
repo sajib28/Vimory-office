@@ -195,6 +195,101 @@ section {
   width: 100%;
 }
 
+/* common Tab content css*/
+.tab-content-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tab-content .react-tabs__tab-panel--selected {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tab-content .react-tabs__tab-list {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border: 0;
+  margin: 40px auto 0;
+}
+
+.tab-content .react-tabs__tab-list .react-tabs__tab {
+  border: 0;
+  margin: 0 50px;
+}
+
+.tab-content .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected span {
+  color: #0584D1;
+}
+
+.tab-content .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected .img-hover {
+  position: relative;
+}
+
+.tab-content .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected .img-hover:after {
+  background: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-transition: 10px;
+  -o-transition: 10px;
+}
+
+.tab-content .react-tabs__tab-list .react-tabs__tab img {
+  display: block;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-transition: 10px;
+  -o-transition: 10px;
+}
+
+.tab-content .react-tabs__tab-list .react-tabs__tab span {
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 15px;
+}
+
+.tab-content .react-tabs__tab-list .react-tabs__tab:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.tab-content .react-tabs__tab-list .react-tabs__tab .img-hover {
+  position: relative;
+}
+
+.tab-content .react-tabs__tab-list .react-tabs__tab .img-hover:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-transition: 10px;
+  -o-transition: 10px;
+}
+
+/* Common Tab content css*/
 /*End photo with content Section*/
 .back-img {
   background-repeat: no-repeat;
@@ -497,6 +592,7 @@ section {
 }
 
 #frame .content-area .mobile-frame {
+  width: 418px;
   float: right;
 }
 
@@ -512,110 +608,6 @@ section {
 
 #filter h2:before {
   content: "Filter";
-}
-
-#filter .tab-content .react-tabs__tab-panel--selected {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#filter .tab-content .react-tabs__tab-list {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  border: 0;
-  margin: 40px auto 0;
-}
-
-#filter .tab-content .react-tabs__tab-list .react-tabs__tab {
-  border: 0;
-  margin: 0 50px;
-}
-
-#filter .tab-content .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected span {
-  color: #0584D1;
-}
-
-#filter .tab-content .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected#react-tabs-2 .img-hover:after, #filter .tab-content .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected#react-tabs-4 .img-hover:after, #filter .tab-content .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected#react-tabs-6 .img-hover:after, #filter .tab-content .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected#react-tabs-8 .img-hover:after {
-  background: none;
-}
-
-#filter .tab-content .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected#react-tabs-0 .img-hover:after {
-  background: none;
-}
-
-#filter .tab-content .react-tabs__tab-list .react-tabs__tab img {
-  display: block;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-transition: 10px;
-  -o-transition: 10px;
-}
-
-#filter .tab-content .react-tabs__tab-list .react-tabs__tab span {
-  display: block;
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 15px;
-}
-
-#filter .tab-content .react-tabs__tab-list .react-tabs__tab:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-#filter .tab-content .react-tabs__tab-list #react-tabs-0 .img-hover,
-#filter .tab-content .react-tabs__tab-list #react-tabs-2 .img-hover,
-#filter .tab-content .react-tabs__tab-list #react-tabs-4 .img-hover,
-#filter .tab-content .react-tabs__tab-list #react-tabs-6 .img-hover,
-#filter .tab-content .react-tabs__tab-list #react-tabs-8 .img-hover {
-  position: relative;
-}
-
-#filter .tab-content .react-tabs__tab-list #react-tabs-0 .img-hover:after,
-#filter .tab-content .react-tabs__tab-list #react-tabs-2 .img-hover:after,
-#filter .tab-content .react-tabs__tab-list #react-tabs-4 .img-hover:after,
-#filter .tab-content .react-tabs__tab-list #react-tabs-6 .img-hover:after,
-#filter .tab-content .react-tabs__tab-list #react-tabs-8 .img-hover:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-transition: 10px;
-  -o-transition: 10px;
-}
-
-#filter .tab-content .react-tabs__tab-list #react-tabs-0 .img-hover:after {
-  background: rgba(60, 85, 207, 0.36);
-}
-
-#filter .tab-content .react-tabs__tab-list #react-tabs-2 .img-hover:after {
-  background: rgba(207, 60, 60, 0.36);
-}
-
-#filter .tab-content .react-tabs__tab-list #react-tabs-4 .img-hover:after {
-  background: rgba(207, 197, 60, 0.36);
-}
-
-#filter .tab-content .react-tabs__tab-list #react-tabs-6 .img-hover:after {
-  background: rgba(60, 207, 89, 0.36);
-}
-
-#filter .tab-content .react-tabs__tab-list #react-tabs-8 .img-hover:after {
-  background: rgba(60, 85, 207, 0.36);
 }
 
 /*End Filter section*/
