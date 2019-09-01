@@ -10,8 +10,8 @@ class Filter extends Component {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="title">
-                                <div className="title-inner">
-                                <h2>Filter</h2>
+                                <div className="title-inner shadow-title text-center">
+                                    <h2>Filter<span className="shadow-text">Filter</span></h2>
                                 </div>
                             </div>
                         </div>

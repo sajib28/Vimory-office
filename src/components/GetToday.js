@@ -13,8 +13,8 @@ class GetToday extends Component {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="title">
-                                <div className="title-inner">
-                                    <h2>Get it Today</h2>
+                                <div className="title-inner shadow-title text-center">
+                                    <h2>Get it Today<span className="shadow-text">Get it Today</span></h2>
                                 </div>
                             </div>
                             <p>Vimory understands your need for animation slides to create looping slideshow video moments. Select a video animation slide that suits your need and the story you want to give an impact.</p>

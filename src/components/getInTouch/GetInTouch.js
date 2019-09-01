@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import appleStore from '../assets/img/apple-app-store.png';
-import googlePlay from '../assets/img/google-play.png';
-import appilianLogo from '../assets/img/logo-appilian.png';
+import appleStore from '../../assets/img/apple-app-store.png';
+import googlePlay from '../../assets/img/google-play.png';
+import appilianLogo from '../../assets/img/logo-appilian.png';
 class GetInTouch extends Component {
     render() {
         return (
@@ -11,8 +11,8 @@ class GetInTouch extends Component {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="title">
-                                <div className="title-inner text-center">
-                                    <h2>Get In Touch</h2>
+                                <div className="title-inner shadow-title text-center">
+                                    <h2>Get In Touch<span className="shadow-text">Get In Touch</span></h2>
                                 </div>
                             </div>
                         </div>

@@ -12,9 +12,9 @@ class Effect extends Component {
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="title">
-                                    <div className="title-inner">
-                                        <h2>Effect</h2>
-                                    </div>
+                                <div className="title-inner shadow-title text-center">
+                                    <h2>Effect<span className="shadow-text">Effect</span></h2>
+                                </div>
                                 </div>
                             </div>
                         </div>

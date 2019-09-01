@@ -8,7 +8,6 @@
     font-style: normal;
 
 }
-
 $heading-font:'helveticaregular';
 $body-font: 'helveticaregular';
 $theme-color:#0584D1;
@@ -97,22 +96,51 @@ a {
 .section-header {
     padding-bottom: 25px;
 }
-
 section {
     padding: 80px 0;
 }
-
+.section-title {
+    margin:0 0 60px;
+    h2 {
+        margin: 0 0 30px;
+    }
+}
 .text-center {
     text-align: center;
 }
-
 .title {
     h2 {
         text-align: center;
         color: $white;
     }
 }
-
+.shadow-title {
+    h2{
+        font-size: 90px;
+        line-height: 108px;
+        font-stretch: 40%;
+        font-weight: bold;
+        z-index: 1;
+        letter-spacing: 4px;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        position: relative;
+    }
+  
+    .shadow-text{
+        position: absolute;
+        font-size: 200px;
+        left: 50%;
+        top:30px;
+        transform: translateX(-50%);
+        z-index: -1;
+        color: rgba(238, 235, 207, .14);
+        letter-spacing: 4px;
+        font-weight: bold;
+        width: 100%;
+    }
+}
 .pic-overlay {
     position: absolute;
     top: 0;
@@ -202,6 +230,7 @@ svg {
 }
 
 /*End svg Icon css */
+
 /*End Back To Top Css*/
 .mobile-frame {
     position: relative;
@@ -217,25 +246,13 @@ svg {
             border-top: 3px solid #000;
         }
     }
-
-
-}
-
-.section-title {
-    h2 {
-        margin: 0 0 30px;
-    }
-
-    margin:0 0 60px;
 }
 
 /*Start Common css for Apps logo*/
 .apps-logo {
     list-style-type: none;
-
     li {
         display: inline-block;
-
         a {
             display: block;
         }
@@ -261,30 +278,30 @@ svg {
         .title-inner {
             width: 100%;
 
-            h2 {
-                font-size: 90px;
-                line-height: 108px;
-                font-stretch: 40%;
-                font-weight: bold;
-                z-index: 1;
-                letter-spacing: 4px;
-                margin: 0 auto;
-                display: block;
-                text-align: center;
-                position: relative;
+            // h2 {
+            //     font-size: 90px;
+            //     line-height: 108px;
+            //     font-stretch: 40%;
+            //     font-weight: bold;
+            //     z-index: 1;
+            //     letter-spacing: 4px;
+            //     margin: 0 auto;
+            //     display: block;
+            //     text-align: center;
+            //     position: relative;
 
-                &:before {
-                    position: absolute;
-                    font-size: 200px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    z-index: -1;
-                    color: rgba(238, 235, 207, .14);
-                    letter-spacing: 4px;
-                    font-weight: bold;
-                    width: 100%;
-                }
-            }
+            //     .shadow-text {
+            //         position: absolute;
+            //         font-size: 200px;
+            //         left: 50%;
+            //         transform: translateX(-50%);
+            //         z-index: -1;
+            //         color: rgba(238, 235, 207, .14);
+            //         letter-spacing: 4px;
+            //         font-weight: bold;
+            //         width: 100%;
+            //     }
+            // }
         }
     }
 }
@@ -390,31 +407,31 @@ svg {
     padding: 150px 0 150px;
     position: relative;
 
-    h2 {
-        font-size: 90px;
-        line-height: 108px;
-        font-stretch: 40%;
-        font-weight: bold;
-        position: relative;
-        width: 1072px;
-        z-index: 1;
-        letter-spacing: 5px;
-        margin: 0 auto;
-        display: block;
-        text-align: left;
+    // h2 {
+    //     font-size: 90px;
+    //     line-height: 108px;
+    //     font-stretch: 40%;
+    //     font-weight: bold;
+    //     position: relative;
+    //     width: 1072px;
+    //     z-index: 1;
+    //     letter-spacing: 5px;
+    //     margin: 0 auto;
+    //     display: block;
+    //     text-align: left;
 
-        &:before {
-            content: "Get it Today";
-            position: absolute;
-            font-size: 185px;
-            left: 0;
-            right: 0;
-            z-index: -1;
-            color: rgba(238, 235, 207, .14);
-            letter-spacing: 5px;
-        }
+    //     &:before {
+    //         content: "Get it Today";
+    //         position: absolute;
+    //         font-size: 185px;
+    //         left: 0;
+    //         right: 0;
+    //         z-index: -1;
+    //         color: rgba(238, 235, 207, .14);
+    //         letter-spacing: 5px;
+    //     }
 
-    }
+    // }
 
     p {
         font-size: 20px;
@@ -688,11 +705,6 @@ svg {
     .photo-area {
         background-image: url("../img/effect-bg.jpg");
 
-        h2 {
-            &:before {
-                content: "Effect";
-            }
-        }
     }
 
 
@@ -758,12 +770,6 @@ svg {
 
     .photo-area {
         background-image: url("../img/filter-bg.jpg");
-    }
-
-    h2 {
-        &:before {
-            content: "Filter";
-        }
     }
 
     .tab-content {
@@ -1060,10 +1066,9 @@ svg {
         margin-bottom: 100px;
 
         h2 {
-            &:before {
-                content: "Get In Touch";
+            .shadow-text{
                 font-size: 180px;
-                top: -10px;
+                top: 30px;
             }
         }
     }
@@ -1184,18 +1189,22 @@ svg {
                 a {
                     color: $white;
                     text-decoration: none;
-                    padding: 0 15px;
+                    margin: 0 15px;
                     line-height: 32px;
 
                     i {
                         width: 32px;
                         height: 32px;
-                        background: $social-icon;
+                        background: rgba($theme-color,0.8);
                         text-align: center;
                         @include border-radius(50%);
                         text-align: center;
                         line-height: 32px;
                         font-size: 16px;
+                        @include transition(all 0.3s ease-in-out);
+                        &:hover{
+                            background: rgba($theme-color,1);
+                        }
                     }
                 }
             }

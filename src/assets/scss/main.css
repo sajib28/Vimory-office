@@ -64,6 +64,14 @@ section {
   padding: 80px 0;
 }
 
+.section-title {
+  margin: 0 0 60px;
+}
+
+.section-title h2 {
+  margin: 0 0 30px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -71,6 +79,33 @@ section {
 .title h2 {
   text-align: center;
   color: #fff;
+}
+
+.shadow-title h2 {
+  font-size: 90px;
+  line-height: 108px;
+  font-stretch: 40%;
+  font-weight: bold;
+  z-index: 1;
+  letter-spacing: 4px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.shadow-title .shadow-text {
+  position: absolute;
+  font-size: 200px;
+  left: 50%;
+  top: 30px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+  color: rgba(238, 235, 207, 0.14);
+  letter-spacing: 4px;
+  font-weight: bold;
+  width: 100%;
 }
 
 .pic-overlay {
@@ -169,14 +204,6 @@ svg .cls-2 {
   border-top: 3px solid #000;
 }
 
-.section-title {
-  margin: 0 0 60px;
-}
-
-.section-title h2 {
-  margin: 0 0 30px;
-}
-
 /*Start Common css for Apps logo*/
 .apps-logo {
   list-style-type: none;
@@ -211,32 +238,6 @@ svg .cls-2 {
 }
 
 .photo-with-content .title .title-inner {
-  width: 100%;
-}
-
-.photo-with-content .title .title-inner h2 {
-  font-size: 90px;
-  line-height: 108px;
-  font-stretch: 40%;
-  font-weight: bold;
-  z-index: 1;
-  letter-spacing: 4px;
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-  position: relative;
-}
-
-.photo-with-content .title .title-inner h2:before {
-  position: absolute;
-  font-size: 200px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: -1;
-  color: rgba(238, 235, 207, 0.14);
-  letter-spacing: 4px;
-  font-weight: bold;
   width: 100%;
 }
 
@@ -359,31 +360,6 @@ svg .cls-2 {
   background-image: url("../img/get-today-bg.png");
   padding: 150px 0 150px;
   position: relative;
-}
-
-#getToday h2 {
-  font-size: 90px;
-  line-height: 108px;
-  font-stretch: 40%;
-  font-weight: bold;
-  position: relative;
-  width: 1072px;
-  z-index: 1;
-  letter-spacing: 5px;
-  margin: 0 auto;
-  display: block;
-  text-align: left;
-}
-
-#getToday h2:before {
-  content: "Get it Today";
-  position: absolute;
-  font-size: 185px;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  color: rgba(238, 235, 207, 0.14);
-  letter-spacing: 5px;
 }
 
 #getToday p {
@@ -646,10 +622,6 @@ svg .cls-2 {
   background-image: url("../img/effect-bg.jpg");
 }
 
-#effect .photo-area h2:before {
-  content: "Effect";
-}
-
 /*End Effect section*/
 /*Start Frame section*/
 #frame {
@@ -701,10 +673,6 @@ svg .cls-2 {
 
 #filter .photo-area {
   background-image: url("../img/filter-bg.jpg");
-}
-
-#filter h2:before {
-  content: "Filter";
 }
 
 #filter .tab-content .img-hover {
@@ -986,10 +954,9 @@ svg .cls-2 {
   margin-bottom: 100px;
 }
 
-#getInTouch .title-inner h2:before {
-  content: "Get In Touch";
+#getInTouch .title-inner h2 .shadow-text {
   font-size: 180px;
-  top: -10px;
+  top: 30px;
 }
 
 #getInTouch .contact-info h3 {
@@ -1098,14 +1065,14 @@ svg .cls-2 {
 #footer .social-icon ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0 15px;
+  margin: 0 15px;
   line-height: 32px;
 }
 
 #footer .social-icon ul li a i {
   width: 32px;
   height: 32px;
-  background: #1DA1F2;
+  background: rgba(5, 132, 209, 0.8);
   text-align: center;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1115,6 +1082,12 @@ svg .cls-2 {
   text-align: center;
   line-height: 32px;
   font-size: 16px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#footer .social-icon ul li a i:hover {
+  background: #0584d1;
 }
 
 /*End Footer Css*/

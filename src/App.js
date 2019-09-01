@@ -19,7 +19,7 @@ import GetToday from './components/GetToday';
 import ClientReview from './components/ClientReview';
 import Pricing from './components/Pricing';
 import Faq from './components/Faq';
-import GetInTouch from './components/GetInTouch';
+import GetInTouch from './components/getInTouch/GetInTouch';
 import Footer from './components/Footer';
 import WOW from 'wowjs';
 function App() {
