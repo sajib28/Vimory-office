@@ -9,11 +9,12 @@ class SliderCom extends Component {
         var settings = {
             dots: true,
             infinite: true,
+            fade: true,
             autoplay: false,
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows:false
+            arrows:true
         };
         return (
 

@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 
 import { Accordion, Card } from 'react-bootstrap';
 class BootsrapAcc extends Component {
-    render() {
 
+    render() {
+       
         return (
             <Accordion defaultActiveKey="2">
                 <Card>

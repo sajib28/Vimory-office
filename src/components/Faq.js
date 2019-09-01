@@ -16,12 +16,12 @@ class Faq extends Component {
                     <div className="row">
                         <div className="col-md-6 offset-3">
                             <div className="accordion-menu">
-                            <BootsrapAcc/>
+                                <BootsrapAcc />
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
         )
     }
 }

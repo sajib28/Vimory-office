@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Navbar, Nav, NavDropdown, Button, ButtonToolbar } from 'react-bootstrap';
 
 // import file or image
 import logo from '../assets/img/vimory-logo.png';
 
 class Header extends Component {
+    
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -38,9 +41,10 @@ class Header extends Component {
     };
 
     render() {
-
+        
         return (
-            <nav id="mainMenu" style=
+            <div>
+                {/* <nav id="mainMenu" style=
                 {{
                     width: "100%", top: "0px", zIndex: "999", position: this.state.scrollingLock ? "static" : "absolute"
                 }}
@@ -113,8 +117,79 @@ class Header extends Component {
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> */}
+                <Navbar id="mainMenu" collapseOnSelect expand="lg" style=
+                {{
+                    width: "100%", top: "0px", zIndex: "999", position: this.state.scrollingLock ? "static" : "absolute"
+                }} className={this.state.scrollingLock ? 'fixedClass navbar navbar-expand-lg navbar-light header-area' : 'absoluteClass navbar navbar-expand-lg navbar-light header-area'}>
+                    <div className="container">
+                        <Navbar.Brand href="#home" className="ml-auto"><img src={logo} alt="Vimory Logo" /></Navbar.Brand>
+                        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                        <Navbar.Collapse id="responsive-navbar-nav">
+                            <Nav className="ml-auto">
+                                <ul className="navbar-nav mt-2 mt-lg-0" id="main-menu">
+                                    <li className="nav-item">
+                                        <Link
+                                            activeClass="active"
+                                            to="mainMenu"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={0}
+                                            duration={2000}
+                                            className="nav-link">Home
+                                </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link
+                                            activeClass="active"
+                                            to="appFeature"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={134}
+                                            duration={2000}
+                                            className="nav-link">Features
+                                </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link
+                                            activeClass="active"
+                                            to="pricing"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={134}
+                                            duration={3000}
+                                            className="nav-link">Pricing
+                                </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link
+                                            activeClass="active"
+                                            to="faqs"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={134}
+                                            duration={3000}
+                                            className="nav-link">FAQs
+                                </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link
+                                            activeClass="active"
+                                            to="getInTouch"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={134}
+                                            duration={3000}
+                                            className="nav-link">Contact Us
+                                </Link>
+                                    </li>
+                                </ul>
+                            </Nav>
+                        </Navbar.Collapse>
+                    </div>
+                </Navbar>
 
+            </div>
         );
     }
 }

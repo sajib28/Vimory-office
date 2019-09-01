@@ -1,26 +1,31 @@
 import React from 'react';
 import './assets/css/bootstrap.min.css';
 //import './assets/css/solar.css';
+import './assets/css/animate.min.css';
 import './assets/fontAwesome/css/fontawesome.min.css';
 import './assets/fontAwesome/css/all.min.css';
 import './assets/scss/main.css';
 import Header from './components/Header';
 import Welcome from './components/Welcome';
-import AppFeature from './components/AppFeature';
+import AppFeature from './components/feature/AppFeature';
 import Templates from './components/Templates';
 import AnimationSlider from './components/AnimationSlider';
 import Effect from './components/Effect';
-import PhotoEdit from './components/PhotoEdit';
-import Slide from './components/Slide';
-import Filter from './components/Filter';
-import Frame from './components/Frame';
+import PhotoEdit from './components/photoEdit/PhotoEdit';
+import SlideSection from './components/slide/SlideSection';
+import Filter from './components/filter/Filter';
+import FrameSection from './components/frame/FrameSection';
 import GetToday from './components/GetToday';
 import ClientReview from './components/ClientReview';
 import Pricing from './components/Pricing';
 import Faq from './components/Faq';
 import GetInTouch from './components/GetInTouch';
 import Footer from './components/Footer';
+import WOW from 'wowjs';
 function App() {
+  new WOW.WOW({
+    live: false
+  }).init();
   return (
     <div className="App">
       <Header />
@@ -29,16 +34,16 @@ function App() {
       <Templates />
       <AnimationSlider />
       <PhotoEdit />
-      <Slide />
+      <SlideSection />
       <Effect />
       <Filter />
       <GetToday />
-      <ClientReview/>
-      <Frame />
-      <Pricing/>
+      <ClientReview />
+      <FrameSection />
+      <Pricing />
       <Faq />
-      <GetInTouch/>
-      <Footer/>
+      <GetInTouch />
+      <Footer />
     </div>
   );
 }
