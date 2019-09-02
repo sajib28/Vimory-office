@@ -254,14 +254,12 @@ svg {
 
     .cls-2 {
         fill: #030303;
-        stroke: #000;
     }
 }
 
 .react-tabs__tab--selected {
     .cls-2 {
         fill: $theme-color;
-        stroke: $theme-color;
     }
 }
 
@@ -276,15 +274,15 @@ svg {
     .cls-2,
     .cls-3,
     .cls-4 {
-        stroke: #000;
+        
     }
 
     .cls-2 {
-        stroke-width: 2.5px;
+       
     }
 
     .cls-3 {
-        stroke-width: 2px;
+      
     }
 
     .cls-4 {
@@ -292,7 +290,7 @@ svg {
     }
 
     .cls-5 {
-        stroke: none;
+        
     }
 }
 
@@ -752,7 +750,7 @@ svg {
         .photo-content {
             .img-hover {
                 i {
-                    font-size: 35px;
+                    font-size: 30px;
                 }
             }
 

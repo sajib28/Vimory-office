@@ -202,12 +202,10 @@ section {
 /*Svg icon Css*/
 svg .cls-2 {
   fill: #030303;
-  stroke: #000;
 }
 
 .react-tabs__tab--selected .cls-2 {
   fill: #0584D1;
-  stroke: #0584D1;
 }
 
 .emoji .cls-1,
@@ -216,26 +214,8 @@ svg .cls-2 {
   fill: none;
 }
 
-.emoji .cls-2,
-.emoji .cls-3,
-.emoji .cls-4 {
-  stroke: #000;
-}
-
-.emoji .cls-2 {
-  stroke-width: 2.5px;
-}
-
-.emoji .cls-3 {
-  stroke-width: 2px;
-}
-
 .emoji .cls-4 {
   fill: #030303;
-}
-
-.emoji .cls-5 {
-  stroke: none;
 }
 
 /*End svg Icon css */
@@ -654,7 +634,7 @@ svg .cls-2 {
 }
 
 #photoEdit .content-area .photo-content .img-hover i {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 #photoEdit .content-area .photo-content .react-tabs__tab--selected .img-hover i {
