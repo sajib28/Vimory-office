@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import appleStore from '../assets/img/apple-app-store.png';
-import googlePlay from '../assets/img/apple-app-store.png';
+import appleStore from '../../assets/img/apple-app-store.png';
+import googlePlay from '../../assets/img/apple-app-store.png';
 
 class Welcome extends Component {
     render() {

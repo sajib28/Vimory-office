@@ -6,7 +6,7 @@ import './assets/fontAwesome/css/fontawesome.min.css';
 import './assets/fontAwesome/css/all.min.css';
 import './assets/scss/main.css';
 import Header from './components/CommonTools/Header';
-import Welcome from './components/Welcome';
+import Welcome from './components/welcome/Welcome';
 import AppFeature from './components/feature/AppFeature';
 import Templates from './components/templates/Templates';
 import Effect from './components/effect/Effect';
