@@ -570,10 +570,6 @@ svg .cls-2 {
   background-image: url("../img/slide-bg.jpg");
 }
 
-#Slide h2:before {
-  content: "Slide";
-}
-
 #Slide .content-area .mobile-frame {
   float: right;
 }

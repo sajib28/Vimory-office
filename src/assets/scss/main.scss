@@ -648,12 +648,6 @@ svg {
         background-image: url("../img/slide-bg.jpg");
     }
 
-    h2 {
-        &:before {
-            content: "Slide";
-        }
-    }
-
     .content-area {
         .mobile-frame {
             float: right;
