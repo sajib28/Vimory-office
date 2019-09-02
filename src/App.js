@@ -9,7 +9,6 @@ import Header from './components/CommonTools/Header';
 import Welcome from './components/Welcome';
 import AppFeature from './components/feature/AppFeature';
 import Templates from './components/templates/Templates';
-import AnimationSlider from './components/AnimationSlider';
 import Effect from './components/effect/Effect';
 import PhotoEdit from './components/photoEdit/PhotoEdit';
 import SlideSection from './components/slide/SlideSection';
@@ -32,7 +31,6 @@ function App() {
       <Welcome />
       <AppFeature />
       <Templates />
-      <AnimationSlider />
       <PhotoEdit />
       <SlideSection />
       <Effect />
