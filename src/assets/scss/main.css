@@ -94,7 +94,7 @@ section {
   position: relative;
 }
 
-.shadow-title .shadow-text {
+.shadow-text {
   position: absolute;
   font-size: 200px;
   left: 50%;
@@ -360,6 +360,11 @@ svg .cls-2 {
   background-image: url("../img/get-today-bg.png");
   padding: 150px 0 150px;
   position: relative;
+}
+
+#getToday .shadow-text {
+  top: 185px;
+  z-index: 1;
 }
 
 #getToday p {

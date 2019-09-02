@@ -15,7 +15,7 @@ import PhotoEdit from './components/photoEdit/PhotoEdit';
 import SlideSection from './components/slide/SlideSection';
 import Filter from './components/filter/Filter';
 import FrameSection from './components/frame/FrameSection';
-import GetToday from './components/GetToday';
+import GetToday from './components/getToday/GetToday';
 import ClientReview from './components/review/ClientReview';
 import Pricing from './components/pricing/Pricing';
 import Faq from './components/faq/Faq';

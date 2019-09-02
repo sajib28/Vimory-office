@@ -134,7 +134,7 @@ section {
         text-align: center;
         position: relative;
     }
-
+}
     .shadow-text {
         position: absolute;
         font-size: 200px;
@@ -147,7 +147,7 @@ section {
         font-weight: bold;
         width: 100%;
     }
-}
+
 
 .pic-overlay {
     position: absolute;
@@ -416,7 +416,12 @@ svg {
     background-image: url("../img/get-today-bg.png");
     padding: 150px 0 150px;
     position: relative;
-
+    
+    .shadow-text{
+        top: 185px;
+        z-index: 1;
+    }
+    
     // h2 {
     //     font-size: 90px;
     //     line-height: 108px;
