@@ -56,6 +56,10 @@ a {
   text-decoration: none;
 }
 
+a:focus, button:focus, span:focus {
+  outline: 0;
+}
+
 .section-header {
   padding-bottom: 25px;
 }
@@ -147,6 +151,39 @@ section {
   display: block;
 }
 
+/*Modal customize css*/
+.modal-open .modal {
+  overflow-y: hidden;
+}
+
+.modal-open .modal .close {
+  color: #0584D1;
+  opacity: 1;
+}
+
+.modal-open .modal .close span {
+  color: #0584D1;
+  opacity: 1;
+}
+
+.modal-open .modal .modal-body {
+  max-height: calc(100vh - 400px);
+  overflow-y: auto;
+}
+
+.modal-open .modal .modal-body p {
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+.modal-open .modal .modal-footer button {
+  background-color: #0584D1;
+  border-color: #0584D1;
+}
+
+/*End Modal customize css*/
 /*Svg icon Css*/
 svg .cls-2 {
   fill: #030303;
@@ -1027,6 +1064,7 @@ svg .cls-2 {
   color: #fff;
   text-decoration: none;
   line-height: 32px;
+  cursor: pointer;
 }
 
 #footer .social-icon ul li {

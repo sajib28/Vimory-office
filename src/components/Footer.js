@@ -1,7 +1,20 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import AboutModal from './modal/AboutModal';
+import PrivacyPolicyModal from './modal/PrivacyPolicyModal';
+import TermConditionModal from './modal/TermConditionModal';
+import { Button, ButtonToolbar } from 'react-bootstrap';
 // import BackTop from './BackTop';
 class Footer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { deps: [], aboutModal: false }
+        this.state = { deps: [], privacyModal: false }
+        this.state = { deps: [], termConditionModal: false }
+    }
     render() {
+        let aboutModalClose = () => this.setState({ aboutModal: false });
+        let privacyModalclose = () => this.setState({ privacyModal: false });
+        let termConditionModalClose = () => this.setState({ termConditionModal: false });
         return (
             <footer id="footer">
                 <div className="container">
@@ -9,11 +22,17 @@ class Footer extends Component {
                         <div className="col-md-6">
                             <div className="footer-menu">
                                 <ul className="nav list-inline list-unstyled">
-                                    <li><a href="/">About us</a></li>
-                                    <li><a href="/">Privacy policy</a></li>
-                                    <li><a href="/">Terms & Condition</a></li>
+                                    <li>
+                                        <a onClick={() => this.setState({ aboutModal: true })}>About us</a>
+                                    </li>
+                                    <li>
+                                        <a onClick={() => this.setState({ privacyModal: true })}>Privacy policy</a>
+                                    </li>
+                                    <li>
+                                        <a onClick={() => this.setState({ termConditionModal: true })}>Terms & Condition</a>
+                                    </li>
                                     <li><a href="/">Blog</a></li>
-                                   
+
                                 </ul>
                             </div>
                         </div>
@@ -30,6 +49,15 @@ class Footer extends Component {
                         </div>
                     </div>
                 </div>
+                <AboutModal
+                    show={this.state.aboutModal}
+                    onHide={aboutModalClose} />
+                <PrivacyPolicyModal
+                    show={this.state.privacyModal}
+                    onHide={privacyModalclose} />
+                <TermConditionModal
+                    show={this.state.termConditionModal}
+                    onHide={termConditionModalClose} />
                 {/* <BackTop/> */}
             </footer>
         )

@@ -93,7 +93,9 @@ a {
     font-family: $body-font;
     text-decoration: none;
 }
-
+a:focus,button:focus,span:focus{
+    outline: 0;
+}
 .section-header {
     padding-bottom: 25px;
 }
@@ -135,18 +137,19 @@ section {
         position: relative;
     }
 }
-    .shadow-text {
-        position: absolute;
-        font-size: 200px;
-        left: 50%;
-        top: 30px;
-        transform: translateX(-50%);
-        z-index: -1;
-        color: rgba(238, 235, 207, .14);
-        letter-spacing: 4px;
-        font-weight: bold;
-        width: 100%;
-    }
+
+.shadow-text {
+    position: absolute;
+    font-size: 200px;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    z-index: -1;
+    color: rgba(238, 235, 207, .14);
+    letter-spacing: 4px;
+    font-weight: bold;
+    width: 100%;
+}
 
 
 .pic-overlay {
@@ -190,6 +193,39 @@ section {
 
 }
 
+/*Modal customize css*/
+.modal-open {
+    .modal {
+        overflow-y: hidden;
+        .close{
+            color: $theme-color;
+            opacity: 1;
+            span{
+                color: $theme-color;
+                opacity: 1;
+            }
+        }
+        .modal-body {
+            max-height: calc(100vh - 400px);
+            overflow-y: auto;
+
+            p {
+                font-size: 18px;
+                line-height: 30px;
+                letter-spacing: 1px;
+                font-weight: normal;
+            }
+        }
+        .modal-footer {
+            button {
+                background-color: $theme-color;
+                border-color: $theme-color;
+            }
+        }
+    }
+}
+
+/*End Modal customize css*/
 /*Svg icon Css*/
 svg {
 
@@ -416,12 +452,12 @@ svg {
     background-image: url("../img/get-today-bg.png");
     padding: 150px 0 150px;
     position: relative;
-    
-    .shadow-text{
+
+    .shadow-text {
         top: 185px;
         z-index: 1;
     }
-    
+
     // h2 {
     //     font-size: 90px;
     //     line-height: 108px;
@@ -1145,6 +1181,7 @@ svg {
                     color: $white;
                     text-decoration: none;
                     line-height: 32px;
+                    cursor: pointer;
 
                 }
             }
