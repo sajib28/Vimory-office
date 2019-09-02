@@ -695,6 +695,7 @@ svg {
 /*Start Frame section*/
 #frame {
     padding: 0;
+
     .content-area {
         .mobile-frame {
             width: 418px;
@@ -858,26 +859,30 @@ svg {
 
     .title-inner {
         color: $white;
-        margin-bottom: 100px;
+        margin-bottom: 80px;
 
-        h2 {
-            &:before {
-                content: "Our Pricing Plan";
-                font-size: 140px;
-            }
+        .shadow-text {
+            font-size: 140px;
         }
+    }
 
+    .subconetnt {
         h5 {
             font-size: 22px;
             font-weight: bold;
             margin-top: 80px;
+            color: $white;
         }
 
         p {
             font-size: 18px;
             line-height: 24px;
+            color: $white;
+            margin-bottom: 60px;
         }
     }
+
+
 
     .price-container {
         display: flex;

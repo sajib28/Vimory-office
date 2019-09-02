@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import priceImg1 from '../assets/img/price-img-1.png';
-import priceImg2 from '../assets/img/price-img-2.png';
+import priceImg1 from '../../assets/img/price-img-1.png';
+import priceImg2 from '../../assets/img/price-img-2.png';
 class Pricing extends Component {
     render() {
         return (
@@ -10,12 +10,21 @@ class Pricing extends Component {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="title">
+                                <div className="title-inner shadow-title text-center">
+                                    <h2>Our Pricing Plan<span className="shadow-text">Our Pricing Plan</span></h2>
+                                </div>
+                            </div>
+                            <div className="text-center subconetnt">
+                            <h5>Unlimited Access to All Features</h5>
+                            <p>Get access to all Premium Templates, Photo Editing<br />Features, Slides, Effect, Filters and Frames.<br />No Watermark & no Ads</p>
+                            </div>
+                            {/* <div className="title">
                                 <div className="title-inner text-center">
                                     <h2>Our Pricing Plan</h2>
                                     <h5>Unlimited Access to All Features</h5>
                                     <p>Get access to all Premium Templates, Photo Editing<br />Features, Slides, Effect, Filters and Frames.<br />No Watermark & no Ads</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="row">

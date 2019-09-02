@@ -17,7 +17,7 @@ import Filter from './components/filter/Filter';
 import FrameSection from './components/frame/FrameSection';
 import GetToday from './components/GetToday';
 import ClientReview from './components/ClientReview';
-import Pricing from './components/Pricing';
+import Pricing from './components/pricing/Pricing';
 import Faq from './components/Faq';
 import GetInTouch from './components/getInTouch/GetInTouch';
 import Footer from './components/Footer';

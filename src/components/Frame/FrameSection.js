@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FrameSlider from './FrameSlider';
 import BackgroundWithText from '../CommonTools/BackgroundWithText';
-import BackgroundImage from '../../assets/img/filter-bg.jpg';
+import BackgroundImage from '../../assets/img/frame-bg.jpg';
 class FrameSection extends Component {
     render() {
         return (
