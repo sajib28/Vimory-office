@@ -641,16 +641,24 @@ svg .cls-2 {
   background-image: url("../img/photo-edit-bg.jpg");
 }
 
-#photoEdit .content-area ul li {
+#photoEdit .content-area ul.content-list li {
   font-size: 18px;
   line-height: 35px;
   padding-left: 10px;
   text-indent: -10px;
 }
 
-#photoEdit .content-area ul li i {
+#photoEdit .content-area ul.content-list li i {
   padding-right: 8px;
   font-size: 12px;
+}
+
+#photoEdit .content-area .photo-content .img-hover i {
+  font-size: 35px;
+}
+
+#photoEdit .content-area .photo-content .react-tabs__tab--selected .img-hover i {
+  color: #0584D1;
 }
 
 /*End Photo Edit section*/

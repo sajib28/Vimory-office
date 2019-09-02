@@ -201,9 +201,11 @@ section {
 .modal-open {
     .modal {
         overflow-y: hidden;
-        .modal-content{
-            background:#f8f9fa;
+
+        .modal-content {
+            background: #f8f9fa;
         }
+
         .close {
             color: $theme-color;
             opacity: 1;
@@ -228,11 +230,11 @@ section {
 
         .modal-footer {
             button {
-                &.btn-danger{
+                &.btn-danger {
                     background-color: $theme-color;
                     border-color: $theme-color;
                     box-shadow: none;
-    
+
                     &:focus,
                     &:active {
                         background-color: $theme-color;
@@ -240,7 +242,7 @@ section {
                         box-shadow: none;
                     }
                 }
-               
+
             }
         }
     }
@@ -731,15 +733,34 @@ svg {
 
     .content-area {
         ul {
-            li {
-                font-size: 18px;
-                line-height: 35px;
-                padding-left: 10px;
-                text-indent: -10px;
+            &.content-list {
+                li {
+                    font-size: 18px;
+                    line-height: 35px;
+                    padding-left: 10px;
+                    text-indent: -10px;
 
+                    i {
+                        padding-right: 8px;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+        }
+
+        .photo-content {
+            .img-hover {
                 i {
-                    padding-right: 8px;
-                    font-size: 12px;
+                    font-size: 35px;
+                }
+            }
+
+            .react-tabs__tab--selected {
+                .img-hover {
+                    i {
+                        color: $theme-color;
+                    }
                 }
             }
         }

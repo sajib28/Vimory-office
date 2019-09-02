@@ -3,7 +3,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { Navbar, Nav, NavDropdown, Button, ButtonToolbar } from 'react-bootstrap';
 
 // import file or image
-import logo from '../assets/img/vimory-logo.png';
+import logo from '../../assets/img/vimory-logo.png';
 
 class Header extends Component {
     

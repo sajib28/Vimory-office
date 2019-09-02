@@ -5,7 +5,7 @@ import './assets/css/animate.min.css';
 import './assets/fontAwesome/css/fontawesome.min.css';
 import './assets/fontAwesome/css/all.min.css';
 import './assets/scss/main.css';
-import Header from './components/Header';
+import Header from './components/CommonTools/Header';
 import Welcome from './components/Welcome';
 import AppFeature from './components/feature/AppFeature';
 import Templates from './components/templates/Templates';
@@ -20,7 +20,7 @@ import ClientReview from './components/review/ClientReview';
 import Pricing from './components/pricing/Pricing';
 import Faq from './components/faq/Faq';
 import GetInTouch from './components/getInTouch/GetInTouch';
-import Footer from './components/Footer';
+import Footer from './components/CommonTools/Footer';
 import WOW from 'wowjs';
 function App() {
   new WOW.WOW({

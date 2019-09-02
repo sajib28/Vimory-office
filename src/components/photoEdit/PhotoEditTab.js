@@ -24,7 +24,7 @@ class PhotoEditTab extends Component {
                             <div className="col-md-7">
                                 <h3>Photo Edit</h3>
                                 <p>Try professional photo editing tools to edit single or multiple photos for adjustments, beautify or an ideal photogenic outlook.</p>
-                                <ul className="list-unstyled">
+                                <ul className="list-unstyled content-list">
                                     <li><i className="far fa-clone"></i>Modern photo cropping tools allow you to crop your photo more easily.</li>
                                     <li><i className="far fa-clone"></i>Express the moment with emoji and do more with it.</li>
                                     <li><i className="far fa-clone"></i>So many options like Exposure, Brightness, Contrast, Saturation,Warmth, highlights that give you a professional photo editing experience.</li>

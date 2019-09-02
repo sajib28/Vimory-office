@@ -35,7 +35,7 @@ class Pricing extends Component {
                                     <div className="price-inner">
                                         <img src={priceImg1} alt="" />
                                         <h5>Monthly Plan</h5>
-                                        <h4>Resubscribe Now</h4>
+                                        <h4>Subscribe Now</h4>
                                         <p className="cost"><span>$</span> 2.99</p>
                                         <a className="btn" href="/">Buy Now</a>
                                     </div>
@@ -44,7 +44,7 @@ class Pricing extends Component {
                                     <div className="price-inner">
                                         <img src={priceImg2} alt="" />
                                         <h5>Annual plan</h5>
-                                        <h4>Resubscribe Now</h4>
+                                        <h4>Subscribe Now</h4>
                                         <p className="cost"><span>$</span>19.99</p>
                                         <a className="btn" href="/">Buy Now</a>
                                     </div>

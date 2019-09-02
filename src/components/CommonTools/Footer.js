@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import AboutModal from './modal/AboutModal';
-import PrivacyPolicyModal from './modal/PrivacyPolicyModal';
-import TermConditionModal from './modal/TermConditionModal';
+import AboutModal from '../modal/AboutModal';
+import PrivacyPolicyModal from '../modal/PrivacyPolicyModal';
+import TermConditionModal from '../modal/TermConditionModal';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 // import BackTop from './BackTop';
 class Footer extends Component {
