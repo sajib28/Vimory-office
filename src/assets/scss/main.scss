@@ -93,9 +93,13 @@ a {
     font-family: $body-font;
     text-decoration: none;
 }
-a:focus,button:focus,span:focus{
+
+a:focus,
+button:focus,
+span:focus {
     outline: 0;
 }
+
 .section-header {
     padding-bottom: 25px;
 }
@@ -197,14 +201,19 @@ section {
 .modal-open {
     .modal {
         overflow-y: hidden;
-        .close{
+        .modal-content{
+            background:#f8f9fa;
+        }
+        .close {
             color: $theme-color;
             opacity: 1;
-            span{
+
+            span {
                 color: $theme-color;
                 opacity: 1;
             }
         }
+
         .modal-body {
             max-height: calc(100vh - 400px);
             overflow-y: auto;
@@ -212,14 +221,26 @@ section {
             p {
                 font-size: 18px;
                 line-height: 30px;
-                letter-spacing: 1px;
+                letter-spacing: .5px;
                 font-weight: normal;
             }
         }
+
         .modal-footer {
             button {
-                background-color: $theme-color;
-                border-color: $theme-color;
+                &.btn-danger{
+                    background-color: $theme-color;
+                    border-color: $theme-color;
+                    box-shadow: none;
+    
+                    &:focus,
+                    &:active {
+                        background-color: $theme-color;
+                        border-color: $theme-color;
+                        box-shadow: none;
+                    }
+                }
+               
             }
         }
     }
@@ -1207,7 +1228,7 @@ svg {
                     i {
                         width: 32px;
                         height: 32px;
-                        background: rgba($theme-color, 0.8);
+                        background: rgba($theme-color, 1);
                         text-align: center;
                         @include border-radius(50%);
                         text-align: center;
@@ -1216,7 +1237,7 @@ svg {
                         @include transition(all 0.3s ease-in-out);
 
                         &:hover {
-                            background: rgba($theme-color, 1);
+                            background: rgba($theme-color, 0.8);
                         }
                     }
                 }

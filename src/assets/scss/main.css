@@ -56,7 +56,9 @@ a {
   text-decoration: none;
 }
 
-a:focus, button:focus, span:focus {
+a:focus,
+button:focus,
+span:focus {
   outline: 0;
 }
 
@@ -156,6 +158,10 @@ section {
   overflow-y: hidden;
 }
 
+.modal-open .modal .modal-content {
+  background: #f8f9fa;
+}
+
 .modal-open .modal .close {
   color: #0584D1;
   opacity: 1;
@@ -174,13 +180,22 @@ section {
 .modal-open .modal .modal-body p {
   font-size: 18px;
   line-height: 30px;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
   font-weight: normal;
 }
 
-.modal-open .modal .modal-footer button {
+.modal-open .modal .modal-footer button.btn-danger {
   background-color: #0584D1;
   border-color: #0584D1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modal-open .modal .modal-footer button.btn-danger:focus, .modal-open .modal .modal-footer button.btn-danger:active {
+  background-color: #0584D1;
+  border-color: #0584D1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /*End Modal customize css*/
@@ -1085,7 +1100,7 @@ svg .cls-2 {
 #footer .social-icon ul li a i {
   width: 32px;
   height: 32px;
-  background: rgba(5, 132, 209, 0.8);
+  background: #0584d1;
   text-align: center;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1100,7 +1115,7 @@ svg .cls-2 {
 }
 
 #footer .social-icon ul li a i:hover {
-  background: #0584d1;
+  background: rgba(5, 132, 209, 0.8);
 }
 
 /*End Footer Css*/
