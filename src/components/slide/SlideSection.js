@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BackgroundWithText from '../CommonTools/BackgroundWithText';
 import mobileFrame from '../../assets/img/mobile-frame.png';
 import mobileFrameSlide from '../../assets/img/mobile-frame-slide.png';
-import BackgroundImage from '../../assets/img/template-bg.jpg';
+import BackgroundImage from '../../assets/img/slide-bg.jpg';
 import SlideTab from './SlideTab';
 class Slide extends Component {
     render() {
