@@ -8,6 +8,7 @@
     font-style: normal;
 
 }
+
 $heading-font:'helveticaregular';
 $body-font: 'helveticaregular';
 $theme-color:#0584D1;
@@ -96,26 +97,32 @@ a {
 .section-header {
     padding-bottom: 25px;
 }
+
 section {
     padding: 80px 0;
 }
+
 .section-title {
-    margin:0 0 60px;
+    margin: 0 0 60px;
+
     h2 {
         margin: 0 0 30px;
     }
 }
+
 .text-center {
     text-align: center;
 }
+
 .title {
     h2 {
         text-align: center;
         color: $white;
     }
 }
+
 .shadow-title {
-    h2{
+    h2 {
         font-size: 90px;
         line-height: 108px;
         font-stretch: 40%;
@@ -127,12 +134,12 @@ section {
         text-align: center;
         position: relative;
     }
-  
-    .shadow-text{
+
+    .shadow-text {
         position: absolute;
         font-size: 200px;
         left: 50%;
-        top:30px;
+        top: 30px;
         transform: translateX(-50%);
         z-index: -1;
         color: rgba(238, 235, 207, .14);
@@ -141,6 +148,7 @@ section {
         width: 100%;
     }
 }
+
 .pic-overlay {
     position: absolute;
     top: 0;
@@ -251,8 +259,10 @@ svg {
 /*Start Common css for Apps logo*/
 .apps-logo {
     list-style-type: none;
+
     li {
         display: inline-block;
+
         a {
             display: block;
         }
@@ -592,16 +602,7 @@ svg {
 
 /*Start Common photo background Section*/
 /*Start Filter section*/
-#template {
-    background-image: url("../img/template-bg.jpg");
-
-
-    h2 {
-        &:before {
-            content: "Templates";
-        }
-    }
-}
+#templateBg {}
 
 #threedSlider {
     .video-template {
@@ -657,9 +658,7 @@ svg {
         .mobile-frame {
             float: right;
 
-            .mobile-frame-content {
-                
-            }
+            .mobile-frame-content {}
         }
     }
 }
@@ -672,11 +671,6 @@ svg {
     .photo-area {
         background-image: url("../img/photo-edit-bg.jpg");
 
-        h2 {
-            &:before {
-                content: "Photo Edit";
-            }
-        }
     }
 
     .content-area {
@@ -1066,7 +1060,7 @@ svg {
         margin-bottom: 100px;
 
         h2 {
-            .shadow-text{
+            .shadow-text {
                 font-size: 180px;
                 top: 30px;
             }
@@ -1195,15 +1189,16 @@ svg {
                     i {
                         width: 32px;
                         height: 32px;
-                        background: rgba($theme-color,0.8);
+                        background: rgba($theme-color, 0.8);
                         text-align: center;
                         @include border-radius(50%);
                         text-align: center;
                         line-height: 32px;
                         font-size: 16px;
                         @include transition(all 0.3s ease-in-out);
-                        &:hover{
-                            background: rgba($theme-color,1);
+
+                        &:hover {
+                            background: rgba($theme-color, 1);
                         }
                     }
                 }

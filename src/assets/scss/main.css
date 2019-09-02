@@ -524,14 +524,6 @@ svg .cls-2 {
 
 /*Start Common photo background Section*/
 /*Start Filter section*/
-#template {
-  background-image: url("../img/template-bg.jpg");
-}
-
-#template h2:before {
-  content: "Templates";
-}
-
 #threedSlider .video-template video {
   max-width: 100%;
 }
@@ -594,10 +586,6 @@ svg .cls-2 {
 
 #photoEdit .photo-area {
   background-image: url("../img/photo-edit-bg.jpg");
-}
-
-#photoEdit .photo-area h2:before {
-  content: "Photo Edit";
 }
 
 #photoEdit .content-area ul li {

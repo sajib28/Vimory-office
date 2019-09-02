@@ -1,27 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import BackgroundWithText from '../CommonTools/BackgroundWithText';
 //import mobileFrame from '../assets/img/mobile-frame.png';
 //import mobileFrameEffect from '../assets/media/sample-video.mp4';
 //import CommonTab from '../components/tab/CommonTab';
 import PhotoEditTab from './PhotoEditTab';
-
+import BackgroundImage from '../../assets/img/photo-edit-bg.jpg';
 class PhotoEdit extends Component {
     render() {
         return (
             <section id="photoEdit">
-                <div id="photoEditBg" className="photo-area">
-                    <div className="pic-overlay"></div>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <div className="title">
-                                    <div className="title-inner">
-                                        <h2>Photo Edit</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <BackgroundWithText id ="photoEditBg" backgroundImage={BackgroundImage} title="Photo Edit" shadowTitle="Photo Edit"/>
                 <div className="content-area">
                     <div className="container">
                         <div className="row">

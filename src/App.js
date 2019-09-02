@@ -8,7 +8,7 @@ import './assets/scss/main.css';
 import Header from './components/Header';
 import Welcome from './components/Welcome';
 import AppFeature from './components/feature/AppFeature';
-import Templates from './components/Templates';
+import Templates from './components/templates/Templates';
 import AnimationSlider from './components/AnimationSlider';
 import Effect from './components/Effect';
 import PhotoEdit from './components/photoEdit/PhotoEdit';
