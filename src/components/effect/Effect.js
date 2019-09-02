@@ -1,25 +1,14 @@
 import React, { Component } from 'react';
-import mobileFrame from '../assets/img/mobile-frame.png';
-import mobileFrameEffect from '../assets/img/mobile-frame-effect.png';
+import BackgroundWithText from '../CommonTools/BackgroundWithText';
+import BackgroundImage from '../../assets/img/effect-bg.jpg';
+import mobileFrame from '../../assets/img/mobile-frame.png';
+import mobileFrameEffect from '../../assets/img/mobile-frame-effect.png';
 class Effect extends Component {
     render() {
         return (
             // Start Effect Section
             <section id="effect">
-                <div id="effectBg" className="photo-area">
-                    <div className="pic-overlay"></div>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <div className="title">
-                                    <div className="title-inner shadow-title text-center">
-                                        <h2>Effect<span className="shadow-text">Effect</span></h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <BackgroundWithText id ="effectBg" backgroundImage={BackgroundImage} title="Effect" shadowTitle="Effect"/>
                 <div className="content-area">
                     <div className="container">
                         <div className="row">
