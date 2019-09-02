@@ -273,25 +273,17 @@ svg {
 
     .cls-2,
     .cls-3,
-    .cls-4 {
-        
-    }
+    .cls-4 {}
 
-    .cls-2 {
-       
-    }
+    .cls-2 {}
 
-    .cls-3 {
-      
-    }
+    .cls-3 {}
 
     .cls-4 {
         fill: #030303;
     }
 
-    .cls-5 {
-        
-    }
+    .cls-5 {}
 }
 
 /*End svg Icon css */
@@ -426,7 +418,8 @@ svg {
                 display: block;
                 font-size: 20px;
                 line-height: 30px;
-                margin-top: 15px;
+                margin-top: 25px;
+                font-weight: bold;
             }
 
             &:focus {
@@ -716,6 +709,26 @@ svg {
 
             .mobile-frame-content {}
         }
+
+        .img-hover{
+            &:after{
+                content: none;
+            }
+            .cls-1,
+            .cls-2,.cls-3 {
+                fill: none;
+                stroke-miterlimit: 10;
+                stroke-width: 2px;
+                stroke: #030303;
+            }
+        }
+        .react-tabs__tab--selected {
+            .cls-1,
+            .cls-2,.cls-3  {
+                stroke: $theme-color;
+            }
+        }
+
     }
 }
 
@@ -749,6 +762,9 @@ svg {
 
         .photo-content {
             .img-hover {
+                &:after{
+                    content: none;
+                }
                 i {
                     font-size: 30px;
                 }
@@ -827,7 +843,7 @@ svg {
 
         #filter-1 {
             &:after {
-                background: rgba(#CF3C3C, .36);
+                background: rgba(#3e82f0, .36);
             }
         }
 

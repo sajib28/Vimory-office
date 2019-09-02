@@ -341,7 +341,8 @@ svg .cls-2 {
   display: block;
   font-size: 20px;
   line-height: 30px;
-  margin-top: 15px;
+  margin-top: 25px;
+  font-weight: bold;
 }
 
 .tab-content .react-tabs__tab-list .react-tabs__tab:focus {
@@ -611,6 +612,23 @@ svg .cls-2 {
   float: right;
 }
 
+#Slide .content-area .img-hover:after {
+  content: none;
+}
+
+#Slide .content-area .img-hover .cls-1,
+#Slide .content-area .img-hover .cls-2, #Slide .content-area .img-hover .cls-3 {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  stroke: #030303;
+}
+
+#Slide .content-area .react-tabs__tab--selected .cls-1,
+#Slide .content-area .react-tabs__tab--selected .cls-2, #Slide .content-area .react-tabs__tab--selected .cls-3 {
+  stroke: #0584D1;
+}
+
 /*End Slide section*/
 /*Start Photo Edit section*/
 #photoEdit {
@@ -631,6 +649,10 @@ svg .cls-2 {
 #photoEdit .content-area ul.content-list li i {
   padding-right: 8px;
   font-size: 12px;
+}
+
+#photoEdit .content-area .photo-content .img-hover:after {
+  content: none;
 }
 
 #photoEdit .content-area .photo-content .img-hover i {
@@ -698,7 +720,7 @@ svg .cls-2 {
 }
 
 #filter .tab-content #filter-1:after {
-  background: rgba(207, 60, 60, 0.36);
+  background: rgba(62, 130, 240, 0.36);
 }
 
 #filter .tab-content #filter-2:after {
