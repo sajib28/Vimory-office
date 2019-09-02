@@ -1,23 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import BackgroundWithText from '../CommonTools/BackgroundWithText';
+import BackgroundImage from '../../assets/img/filter-bg.jpg';
 import TabCom from './TabCom';
 class Filter extends Component {
     render() {
         return (
             <section id="filter">
-            <div id="filterBg" className="photo-area">
-                <div className="pic-overlay"></div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="title">
-                                <div className="title-inner shadow-title text-center">
-                                    <h2>Filter<span className="shadow-text">Filter</span></h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <BackgroundWithText id ="filterBg" backgroundImage={BackgroundImage} title="Filter" shadowTitle="Filter"/>
             <div className="content-area">
                 <div className="container">
                     <div className="row">
