@@ -54,6 +54,14 @@ ul {
 a {
   font-family: "helveticaregular";
   text-decoration: none;
+  color: #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #0584D1;
 }
 
 a:focus,
@@ -173,15 +181,26 @@ section {
 }
 
 .modal-open .modal .modal-body {
-  max-height: calc(100vh - 400px);
+  max-height: calc(100vh - 260px);
   overflow-y: auto;
 }
 
 .modal-open .modal .modal-body p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
   letter-spacing: .5px;
   font-weight: normal;
+  font-family: "helveticaregular";
+  text-align: justify;
+}
+
+.modal-open .modal .modal-body ul {
+  padding: 0 0 20px 20px;
+  list-style-type: none;
+}
+
+.modal-open .modal .modal-body ul li {
+  padding: 5px 0;
 }
 
 .modal-open .modal .modal-footer button.btn-danger {
@@ -324,8 +343,8 @@ svg .cls-2 {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-transition: 10px;
-  -o-transition: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .tab-content .react-tabs__tab-list .react-tabs__tab img {
@@ -333,8 +352,8 @@ svg .cls-2 {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-transition: 10px;
-  -o-transition: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .tab-content .react-tabs__tab-list .react-tabs__tab span {
@@ -364,8 +383,8 @@ svg .cls-2 {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-transition: 10px;
-  -o-transition: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 /* Common Tab content css*/
@@ -571,8 +590,8 @@ svg .cls-2 {
   box-shadow: 0 0 20px black;
   -webkit-box-shadow: 0 0 20px black;
   -moz-box-shadow: 0 0 20px black;
-  -ms-transition: 0 0 20px black;
-  -o-transition: 0 0 20px black;
+  -ms-box-shadow: 0 0 20px black;
+  -o-box-shadow: 0 0 20px black;
 }
 
 #threedSlider .css-1qzevvg {
@@ -618,7 +637,8 @@ svg .cls-2 {
 }
 
 #Slide .content-area .img-hover .cls-1,
-#Slide .content-area .img-hover .cls-2, #Slide .content-area .img-hover .cls-3 {
+#Slide .content-area .img-hover .cls-2,
+#Slide .content-area .img-hover .cls-3 {
   fill: none;
   stroke-miterlimit: 10;
   stroke-width: 2px;
@@ -626,7 +646,8 @@ svg .cls-2 {
 }
 
 #Slide .content-area .react-tabs__tab--selected .cls-1,
-#Slide .content-area .react-tabs__tab--selected .cls-2, #Slide .content-area .react-tabs__tab--selected .cls-3 {
+#Slide .content-area .react-tabs__tab--selected .cls-2,
+#Slide .content-area .react-tabs__tab--selected .cls-3 {
   stroke: #0584D1;
 }
 
@@ -716,8 +737,8 @@ svg .cls-2 {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-transition: 10px;
-  -o-transition: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 #filter .tab-content #filter-1:after {
@@ -850,8 +871,8 @@ svg .cls-2 {
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  -ms-transition: 20px;
-  -o-transition: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
   border: 1px solid #707070;
   -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
           box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
@@ -921,8 +942,8 @@ svg .cls-2 {
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  -ms-transition: 20px;
-  -o-transition: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
   font-size: 20px;
   padding: 0 45px;
   height: 45px;
@@ -949,13 +970,13 @@ svg .cls-2 {
   border-radius: 14x;
   -webkit-border-radius: 14x;
   -moz-border-radius: 14x;
-  -ms-transition: 14x;
-  -o-transition: 14x;
+  -ms-border-radius: 14x;
+  -o-border-radius: 14x;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  -ms-transition: 0 3px 6px rgba(0, 0, 0, 0.16);
-  -o-transition: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 #faqs .accordion-menu .card .card-header h5 {
@@ -1039,8 +1060,8 @@ svg .cls-2 {
   border-radius: 17px;
   -webkit-border-radius: 17px;
   -moz-border-radius: 17px;
-  -ms-transition: 17px;
-  -o-transition: 17px;
+  -ms-border-radius: 17px;
+  -o-border-radius: 17px;
   height: 56px;
   border: 2px solid #0C89D5;
   -webkit-box-shadow: none;
@@ -1116,8 +1137,8 @@ svg .cls-2 {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  -ms-transition: 50%;
-  -o-transition: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   text-align: center;
   line-height: 32px;
   font-size: 16px;

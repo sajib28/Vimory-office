@@ -33,16 +33,16 @@ $social-icon:#1DA1F2;
     border-radius: $radius;
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
-    -ms-transition: $radius;
-    -o-transition: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
 }
 
 @mixin box-shadow($left, $top, $blur, $color) {
     box-shadow: $left $top $blur $color;
     -webkit-box-shadow: $left $top $blur $color;
     -moz-box-shadow: $left $top $blur $color;
-    -ms-transition: $left $top $blur $color;
-    -o-transition: $left $top $blur $color;
+    -ms-box-shadow: $left $top $blur $color;
+    -o-box-shadow: $left $top $blur $color;
 }
 
 /*End All Cross browser CSS3 mixins*/
@@ -92,6 +92,13 @@ ul {
 a {
     font-family: $body-font;
     text-decoration: none;
+    color: $black;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        text-decoration: none;
+        color: $theme-color;
+    }
 }
 
 a:focus,
@@ -217,14 +224,24 @@ section {
         }
 
         .modal-body {
-            max-height: calc(100vh - 400px);
+            max-height: calc(100vh - 260px);
             overflow-y: auto;
 
             p {
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 30px;
                 letter-spacing: .5px;
                 font-weight: normal;
+                font-family: $body-font;
+                text-align: justify;
+            }
+
+            ul {
+                padding: 0 0 20px 20px;
+                list-style-type: none;
+                li{
+                    padding: 5px 0;
+                }
             }
         }
 
@@ -711,21 +728,26 @@ svg {
             .mobile-frame-content {}
         }
 
-        .img-hover{
-            &:after{
+        .img-hover {
+            &:after {
                 content: none;
             }
+
             .cls-1,
-            .cls-2,.cls-3 {
+            .cls-2,
+            .cls-3 {
                 fill: none;
                 stroke-miterlimit: 10;
                 stroke-width: 2px;
                 stroke: #030303;
             }
         }
+
         .react-tabs__tab--selected {
+
             .cls-1,
-            .cls-2,.cls-3  {
+            .cls-2,
+            .cls-3 {
                 stroke: $theme-color;
             }
         }
@@ -763,9 +785,10 @@ svg {
 
         .photo-content {
             .img-hover {
-                &:after{
+                &:after {
                     content: none;
                 }
+
                 i {
                     font-size: 30px;
                 }
