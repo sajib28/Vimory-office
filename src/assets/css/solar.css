@@ -1,16 +1,16 @@
 .solar-system {
-    width: 520px;
-    height: 520px;
+    width: 260px;
+    height: 260px;
     margin: auto;
     overflow: hidden;
     position: absolute;
-    top: 0;
-    right: -55px;
+    bottom: -40px;
+    left: 0;
 }
   
   /* Some positioning rules that are common for all objects */
   .orbit {
-    border: 1px dashed #666;
+    border:14px solid #99c9e645;
   }
   
   #sun, .orbit, .orbit + div, .orbit + div > div {
@@ -99,20 +99,19 @@
   }
   
   #mercury {
-    margin-top: -13.5px;
-    margin-left: -13.5px;
-    height: 25px;
-    width: 25px;
-    background-color: #a65e22;
-    /* box-shadow: 0 0 34px #3a4385; */
+    margin-top: -23px;
+    margin-left: -23px;
+    height: 60px;
+    width: 60px;
+    background: linear-gradient(90deg, #6EBCEB, #0066FF);
   }
   
   .mercury-orbit, .mercury-spin {
   
-    width: 280px;
-    height: 280px;
-    margin-left: -140px;
-    margin-top: -140px;   
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    margin-top: -100px;  
   }
   
   #mars {
@@ -150,7 +149,7 @@
     animation: spin-right 22s linear infinite;
   }
   .mercury-spin {
-    animation: spin-right 8.8s linear infinite;
+    animation: spin-right 10s linear infinite;
   }
   .mars-spin {
     animation: spin-right 68.7s linear infinite;

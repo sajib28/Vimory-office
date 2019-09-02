@@ -582,6 +582,14 @@ svg .cls-2 {
 
 /*Start Common photo background Section*/
 /*Start Filter section*/
+.slider-section {
+  position: relative;
+}
+
+.slider-section p {
+  line-height: 28px;
+}
+
 #threedSlider .video-template video {
   max-width: 100%;
 }
@@ -1267,5 +1275,68 @@ svg .cls-2 {
   color: #000;
 }
 
+/*All Animation circle css*/
+.circle-position {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+}
+
+.circle-position .circle-wrapper {
+  width: 280px;
+  height: 280px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.circle-position .circle-wrapper .orbit {
+  border: 14px solid #99c9e645;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+}
+
+.circle-position .circle-wrapper .mercury-orbit {
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+
+.circle-position .circle-wrapper .mercury-spin {
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  margin-top: -100px;
+  -webkit-animation: spin-right 10s linear infinite;
+          animation: spin-right 10s linear infinite;
+}
+
+.circle-position .circle-wrapper #mercury {
+  margin-top: -23px;
+  margin-left: -23px;
+  height: 60px;
+  width: 60px;
+  background: -webkit-gradient(linear, left top, right top, from(#6EBCEB), to(#0066FF));
+  background: linear-gradient(90deg, #6EBCEB, #0066FF);
+}
+
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*End All Animation circle css*/
 /*Responsive css*/
 /*# sourceMappingURL=main.css.map */
