@@ -608,14 +608,6 @@ svg .cls-2 {
   padding: 0;
 }
 
-#frame .photo-area {
-  background-image: url("../img/frame-bg.jpg");
-}
-
-#frame h2:before {
-  content: "Frame";
-}
-
 #frame .content-area .mobile-frame {
   width: 418px;
   float: right;
@@ -649,10 +641,6 @@ svg .cls-2 {
 /*Start Filter section*/
 #filter {
   padding: 0;
-}
-
-#filter .photo-area {
-  background-image: url("../img/filter-bg.jpg");
 }
 
 #filter .tab-content .img-hover {

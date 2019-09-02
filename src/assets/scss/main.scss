@@ -695,17 +695,6 @@ svg {
 /*Start Frame section*/
 #frame {
     padding: 0;
-
-    .photo-area {
-        background-image: url("../img/frame-bg.jpg");
-    }
-
-    h2 {
-        &:before {
-            content: "Frame";
-        }
-    }
-
     .content-area {
         .mobile-frame {
             width: 418px;
@@ -747,10 +736,6 @@ svg {
 /*Start Filter section*/
 #filter {
     padding: 0;
-
-    .photo-area {
-        background-image: url("../img/filter-bg.jpg");
-    }
 
     .tab-content {
         .img-hover {

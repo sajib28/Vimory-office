@@ -1,23 +1,12 @@
 import React, { Component } from 'react'
 import FrameSlider from './FrameSlider';
+import BackgroundWithText from '../CommonTools/BackgroundWithText';
+import BackgroundImage from '../../assets/img/filter-bg.jpg';
 class FrameSection extends Component {
     render() {
         return (
             <section id="frame">
-                <div id="frameBg" className="photo-area">
-                    <div className="pic-overlay"></div>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <div className="title">
-                                    <div className="title-inner">
-                                        <h2>Frame</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <BackgroundWithText id ="filterBg" backgroundImage={BackgroundImage} title="Frame" shadowTitle="Frame"/>
                 <div className="content-area">
                     <div className="container">
                         <div className="row">
