@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BootsrapAcc from './BootsrapAcc';
+import FaqAccordion from './FaqAccordion';
 class Faq extends Component {
     render() {
         return (
@@ -16,7 +16,7 @@ class Faq extends Component {
                     <div className="row">
                         <div className="col-md-6 offset-3">
                             <div className="accordion-menu">
-                                <BootsrapAcc />
+                                <FaqAccordion />
                             </div>
                         </div>
                     </div>

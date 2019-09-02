@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { Accordion, Card } from 'react-bootstrap';
-class BootsrapAcc extends Component {
+class FaqAccordion extends Component {
 
     render() {
        
@@ -65,4 +65,4 @@ class BootsrapAcc extends Component {
         )
     }
 }
-export default BootsrapAcc;
+export default FaqAccordion;

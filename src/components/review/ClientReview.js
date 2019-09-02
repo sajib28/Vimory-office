@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SliderCom from './SliderCom';
+import ReviewSlider from './ReviewSlider';
 class ClientReview extends Component {
     render() {
         return (
@@ -15,7 +15,7 @@ class ClientReview extends Component {
                     </div>
                     <div className="row">
                         <div className="col-md-8 offset-2 text-center">
-                            <SliderCom/>
+                            <ReviewSlider/>
                         </div>
                     </div>
                 </div>
