@@ -123,11 +123,11 @@ class Header extends Component {
                     width: "100%", top: "0px", zIndex: "999", position: this.state.scrollingLock ? "static" : "absolute"
                 }} className={this.state.scrollingLock ? 'fixedClass navbar navbar-expand-lg navbar-light header-area' : 'absoluteClass navbar navbar-expand-lg navbar-light header-area'}>
                     <div className="container">
-                        <Navbar.Brand href="#home" className="ml-auto"><img src={logo} alt="Vimory Logo" /></Navbar.Brand>
+                        <Navbar.Brand href="/"><img src={logo} alt="Vimory Logo" /></Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="ml-auto">
-                                <ul className="navbar-nav mt-2 mt-lg-0" id="main-menu">
+                                <ul className="navbar-nav" id="main-menu">
                                     <li className="nav-item">
                                         <Link
                                             activeClass="active"

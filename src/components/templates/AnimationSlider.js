@@ -91,15 +91,6 @@ class AnimationSlider extends Component {
 
         return (
             <div className="slider-section">
-                <div className="circle-position">
-                    <div class="circle-wrapper">
-                        <div class="orbit mercury-orbit"></div>
-                        <div class="mercury-spin">
-                            <div id="mercury"></div>
-                        </div>
-                    </div>
-                </div>
-
                 {/* <div class="orbit venus-orbit"></div>
                     <div class="venus-spin">
                         <div id="venus"></div>
@@ -134,7 +125,7 @@ class AnimationSlider extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
 }

@@ -20,7 +20,26 @@ $blue:#0C89D5;
 $footer-bg:#161D24;
 $social-icon:#1DA1F2;
 
+/*Animation Color Code*/
+$animation-border:rgba(#99C9E6, .13);
+$gardient-pink1:#B56EEB;
+$gardient-pink2:#5400FF;
+$gardient-blue1:#6EBCEB;
+$gardient-blue2:#0066FF;
+
+
+
+/*End Animation Color code*/
+
 /*All Cross browser CSS3 mixins*/
+@mixin linear-gradient($direction, $start-color, $end-color) {
+    background: -webkit-linear-gradient($direction, $start-color, $end-color);
+    background: -moz-linear-gradient($direction, $start-color, $end-color);
+    background: -ms-linear-gradient($direction, $start-color, $end-color);
+    background: -o-linear-gradient($direction, $start-color, $end-color);
+    background: linear-gradient($direction, $start-color, $end-color);
+}
+
 @mixin transition($args...) {
     -webkit-transition: $args;
     -moz-transition: $args;
@@ -208,6 +227,7 @@ section {
 .modal-open {
     .modal {
         overflow-y: hidden;
+        padding: 0 !important;
 
         .modal-content {
             background: #f8f9fa;
@@ -566,6 +586,81 @@ svg {
 
 // end Navbar css
 
+/*Second Menu Css*/
+.modal-open {
+    .fixedClass {
+        overflow-y: scroll;
+    }
+}
+
+.second-Menu {
+    .navbar {
+        padding: 0;
+        .nav-item {
+            padding: 0 16px;
+
+            .nav-link {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.fixedClass {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 999;
+        background: rgba($black,.95);
+       
+        .navbar {
+            .nav-item {
+                .nav-link {
+                    font-size: 18px;
+                    color: #fff;
+                }
+
+                .nav-link.active,
+                .nav-link:hover {
+                    color:$theme-color;
+                }
+            }
+        }
+        .fa-bars {
+            color: $white;
+        }
+        img{
+            visibility:visible;
+        }
+    }
+        &.absoluteClass {
+            .navbar {
+                .nav-item {
+                    .nav-link {
+                        font-size: 18px;
+                        color: rgba($black, .23);
+                    }
+
+                    .nav-link.active,
+                    .nav-link:hover {
+                        color:$theme-color;
+                    }
+                }
+                img{
+                    visibility:hidden;
+                }
+            }
+        
+    }
+
+    .fa-bars {
+        color: $black;
+        font-size: 30px;
+    }
+}
+
+/*End Second Menu css*/
+
 #intro {
     background-image: url("../img/intro-bg.png");
     padding: 250px 0 200px;
@@ -600,6 +695,12 @@ svg {
     }
 }
 
+/*Template css code*/
+#template {
+    padding-top: 0;
+}
+
+/*End Template css code*/
 /*Start Common photo background Section*/
 .photo-area {
     background-repeat: no-repeat;
@@ -721,7 +822,7 @@ svg {
 /*End Filter section*/
 
 /*Start slide section*/
-#Slide {
+#slide {
     padding: 0;
 
     .photo-area {
@@ -1021,8 +1122,7 @@ svg {
             background: $white;
             margin: 0 85px;
             @include border-radius(20px);
-            border: 1px solid #707070;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            @include box-shadow(0, 0, 20px,rgba($white, .41));
             width: 330px;
             @include transition(all 0.3s ease-in-out);
 
@@ -1109,6 +1209,8 @@ svg {
 
 /*Start Faqs Css*/
 #faqs {
+    position: relative;
+
     .accordion-menu {
         .card {
             border: 0;
@@ -1146,6 +1248,34 @@ svg {
         }
 
     }
+
+    .circle-position {
+        &.two-circle {
+
+            .circle-wrapper {
+                left: 0;
+                bottom: 0;
+            }
+
+            .second-circle {
+
+                .circle-spin {
+                    .first-circle {}
+                }
+            }
+        }
+
+        &.one-circle {
+
+            .circle-wrapper {
+                right: 0;
+                left: auto;
+                bottom: 0;
+            }
+        }
+
+    }
+
 }
 
 /*End Faqs Css*/
@@ -1433,49 +1563,137 @@ svg {
 /*All Animation circle css*/
 .circle-position {
     position: absolute;
-    left: 0;
-    bottom: -40px;
 
-    .circle-wrapper {
-        width: 280px;
-        height: 280px;
-        margin: auto;
-        overflow: hidden;
-        position: relative;
+    &.one-circle {
+        width: 142px;
+        height: 142px;
+        right: 80px;
+        bottom: 60px;
+
+        .circle-wrapper {
+            width: 142px;
+            height: 142px;
+            position: absolute;
+
+            .orbit {
+                border: 8px solid $animation-border;
+            }
+
+            .second-circle,
+            .circle-spin {
+                width: 142px;
+                height: 142px;
+                margin-left: -71px;
+                margin-top: -71px;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                animation: spin-right 5s linear infinite;
+            }
+        }
+
+        .first-circle {
+            height: 34px;
+            width: 34px;
+            @include linear-gradient(to bottom, $gardient-pink1, $gardient-pink2);
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+
+/*Animation With Two circle*/
+.circle-position {
+    &.two-circle {
+        left: 80px;
+        bottom: 60px;
+        width: 208px;
+        height: 208px;
+
+        .circle-wrapper {
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            width: 208px;
+            height: 208px;
+        }
 
         .orbit {
-            border: 14px solid #99c9e645;
+            border: 8px solid $animation-border;
+        }
+
+        .second-circle {
+            width: 208px;
+            height: 208px;
+            margin-left: -104px;
+            margin-top: -104px;
             position: absolute;
             top: 50%;
             left: 50%;
-            border-radius: 50%;
-        }
-            .mercury-orbit {
-                width: 200px;
-                height: 200px;
-                margin-left: -100px;
-                margin-top: -100px;
-            }
-        
-            .mercury-spin {
-                width: 200px;
-                height: 200px;
-                margin-left: -100px;
-                margin-top: -100px;
+
+            .circle-spin {
+                width: 208px;
+                height: 208px;
+                margin-left: -104px;
+                margin-top: -104px;
                 animation: spin-right 10s linear infinite;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                border: 8px solid $animation-border;
+                @include border-radius(50%);
+
+                .first-circle {
+                    width: 64px;
+                    height: 64px;
+                    @include linear-gradient(to bottom, $gardient-blue1, $gardient-blue2);
+                    border-radius: 50%;
+                    top: 0;
+                    right: 0;
+                    position: absolute;
+                }
             }
-        
-
-        #mercury {
-            margin-top: -23px;
-            margin-left: -23px;
-            height: 60px;
-            width: 60px;
-            background: linear-gradient(90deg, #6EBCEB, #0066FF);
         }
-
     }
 }
+
+//         .orbit {
+//             border: 14px solid #99c9e645;
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             border-radius: 50%;
+//         }
+//             .mercury-orbit {
+//                 width: 200px;
+//                 height: 200px;
+//                 margin-left: -100px;
+//                 margin-top: -100px;
+//             }
+
+//             .mercury-spin {
+//                 width: 200px;
+//                 height: 200px;
+//                 margin-left: -100px;
+//                 margin-top: -100px;
+//animation: spin-right 10s linear infinite;
+//             }
+
+
+//         #mercury {
+//             margin-top: -23px;
+//             margin-left: -23px;
+//             height: 60px;
+//             width: 60px;
+//             background: linear-gradient(90deg, #6EBCEB, #0066FF);
+//         }
+
+//     }
+// }
 
 
 @keyframes spin-right {

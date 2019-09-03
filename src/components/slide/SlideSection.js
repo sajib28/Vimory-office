@@ -7,7 +7,7 @@ import SlideTab from './SlideTab';
 class Slide extends Component {
     render() {
         return (
-            <section id="Slide">
+            <section id="slide">
                <BackgroundWithText id ="SlideBg" backgroundImage={BackgroundImage} title="Slide" shadowTitle="Slide"/>
                 <div className="content-area">
                     <div className="container">

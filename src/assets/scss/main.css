@@ -6,6 +6,8 @@
   font-style: normal;
 }
 
+/*Animation Color Code*/
+/*End Animation Color code*/
 /*All Cross browser CSS3 mixins*/
 /*End All Cross browser CSS3 mixins*/
 body {
@@ -164,6 +166,7 @@ section {
 /*Modal customize css*/
 .modal-open .modal {
   overflow-y: hidden;
+  padding: 0 !important;
 }
 
 .modal-open .modal .modal-content {
@@ -462,6 +465,70 @@ svg .cls-2 {
   color: #0C89D5;
 }
 
+/*Second Menu Css*/
+.modal-open .fixedClass {
+  overflow-y: scroll;
+}
+
+.second-Menu .navbar {
+  padding: 0;
+}
+
+.second-Menu .navbar .nav-item {
+  padding: 0 16px;
+}
+
+.second-Menu .navbar .nav-item .nav-link {
+  cursor: pointer;
+}
+
+.second-Menu.fixedClass {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.second-Menu.fixedClass .navbar .nav-item .nav-link {
+  font-size: 18px;
+  color: #fff;
+}
+
+.second-Menu.fixedClass .navbar .nav-item .nav-link.active,
+.second-Menu.fixedClass .navbar .nav-item .nav-link:hover {
+  color: #0584D1;
+}
+
+.second-Menu.fixedClass .fa-bars {
+  color: #fff;
+}
+
+.second-Menu.fixedClass img {
+  visibility: visible;
+}
+
+.second-Menu.absoluteClass .navbar .nav-item .nav-link {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.23);
+}
+
+.second-Menu.absoluteClass .navbar .nav-item .nav-link.active,
+.second-Menu.absoluteClass .navbar .nav-item .nav-link:hover {
+  color: #0584D1;
+}
+
+.second-Menu.absoluteClass .navbar img {
+  visibility: hidden;
+}
+
+.second-Menu .fa-bars {
+  color: #000;
+  font-size: 30px;
+}
+
+/*End Second Menu css*/
 #intro {
   background-image: url("../img/intro-bg.png");
   padding: 250px 0 200px;
@@ -496,6 +563,12 @@ svg .cls-2 {
   margin-right: 50px;
 }
 
+/*Template css code*/
+#template {
+  padding-top: 0;
+}
+
+/*End Template css code*/
 /*Start Common photo background Section*/
 .photo-area {
   background-repeat: no-repeat;
@@ -628,34 +701,34 @@ svg .cls-2 {
 
 /*End Filter section*/
 /*Start slide section*/
-#Slide {
+#slide {
   padding: 0;
 }
 
-#Slide .photo-area {
+#slide .photo-area {
   background-image: url("../img/slide-bg.jpg");
 }
 
-#Slide .content-area .mobile-frame {
+#slide .content-area .mobile-frame {
   float: right;
 }
 
-#Slide .content-area .img-hover:after {
+#slide .content-area .img-hover:after {
   content: none;
 }
 
-#Slide .content-area .img-hover .cls-1,
-#Slide .content-area .img-hover .cls-2,
-#Slide .content-area .img-hover .cls-3 {
+#slide .content-area .img-hover .cls-1,
+#slide .content-area .img-hover .cls-2,
+#slide .content-area .img-hover .cls-3 {
   fill: none;
   stroke-miterlimit: 10;
   stroke-width: 2px;
   stroke: #030303;
 }
 
-#Slide .content-area .react-tabs__tab--selected .cls-1,
-#Slide .content-area .react-tabs__tab--selected .cls-2,
-#Slide .content-area .react-tabs__tab--selected .cls-3 {
+#slide .content-area .react-tabs__tab--selected .cls-1,
+#slide .content-area .react-tabs__tab--selected .cls-2,
+#slide .content-area .react-tabs__tab--selected .cls-3 {
   stroke: #0584D1;
 }
 
@@ -881,9 +954,11 @@ svg .cls-2 {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  border: 1px solid #707070;
-  -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-          box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.41);
+  -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.41);
+  -moz-box-shadow: 0 0 20px rgba(255, 255, 255, 0.41);
+  -ms-box-shadow: 0 0 20px rgba(255, 255, 255, 0.41);
+  -o-box-shadow: 0 0 20px rgba(255, 255, 255, 0.41);
   width: 330px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -967,6 +1042,10 @@ svg .cls-2 {
 
 /*End pricing Review Css*/
 /*Start Faqs Css*/
+#faqs {
+  position: relative;
+}
+
 #faqs .accordion-menu .card {
   border: 0;
 }
@@ -1003,6 +1082,17 @@ svg .cls-2 {
 #faqs .accordion-menu .card .card-body p {
   font-size: 15px;
   line-height: 22px;
+}
+
+#faqs .circle-position.two-circle .circle-wrapper {
+  left: 0;
+  bottom: 0;
+}
+
+#faqs .circle-position.one-circle .circle-wrapper {
+  right: 0;
+  left: auto;
+  bottom: 0;
 }
 
 /*End Faqs Css*/
@@ -1278,49 +1368,107 @@ svg .cls-2 {
 /*All Animation circle css*/
 .circle-position {
   position: absolute;
-  left: 0;
-  bottom: -40px;
 }
 
-.circle-position .circle-wrapper {
-  width: 280px;
-  height: 280px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
+.circle-position.one-circle {
+  width: 142px;
+  height: 142px;
+  right: 80px;
+  bottom: 60px;
 }
 
-.circle-position .circle-wrapper .orbit {
-  border: 14px solid #99c9e645;
+.circle-position.one-circle .circle-wrapper {
+  width: 142px;
+  height: 142px;
+  position: absolute;
+}
+
+.circle-position.one-circle .circle-wrapper .orbit {
+  border: 8px solid rgba(153, 201, 230, 0.13);
+}
+
+.circle-position.one-circle .circle-wrapper .second-circle,
+.circle-position.one-circle .circle-wrapper .circle-spin {
+  width: 142px;
+  height: 142px;
+  margin-left: -71px;
+  margin-top: -71px;
+  border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-animation: spin-right 5s linear infinite;
+          animation: spin-right 5s linear infinite;
+}
+
+.circle-position.one-circle .first-circle {
+  height: 34px;
+  width: 34px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#B56EEB), to(#5400FF));
+  background: linear-gradient(to bottom, #B56EEB, #5400FF);
+  position: absolute;
   border-radius: 50%;
+  top: 0;
+  right: 0;
 }
 
-.circle-position .circle-wrapper .mercury-orbit {
-  width: 200px;
-  height: 200px;
-  margin-left: -100px;
-  margin-top: -100px;
+/*Animation With Two circle*/
+.circle-position.two-circle {
+  left: 80px;
+  bottom: 60px;
+  width: 208px;
+  height: 208px;
 }
 
-.circle-position .circle-wrapper .mercury-spin {
-  width: 200px;
-  height: 200px;
-  margin-left: -100px;
-  margin-top: -100px;
+.circle-position.two-circle .circle-wrapper {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 208px;
+  height: 208px;
+}
+
+.circle-position.two-circle .orbit {
+  border: 8px solid rgba(153, 201, 230, 0.13);
+}
+
+.circle-position.two-circle .second-circle {
+  width: 208px;
+  height: 208px;
+  margin-left: -104px;
+  margin-top: -104px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.circle-position.two-circle .second-circle .circle-spin {
+  width: 208px;
+  height: 208px;
+  margin-left: -104px;
+  margin-top: -104px;
   -webkit-animation: spin-right 10s linear infinite;
           animation: spin-right 10s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 8px solid rgba(153, 201, 230, 0.13);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
-.circle-position .circle-wrapper #mercury {
-  margin-top: -23px;
-  margin-left: -23px;
-  height: 60px;
-  width: 60px;
-  background: -webkit-gradient(linear, left top, right top, from(#6EBCEB), to(#0066FF));
-  background: linear-gradient(90deg, #6EBCEB, #0066FF);
+.circle-position.two-circle .second-circle .circle-spin .first-circle {
+  width: 64px;
+  height: 64px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6EBCEB), to(#0066FF));
+  background: linear-gradient(to bottom, #6EBCEB, #0066FF);
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  position: absolute;
 }
 
 @-webkit-keyframes spin-right {
