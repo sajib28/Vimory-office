@@ -601,6 +601,7 @@ svg {
 
             .nav-link {
                 cursor: pointer;
+                font-weight: bold;
             }
         }
     }
@@ -611,7 +612,7 @@ svg {
         top: 0;
         right: 0;
         z-index: 999;
-        background: rgba($black,.95);
+        background: rgba($black,.8);
        
         .navbar {
             .nav-item {

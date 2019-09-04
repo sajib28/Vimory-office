@@ -480,6 +480,7 @@ svg .cls-2 {
 
 .second-Menu .navbar .nav-item .nav-link {
   cursor: pointer;
+  font-weight: bold;
 }
 
 .second-Menu.fixedClass {
@@ -488,7 +489,7 @@ svg .cls-2 {
   top: 0;
   right: 0;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .second-Menu.fixedClass .navbar .nav-item .nav-link {

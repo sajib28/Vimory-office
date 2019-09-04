@@ -118,7 +118,7 @@ class SecondHeader extends Component {
                             </Nav>
                             <Nav className="ml-auto">
                                 <li>
-                                    <i class="fas fa-bars"></i>
+                                    <i className="fas fa-bars"></i>
                                 </li>
                             </Nav>
 
