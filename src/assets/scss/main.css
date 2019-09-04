@@ -220,6 +220,20 @@ section {
           box-shadow: none;
 }
 
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .75s ease-in-out;
+  transition: -webkit-transform .75s ease-in-out;
+  transition: transform .75s ease-in-out;
+  transition: transform .75s ease-in-out, -webkit-transform .75s ease-in-out;
+  -webkit-transform: translate3d(0, 100vh, 0);
+          transform: translate3d(0, 100vh, 0);
+}
+
+.modal.show .modal-dialog {
+  -webkit-transform: none;
+          transform: none;
+}
+
 /*End Modal customize css*/
 /*Svg icon Css*/
 svg .cls-2 {
@@ -504,11 +518,11 @@ svg .cls-2 {
 
 .second-Menu.fixedClass .fa-bars {
   color: #fff;
-  visibility: visible;
+  opacity: 1;
 }
 
 .second-Menu.fixedClass img {
-  visibility: visible;
+  opacity: 1;
 }
 
 .second-Menu.absoluteClass .navbar .nav-item .nav-link {
@@ -522,11 +536,11 @@ svg .cls-2 {
 }
 
 .second-Menu.absoluteClass .navbar img {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .second-Menu.absoluteClass .fa-bars {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .second-Menu .fa-bars {
@@ -711,6 +725,10 @@ svg .cls-2 {
   background-image: url("../img/slide-bg.jpg");
 }
 
+#slide .content-area {
+  position: relative;
+}
+
 #slide .content-area .mobile-frame {
   float: right;
 }
@@ -732,6 +750,24 @@ svg .cls-2 {
 #slide .content-area .react-tabs__tab--selected .cls-2,
 #slide .content-area .react-tabs__tab--selected .cls-3 {
   stroke: #0584D1;
+}
+
+#slide .content-area .circle-position.right-circle {
+  display: block;
+}
+
+#slide .content-area .circle-position.right-circle .circle-spin {
+  right: 0;
+}
+
+#slide .content-area .circle-position.top-left-circle {
+  left: 80px;
+  top: 60px;
+}
+
+#slide .content-area .circle-position.top-left-circle .circle-spin {
+  right: inherit;
+  top: 0;
 }
 
 /*End Slide section*/
@@ -774,6 +810,18 @@ svg .cls-2 {
   padding: 0;
 }
 
+#effect .content-area {
+  position: relative;
+}
+
+#effect .content-area .top-circle-left {
+  left: 80px;
+}
+
+#effect .content-area .top-circle-left .circle-spin {
+  bottom: inherit;
+}
+
 /*End Effect section*/
 /*Start Frame section*/
 #frame {
@@ -813,6 +861,7 @@ svg .cls-2 {
 /*Start Filter section*/
 #filter {
   padding: 0;
+  position: relative;
 }
 
 #filter .tab-content .img-hover {
@@ -860,10 +909,15 @@ svg .cls-2 {
   background: none;
 }
 
+#filter .left-circle {
+  bottom: 200px;
+}
+
 /*End Filter section*/
 /*Client Review Css*/
 #review {
   background: #fff;
+  position: relative;
 }
 
 #review .slick-slider {
@@ -906,6 +960,11 @@ svg .cls-2 {
 
 #review .slick-slider ul.review-icon li i {
   color: #0C89D5;
+}
+
+#review .left-circle .circle-spin {
+  left: 0;
+  right: inherit;
 }
 
 /*End Client Review Css*/
@@ -1086,17 +1145,6 @@ svg .cls-2 {
   line-height: 22px;
 }
 
-#faqs .circle-position.two-circle .circle-wrapper {
-  left: 0;
-  bottom: 0;
-}
-
-#faqs .circle-position.one-circle .circle-wrapper {
-  right: 0;
-  left: auto;
-  bottom: 0;
-}
-
 /*End Faqs Css*/
 /*Start Get in Touch Css*/
 #getInTouch {
@@ -1259,6 +1307,22 @@ svg .cls-2 {
   list-style-type: none;
 }
 
+.feature-box h4 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.feature-box p {
+  font-size: 16px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.feature-box a {
+  font-size: 15px;
+  font-weight: 100;
+}
+
 .vimory-btn {
   border: 2px solid #fff;
   border-radius: 20px;
@@ -1290,15 +1354,15 @@ svg .cls-2 {
 }
 
 .brk-sc-honeycomb-one_wide-shadow {
-  -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.55);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.55);
 }
 
 .brk-sc-honeycomb-one {
-  width: 160px;
+  width: 162px;
   height: 280px;
-  -webkit-box-shadow: 0 1px 14px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 1px 14px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.55);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.55);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   margin: 30px 0;
@@ -1363,7 +1427,7 @@ svg .cls-2 {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 202%;
+  width: 203%;
   height: 100%;
   opacity: 0;
   -webkit-transition: all .3s ease-in-out;
@@ -1442,33 +1506,21 @@ svg .cls-2 {
   position: absolute;
 }
 
-.circle-position.one-circle {
-  width: 142px;
-  height: 142px;
-  right: 80px;
-  bottom: 60px;
-}
-
 .circle-position.one-circle .circle-wrapper {
-  width: 142px;
-  height: 142px;
-  position: absolute;
+  position: relative;
 }
 
 .circle-position.one-circle .circle-wrapper .orbit {
   border: 8px solid rgba(153, 201, 230, 0.13);
 }
 
-.circle-position.one-circle .circle-wrapper .second-circle,
 .circle-position.one-circle .circle-wrapper .circle-spin {
   width: 142px;
   height: 142px;
-  margin-left: -71px;
-  margin-top: -71px;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  bottom: 0;
+  right: 0;
   -webkit-animation: spin-right 5s linear infinite;
           animation: spin-right 5s linear infinite;
 }
@@ -1485,54 +1537,40 @@ svg .cls-2 {
 }
 
 /*Animation With Two circle*/
-.circle-position.two-circle {
+.circle-position.left-circle {
   left: 80px;
   bottom: 60px;
-  width: 208px;
-  height: 208px;
+}
+
+.circle-position.right-circle {
+  right: 80px;
+  bottom: 60px;
 }
 
 .circle-position.two-circle .circle-wrapper {
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  width: 208px;
-  height: 208px;
+  position: relative;
 }
 
 .circle-position.two-circle .orbit {
   border: 8px solid rgba(153, 201, 230, 0.13);
 }
 
-.circle-position.two-circle .second-circle {
+.circle-position.two-circle .circle-spin {
   width: 208px;
   height: 208px;
-  margin-left: -104px;
-  margin-top: -104px;
+  -webkit-animation: spin-right 5s linear infinite;
+          animation: spin-right 5s linear infinite;
   position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.circle-position.two-circle .second-circle .circle-spin {
-  width: 208px;
-  height: 208px;
-  margin-left: -104px;
-  margin-top: -104px;
-  -webkit-animation: spin-right 10s linear infinite;
-          animation: spin-right 10s linear infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   border: 8px solid rgba(153, 201, 230, 0.13);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  bottom: 0;
 }
 
-.circle-position.two-circle .second-circle .circle-spin .first-circle {
+.circle-position.two-circle .circle-spin .first-circle {
   width: 64px;
   height: 64px;
   background: -webkit-gradient(linear, left top, left bottom, from(#6EBCEB), to(#0066FF));
@@ -1541,6 +1579,27 @@ svg .cls-2 {
   top: 0;
   right: 0;
   position: absolute;
+}
+
+.circle-position.two-circle .circle-spin .first-circle .outer-orbit-small {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  -webkit-animation: spin-right 2s linear infinite;
+          animation: spin-right 2s linear infinite;
+}
+
+.circle-position.two-circle .circle-spin .first-circle .outer-orbit-small .small {
+  width: 20px;
+  height: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6EBCEB), to(#0066FF));
+  background: linear-gradient(to bottom, #6EBCEB, #0066FF);
+  border-radius: 50%;
+  position: absolute;
+  left: 90px;
 }
 
 @-webkit-keyframes spin-right {
@@ -1559,4 +1618,9 @@ svg .cls-2 {
 
 /*End All Animation circle css*/
 /*Responsive css*/
+.circle-left-bottom {
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+}
 /*# sourceMappingURL=main.css.map */

@@ -6,18 +6,29 @@ class Filter extends Component {
     render() {
         return (
             <section id="filter">
-            <BackgroundWithText id ="filterBg" backgroundImage={BackgroundImage} title="Filter" shadowTitle="Filter"/>
-            <div className="content-area">
-                <div className="container">
-                    <div className="row">
-                        <div className="photo-content">
-                        <TabCom/>
+                <div className="circle-position two-circle left-circle">
+                    <div className="circle-wrapper">
+                        <div className="orbit circle-spin">
+                            <div className="first-circle">
+                                <div className="outer-orbit-small">
+                                    <div className="small"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        // End Filter Section
+                <BackgroundWithText id="filterBg" backgroundImage={BackgroundImage} title="Filter" shadowTitle="Filter" />
+                <div className="content-area">
+                    <div className="container">
+                        <div className="row">
+                            <div className="photo-content">
+                                <TabCom />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            // End Filter Section
         )
     }
 }

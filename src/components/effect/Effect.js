@@ -8,8 +8,19 @@ class Effect extends Component {
         return (
             // Start Effect Section
             <section id="effect">
-                <BackgroundWithText id ="effectBg" backgroundImage={BackgroundImage} title="Effect" shadowTitle="Effect"/>
+                <BackgroundWithText id="effectBg" backgroundImage={BackgroundImage} title="Effect" shadowTitle="Effect" />
                 <div className="content-area">
+                    <div className="circle-position two-circle top-circle-left">
+                        <div className="circle-wrapper">
+                            <div className="orbit circle-spin">
+                                <div className="first-circle">
+                                    <div className="outer-orbit-small">
+                                        <div className="small"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="container">
                         <div className="row">
                             <div className="photo-content">
@@ -29,6 +40,7 @@ class Effect extends Component {
                         </div>
                     </div>
                 </div>
+
             </section>
             // End Effect Section
         );

@@ -34,10 +34,10 @@ function App() {
       <PhotoEdit />
       <SlideSection />
       <Effect />
+      <FrameSection />
       <Filter />
       <GetToday />
       <ClientReview />
-      <FrameSection />
       <Pricing />
       <Faq />
       <GetInTouch />

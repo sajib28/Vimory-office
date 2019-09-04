@@ -4,6 +4,13 @@ class ClientReview extends Component {
     render() {
         return (
             <section id="review">
+                <div className="circle-position one-circle left-circle">
+                    <div className="circle-wrapper">
+                            <div className="orbit circle-spin">
+                                <div className="first-circle"></div>
+                            </div>
+                    </div>
+                </div>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8 offset-2">

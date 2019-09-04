@@ -233,6 +233,8 @@ section {
         overflow-y: hidden;
         padding: 0 !important;
 
+
+
         .modal-content {
             background: #f8f9fa;
         }
@@ -288,6 +290,15 @@ section {
             }
         }
     }
+}
+
+.modal.fade .modal-dialog {
+    transition: transform .75s ease-in-out;
+    transform: translate3d(0, 100vh, 0);
+}
+
+.modal.show .modal-dialog {
+    transform: none;
 }
 
 /*End Modal customize css*/
@@ -635,11 +646,11 @@ svg {
 
         .fa-bars {
             color: $white;
-            visibility:visible;
+            opacity: 1;
         }
 
         img {
-            visibility: visible;
+            opacity: 1;
         }
     }
 
@@ -658,11 +669,12 @@ svg {
             }
 
             img {
-                visibility: hidden;
+                opacity: 0;
             }
         }
+
         .fa-bars {
-            visibility: hidden;
+            opacity: 0;
         }
 
     }
@@ -801,9 +813,7 @@ svg {
 
 #threedSlider {
     .video-template {
-        video {
-           
-        }
+        video {}
     }
 
     .slide-img {
@@ -844,6 +854,7 @@ svg {
     }
 
     .content-area {
+        position: relative;
         .mobile-frame {
             float: right;
 
@@ -873,8 +884,27 @@ svg {
                 stroke: $theme-color;
             }
         }
+        .circle-position{
+            &.right-circle{
+                display: block;
+                .circle-spin{
+                    right: 0;
+                }
+            }
 
+            &.top-left-circle{
+                left: 80px;
+                top:60px;
+                .circle-spin{
+                    right: inherit;
+                    top:0;
+    
+                }
+             }
+        }
+      
     }
+
 }
 
 /*End Slide section*/
@@ -932,6 +962,17 @@ svg {
 /*Start Effect section*/
 #effect {
     padding: 0;
+
+    .content-area{
+        position: relative;
+        .top-circle-left{
+            left: 80px;
+            .circle-spin{
+                bottom: inherit;
+            }
+         }
+    }
+    
 }
 
 /*End Effect section*/
@@ -980,6 +1021,7 @@ svg {
 /*Start Filter section*/
 #filter {
     padding: 0;
+    position: relative;
 
     .tab-content {
         .img-hover {
@@ -1035,14 +1077,17 @@ svg {
 
         }
     }
+.left-circle{
+    bottom:200px;
 
 }
-
+}
 /*End Filter section*/
 
 /*Client Review Css*/
 #review {
     background: $white;
+    position: relative;
 
     h2 {}
 
@@ -1092,7 +1137,15 @@ svg {
             }
         }
     }
+.left-circle{
+.circle-spin{
+    left: 0;
+    right: inherit;
+}
+}
+.right-circle{
 
+}
 }
 
 /*End Client Review Css*/
@@ -1259,33 +1312,6 @@ svg {
             }
 
 
-        }
-
-    }
-
-    .circle-position {
-        &.two-circle {
-
-            .circle-wrapper {
-                left: 0;
-                bottom: 0;
-            }
-
-            .second-circle {
-
-                .circle-spin {
-                    .first-circle {}
-                }
-            }
-        }
-
-        &.one-circle {
-
-            .circle-wrapper {
-                right: 0;
-                left: auto;
-                bottom: 0;
-            }
         }
 
     }
@@ -1465,6 +1491,22 @@ svg {
     min-height: 530px;
     list-style-type: none;
 
+    h4 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 16px;
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+
+    a {
+        font-size: 15px;
+        font-weight: 100;
+    }
+
     // .feature-1 {
     //     position: absolute;
     //     left: 0;
@@ -1578,7 +1620,7 @@ svg {
 .vimory-btn {
     border: 2px solid #fff;
     border-radius: 20px;
-    color:$black;
+    color: $black;
 }
 
 .feature-1 {
@@ -1606,13 +1648,13 @@ svg {
 }
 
 .brk-sc-honeycomb-one_wide-shadow {
-    box-shadow: 0 0 35px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .55);
 }
 
 .brk-sc-honeycomb-one {
-    width: 160px;
+    width: 162px;
     height: 280px;
-    box-shadow: 0 1px 14px rgba(0, 0, 0, .06);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .55);
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     margin: 30px 0;
@@ -1676,7 +1718,7 @@ svg {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 202%;
+    width: 203%;
     height: 100%;
     opacity: 0;
     -webkit-transition: all .3s ease-in-out;
@@ -1753,30 +1795,20 @@ svg {
     position: absolute;
 
     &.one-circle {
-        width: 142px;
-        height: 142px;
-        right: 80px;
-        bottom: 60px;
-
+        
         .circle-wrapper {
-            width: 142px;
-            height: 142px;
-            position: absolute;
+            position: relative;
 
             .orbit {
                 border: 8px solid $animation-border;
             }
-
-            .second-circle,
             .circle-spin {
                 width: 142px;
                 height: 142px;
-                margin-left: -71px;
-                margin-top: -71px;
                 border-radius: 50%;
                 position: absolute;
-                top: 50%;
-                left: 50%;
+                bottom:0;
+                right:0;
                 animation: spin-right 5s linear infinite;
             }
         }
@@ -1795,45 +1827,33 @@ svg {
 
 
 /*Animation With Two circle*/
+
 .circle-position {
-    &.two-circle {
+    &.left-circle {
         left: 80px;
         bottom: 60px;
-        width: 208px;
-        height: 208px;
-
+    }
+     &.right-circle{
+        right: 80px;
+        bottom: 60px;
+     }
+    
+    &.two-circle {
         .circle-wrapper {
-            left: 0;
-            bottom: 0;
-            position: absolute;
-            width: 208px;
-            height: 208px;
+            position: relative;
         }
 
         .orbit {
             border: 8px solid $animation-border;
         }
-
-        .second-circle {
-            width: 208px;
-            height: 208px;
-            margin-left: -104px;
-            margin-top: -104px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-
             .circle-spin {
                 width: 208px;
                 height: 208px;
-                margin-left: -104px;
-                margin-top: -104px;
-                animation: spin-right 10s linear infinite;
+                animation: spin-right 5s linear infinite;
                 position: absolute;
-                top: 50%;
-                left: 50%;
                 border: 8px solid $animation-border;
                 @include border-radius(50%);
+                bottom: 0;
 
                 .first-circle {
                     width: 64px;
@@ -1843,9 +1863,30 @@ svg {
                     top: 0;
                     right: 0;
                     position: absolute;
+
+                    .outer-orbit-small {
+                        width: 64px;
+                        height: 64px;
+                        border-radius: 50%;
+                        top: 0;
+                        right: 0;
+                        position: absolute;
+                        animation: spin-right 2s linear infinite;
+
+                        .small {
+                            width: 20px;
+                            height: 20px;
+                            @include linear-gradient(to bottom, $gardient-blue1, $gardient-blue2);
+                            border-radius: 50%;
+                            position: absolute;
+                            left: 90px;
+                           
+                        }
+                    }
+
                 }
             }
-        }
+        
     }
 }
 
@@ -1893,3 +1934,11 @@ svg {
 /*End All Animation circle css*/
 
 /*Responsive css*/
+
+
+.circle-left-bottom {
+
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+}

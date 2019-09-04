@@ -7,19 +7,19 @@ class Faq extends Component {
             <section id="faqs">
                 <div className="circle-position two-circle left-circle">
                     <div className="circle-wrapper">
-                        <div className="second-circle">
-                            <div className="orbit circle-spin">
-                                <div className="first-circle"></div>
+                        <div className="orbit circle-spin">
+                            <div className="first-circle">
+                                <div className="outer-orbit-small">
+                                    <div className="small"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="circle-position one-circle right-circle">
                     <div className="circle-wrapper">
-                        <div className="second-circle">
-                            <div className="orbit circle-spin">
-                                <div className="first-circle"></div>
-                            </div>
+                        <div className="orbit circle-spin">
+                            <div className="first-circle"></div>
                         </div>
                     </div>
                 </div>

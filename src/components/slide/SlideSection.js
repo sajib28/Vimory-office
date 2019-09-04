@@ -8,16 +8,47 @@ class Slide extends Component {
     render() {
         return (
             <section id="slide">
-               <BackgroundWithText id ="SlideBg" backgroundImage={BackgroundImage} title="Slide" shadowTitle="Slide"/>
+                <BackgroundWithText id="SlideBg" backgroundImage={BackgroundImage} title="Slide" shadowTitle="Slide" />
                 <div className="content-area">
-                    <div className="container">
-                        <div className="row">
-                            <div className="photo-content">
-                                <SlideTab/>
+                <div className="circle-position two-circle right-circle">
+                    <div className="circle-wrapper">
+                        <div className="orbit circle-spin">
+                            <div className="first-circle">
+                                <div className="outer-orbit-small">
+                                    <div className="small"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div className="circle-position one-circle top-left-circle">
+                    <div className="circle-wrapper">
+                        <div className="orbit circle-spin">
+                            <div className="first-circle"></div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div className="container">
+                        <div className="row">
+                            <div className="photo-content">
+                                <SlideTab />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="circle-left-bottom">
+                    <div className="circle-slide">
+                        <div className="first-circle orbit">
+                        </div>
+                        <div id="mercury" className="orbit">
+                            <div class="medium-circle">
+                                <div className="small-cicrcle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
             // End Effect Section
         )
