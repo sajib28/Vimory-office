@@ -504,6 +504,7 @@ svg .cls-2 {
 
 .second-Menu.fixedClass .fa-bars {
   color: #fff;
+  visibility: visible;
 }
 
 .second-Menu.fixedClass img {
@@ -521,6 +522,10 @@ svg .cls-2 {
 }
 
 .second-Menu.absoluteClass .navbar img {
+  visibility: hidden;
+}
+
+.second-Menu.absoluteClass .fa-bars {
   visibility: hidden;
 }
 
@@ -662,10 +667,6 @@ svg .cls-2 {
 
 .slider-section p {
   line-height: 28px;
-}
-
-#threedSlider .video-template video {
-  max-width: 100%;
 }
 
 #threedSlider .slide-img {
@@ -1255,115 +1256,185 @@ svg .cls-2 {
   position: relative;
   z-index: 9;
   min-height: 530px;
+  list-style-type: none;
 }
 
-.feature-box .feature-1 {
-  position: absolute;
-  left: 0;
+.vimory-btn {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  color: #000;
 }
 
-.feature-box .feature-2 {
+.feature-1 {
   position: absolute;
-  bottom: 0;
-  left: 23.5%;
+  left: 85px;
+  top: 0;
 }
 
-.feature-box .feature-3 {
+.feature-2 {
   position: absolute;
-  right: 23.5%;
-}
-
-.feature-box .feature-4 {
-  position: absolute;
-  right: 0;
+  left: 31%;
   bottom: 0;
 }
 
-.feature-box li {
-  display: inline-block;
-  position: relative;
-  width: 165px;
-  height: 285px;
-  border-top: 2px solid rgba(0, 0, 0, 0.4);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
-  -webkit-transition: .5s border-color;
-  transition: .5s border-color;
-  cursor: pointer;
-  margin: 10px 84px;
-  opacity: 1;
+.feature-3 {
+  position: absolute;
+  right: 31%;
+  top: 0;
 }
 
-.feature-box li:before {
-  -webkit-transform: rotate(60deg);
-  transform: rotate(60deg);
+.feature-4 {
+  right: 85px;
+  position: absolute;
+  bottom: 0;
 }
 
-.feature-box li:after {
-  -webkit-transform: rotate(-60deg);
-  transform: rotate(-60deg);
+.brk-sc-honeycomb-one_wide-shadow {
+  -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
 }
 
-.feature-box li:after, .feature-box li:before {
+.brk-sc-honeycomb-one {
+  width: 160px;
+  height: 280px;
+  -webkit-box-shadow: 0 1px 14px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 1px 14px rgba(0, 0, 0, 0.06);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  margin: 30px 0;
+  background-color: #fff;
+}
+
+.brk-sc-honeycomb-one:after,
+.brk-sc-honeycomb-one:before {
   content: '';
   position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100%;
-  height: calc(100% + 4px);
-  border-bottom: inherit;
-  border-top: inherit;
-  bottom: -2px;
+  height: 100%;
+  z-index: -1;
+  -webkit-box-shadow: inherit;
+          box-shadow: inherit;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  background-color: #fff;
 }
 
-.feature-box li .content {
+.brk-sc-honeycomb-one:before {
+  -webkit-transform: translate(-50%, -50%) rotate(60deg);
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.brk-sc-honeycomb-one_hide-btn .brk-sc-honeycomb-one__content {
+  padding-top: 50px;
+}
+
+.brk-sc-honeycomb-one__content {
   position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  text-align: center;
+  /* -webkit-transition-property: padding-top,background-color; */
+  /* transition-property: padding-top,background-color; */
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  padding-top: 50px;
+}
+
+.brk-sc-honeycomb-one__p {
+  margin-left: -35px;
+  margin-right: -35px;
+}
+
+.brk-sc-honeycomb-one__hide-btn {
+  opacity: 1;
+  -webkit-transition: .3s opacity;
+  transition: .3s opacity;
+}
+
+.brk-sc-honeycomb-one__layer {
+  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: auto;
-  color: #000;
-  text-align: center;
-  font-size: 1rem;
   z-index: 2;
-}
-
-.feature-box li .hover {
-  position: absolute;
-  width: 200%;
+  width: 202%;
   height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background: transparent;
+  opacity: 0;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  z-index: 1;
   -webkit-clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
   clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
 }
 
-.feature-box li:hover .hover {
+.brk-base-bg-gradient-14 {
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--brk-base-3)), to(var(--secondary)));
+  background-image: linear-gradient(to right, var(--brk-base-3), var(--secondary));
+}
+
+.brk-sc-honeycomb-one__hex-1,
+.brk-sc-honeycomb-one__hex-2 {
+  position: absolute;
+  background: inherit;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.brk-sc-honeycomb-one__hex-1 {
+  -webkit-transform: translate(-50%, -50%) rotate(60deg);
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.brk-sc-honeycomb-one__hex-2 {
+  -webkit-transform: translate(-50%, -50%) rotate(-60deg);
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.brk-sc-honeycomb-one:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-60deg);
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.brk-sc-honeycomb-one:hover .brk-sc-honeycomb-one__content {
+  padding-top: 50px;
+}
+
+.brk-sc-honeycomb-one_hide-btn:hover .brk-sc-honeycomb-one__header,
+.brk-sc-honeycomb-one_hide-btn:hover .brk-sc-honeycomb-one__p {
+  color: #fff;
+}
+
+.brk-sc-honeycomb-one:hover .brk-sc-honeycomb-one__layer {
+  opacity: 1;
+}
+
+.brk-base-bg-gradient-14 {
   background: -webkit-gradient(linear, left top, right top, from(#5BB1E5), to(#002BFF));
   background: linear-gradient(to right, #5BB1E5, #002BFF);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
 }
 
-.feature-box li:nth-child(even) {
-  margin-top: 100px;
+.btn-prime {
+  border: 0;
+  -webkit-box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.feature-box li h3 {
-  color: #000;
-}
-
-.feature-box li p {
-  color: #000;
-}
-
-.feature-box li a {
-  color: #000;
+.btn-prime-primary-transparent,
+.btn-prime-white-transparent {
+  background: #0584D1;
+  color: #fff;
 }
 
 /*All Animation circle css*/

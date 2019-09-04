@@ -6,80 +6,80 @@ import Slide1 from '../../assets/img/template-1.gif';
 import Slide2 from '../../assets/img/template-2.gif';
 import Slide3 from '../../assets/img/template-2.gif';
 import { relative } from 'path';
-import videomp from '../../assets/media/30.Love_OK.mp4';
+import videomp from '../../assets/media/400-400.mp4';
 import videoweb from '../../assets/media/30.Love_OK.webm';
 let slides = [
-    // {
-    //     key: uuidv4(),
-    //     content: <div className="video-template">
-    //     <video autoPlay muted>
-    //         <source src={videomp} type="video/webm"/>
-    //         <source src={videomp} type="video/mp4"/>
-    //         </video>
-    //     </div>
-    // },
-    // {
-    //     key: uuidv4(),
-    //     content: <div className="video-template">
-    //     <video autoPlay muted>
-    //         <source src={videomp} type="video/webm"/>
-    //         <source src={videomp} type="video/mp4"/>
-    //         </video>
-    //     </div>
-    // },
-    // {
-    //     key: uuidv4(),
-    //     content: <div className="video-template">
-    //     <video autoPlay muted>
-    //         <source src={videomp} type="video/webm"/>
-    //         <source src={videomp} type="video/mp4"/>
-    //         </video>
-    //     </div>
-    // },
-    // {
-    //     key: uuidv4(),
-    //     content: <div className="video-template">
-    //     <video autoPlay muted>
-    //         <source src={videomp} type="video/webm"/>
-    //         <source src={videomp} type="video/mp4"/>
-    //         </video>
-    //     </div>
-    // },
-    // {
-    //     key: uuidv4(),
-    //     content: <div className="video-template">
-    //     <video autoPlay muted>
-    //         <source src={videomp} type="video/webm"/>
-    //         <source src={videomp} type="video/mp4"/>
-    //         </video>
-    //     </div>
-    // },
-    // {
-    //     key: uuidv4(),
-    //     content: <div className="video-template">
-    //     <video autoPlay muted>
-    //         <source src={videomp} type="video/webm"/>
-    //         <source src={videomp} type="video/mp4"/>
-    //         </video>
-    //     </div>
-    // }
     {
         key: uuidv4(),
-        content: <img className="slide-img" src={Slide1} alt="5" />
+        content: <div className="video-template">
+        <video autoPlay muted>
+            <source src={videomp} type="video/webm"/>
+            <source src={videomp} type="video/mp4"/>
+            </video>
+        </div>
     },
     {
         key: uuidv4(),
-        content: <img className="slide-img" src={Slide3} alt="6" />
+        content: <div className="video-template">
+        <video autoPlay muted>
+            <source src={videomp} type="video/webm"/>
+            <source src={videomp} type="video/mp4"/>
+            </video>
+        </div>
     },
     {
         key: uuidv4(),
-        content: <img className="slide-img" src={Slide1} alt="7" />
+        content: <div className="video-template">
+        <video autoPlay muted>
+            <source src={videomp} type="video/webm"/>
+            <source src={videomp} type="video/mp4"/>
+            </video>
+        </div>
+    },
+    {
+        key: uuidv4(),
+        content: <div className="video-template">
+        <video autoPlay muted>
+            <source src={videomp} type="video/webm"/>
+            <source src={videomp} type="video/mp4"/>
+            </video>
+        </div>
+    },
+    {
+        key: uuidv4(),
+        content: <div className="video-template">
+        <video autoPlay muted>
+            <source src={videomp} type="video/webm"/>
+            <source src={videomp} type="video/mp4"/>
+            </video>
+        </div>
+    },
+    {
+        key: uuidv4(),
+        content: <div className="video-template">
+        <video autoPlay muted>
+            <source src={videomp} type="video/webm"/>
+            <source src={videomp} type="video/mp4"/>
+            </video>
+        </div>
     }
+    // {
+    //     key: uuidv4(),
+    //     content: <img className="slide-img" src={Slide1} alt="5" />
+    // },
+    // {
+    //     key: uuidv4(),
+    //     content: <img className="slide-img" src={Slide3} alt="6" />
+    // },
+    // {
+    //     key: uuidv4(),
+    //     content: <img className="slide-img" src={Slide1} alt="7" />
+    // }
 ];
 class AnimationSlider extends Component {
     state = {
         goToSlide: 1,
-        offsetRadius: 10,
+        offsetRadius: 2,
         showNavigation: true,
         autoPlay: true,
         loop: true,
