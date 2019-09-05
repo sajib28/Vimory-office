@@ -68,6 +68,14 @@ $gardient-frame2:#002BFF;
     -o-box-shadow: $left $top $blur $color;
 }
 
+@mixin translate($args) {
+    transform: translate($args);
+    transform: -webkit-translate($args);
+    transform: -moz-translate($args);
+    transform: -ms-translate($args);
+    transform: -o-translate($args);
+}
+
 /*End All Cross browser CSS3 mixins*/
 body {
     font-family: $body-font;
@@ -158,6 +166,7 @@ section {
 }
 
 .shadow-title {
+
     h2 {
         font-size: 90px;
         line-height: 108px;
@@ -169,16 +178,16 @@ section {
         display: block;
         text-align: center;
         position: relative;
+
     }
 }
 
 .shadow-text {
     position: absolute;
     font-size: 200px;
-    left: 50%;
     top: 30px;
-    transform: translateX(-50%);
-    z-index: -1;
+    z-index: 0;
+    left: 0;
     color: rgba(238, 235, 207, .14);
     letter-spacing: 4px;
     font-weight: bold;
@@ -352,8 +361,12 @@ svg {
         z-index: 99;
 
         video {
-            border-radius: 36px;
+            @include border-radius(36px);
             border-top: 3px solid #000;
+        }
+
+        img {
+            @include border-radius(36px);
         }
     }
 }
@@ -580,13 +593,30 @@ svg {
         float: right;
     }
 
+    .mobile-frame-content {
+        top: 32px;
+    }
+
 }
 
 // Navbar  css
 #mainMenu {
     padding: 25px 0;
 
+    &.fixedClass {
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 999;
+        background: rgba($black, .8);
+        padding: 0;
+    }
+
+    .absoluteClass {}
+
     .nav-item {
+        padding: 0 8px;
+
         .nav-link {
             font-size: 18px;
             color: #fff;
@@ -594,8 +624,26 @@ svg {
 
         .nav-link.active,
         .nav-link:hover {
+
             color: #0C89D5;
         }
+
+        .nav-link.active {
+            position: relative;
+
+            &:after {
+                content: '';
+                border-left: 2px solid $theme-color;
+                position: absolute;
+                height: 50px;
+                left: 50%;
+                transform: rotate(36.5deg);
+                top: 0px;
+                margin-left: -5px;
+            }
+        }
+
+
     }
 }
 
@@ -610,10 +658,11 @@ svg {
 
 .second-Menu {
     .navbar {
-        padding: 0;
+        padding: 35px 0 35px;
+        @include transition(all 0.3s ease-in-out);
 
         .nav-item {
-            padding: 0 16px;
+            padding: 0 22px;
 
             .nav-link {
                 cursor: pointer;
@@ -631,6 +680,9 @@ svg {
         background: rgba($black, .8);
 
         .navbar {
+            padding: 0;
+            @include transition(all 0.5s ease-in-out);
+
             .nav-item {
                 .nav-link {
                     font-size: 18px;
@@ -641,16 +693,44 @@ svg {
                 .nav-link:hover {
                     color: $theme-color;
                 }
+
+                .nav-link.active {
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        border-left: 2px solid $theme-color;
+                        position: absolute;
+                        height: 50px;
+                        left: 50%;
+                        transform: rotate(36.5deg);
+                        top: 0px;
+                        margin-left: -5px;
+                    }
+                }
             }
         }
-
+        .mb-dropdown{
+            opacity: 1;
+            &.btn{
+                background: none;
+                border: none;
+                box-shadow: none;
+            }
+            &:after{
+                display: none;
+            }
+            &:hover,&:active,&:focus{
+                outline: 0;
+                box-shadow: none;
+            }
+        }
         .fa-bars {
             color: $white;
-            opacity: 1;
         }
 
-        img {
-            opacity: 1;
+        .navbar-brand {
+            display: block;
         }
     }
 
@@ -668,12 +748,12 @@ svg {
                 }
             }
 
-            img {
-                opacity: 0;
+            .navbar-brand {
+                display: none;
             }
         }
 
-        .fa-bars {
+        .mb-dropdown{
             opacity: 0;
         }
 
@@ -681,7 +761,7 @@ svg {
 
     .fa-bars {
         color: $black;
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
@@ -696,7 +776,7 @@ svg {
         font-size: 70px;
         line-height: 84px;
         margin-bottom: 30px;
-        text-align: justify;
+        text-align:left;
         font-weight: bold;
         letter-spacing: 5px;
     }
@@ -705,6 +785,7 @@ svg {
         color: $white;
         font-size: 20px;
         line-height: 25px;
+        max-width: 540px;
     }
 
     ul {
@@ -813,11 +894,9 @@ svg {
 
 #threedSlider {
     .video-template {
-        video {}
-    }
-
-    .slide-img {
-        @include box-shadow(0, 0, 20px, rgba(0, 0, 0, 1));
+        video {
+            @include box-shadow(0, 0, 20px, rgba(0, 0, 0, 1));
+        }
     }
 
     .css-1qzevvg {
@@ -855,6 +934,7 @@ svg {
 
     .content-area {
         position: relative;
+
         .mobile-frame {
             float: right;
 
@@ -884,25 +964,28 @@ svg {
                 stroke: $theme-color;
             }
         }
-        .circle-position{
-            &.right-circle{
+
+        .circle-position {
+            &.right-circle {
                 display: block;
-                .circle-spin{
+
+                .circle-spin {
                     right: 0;
                 }
             }
 
-            &.top-left-circle{
+            &.top-left-circle {
                 left: 80px;
-                top:60px;
-                .circle-spin{
+                top: 60px;
+
+                .circle-spin {
                     right: inherit;
-                    top:0;
-    
+                    top: 0;
+
                 }
-             }
+            }
         }
-      
+
     }
 
 }
@@ -963,16 +1046,18 @@ svg {
 #effect {
     padding: 0;
 
-    .content-area{
+    .content-area {
         position: relative;
-        .top-circle-left{
+
+        .top-circle-left {
             left: 80px;
-            .circle-spin{
+
+            .circle-spin {
                 bottom: inherit;
             }
-         }
+        }
     }
-    
+
 }
 
 /*End Effect section*/
@@ -1022,6 +1107,10 @@ svg {
 #filter {
     padding: 0;
     position: relative;
+
+    .mobile-frame-content {
+        top: 32px;
+    }
 
     .tab-content {
         .img-hover {
@@ -1077,11 +1166,13 @@ svg {
 
         }
     }
-.left-circle{
-    bottom:200px;
 
+    .left-circle {
+        bottom: 200px;
+
+    }
 }
-}
+
 /*End Filter section*/
 
 /*Client Review Css*/
@@ -1137,15 +1228,15 @@ svg {
             }
         }
     }
-.left-circle{
-.circle-spin{
-    left: 0;
-    right: inherit;
-}
-}
-.right-circle{
 
-}
+    .left-circle {
+        .circle-spin {
+            left: 0;
+            right: inherit;
+        }
+    }
+
+    .right-circle {}
 }
 
 /*End Client Review Css*/
@@ -1279,41 +1370,59 @@ svg {
     position: relative;
 
     .accordion-menu {
-        .card {
-            border: 0;
+        .MuiExpansionPanel-rounded {
+            background: #0584D1;
+            margin-bottom: 30px;
+            @include border-radius(14px);
+            @include box-shadow(0, 3px, 6px, rgba(0, 3, 6, .16));
 
-            .card-header {
-                background: #0584D1;
-                height: 50px;
-                margin-bottom: 30px;
-                @include border-radius(14x);
-                @include box-shadow(0, 3px, 6px, rgba(0, 0, 0, .16));
+            &:before {
+                background: none;
+            }
 
-                h5 {
+            .MuiExpansionPanelSummary-content {
+                p {
                     color: $white;
-                    height: 50px;
                     font-size: 18px;
                     font-weight: bold;
                     line-height: 22px;
                     letter-spacing: 1px;
-
-                }
-
-                i {
-                    float: right;
+                    font-family: $body-font;
                 }
             }
 
-            .card-body {
-                p {
-                    font-size: 15px;
-                    line-height: 22px;
-                }
+            .MuiTypography-body1 {
+                font-size: 15px;
+                line-height: 22px;
+                font-family: $body-font;
             }
 
+            .MuiExpansionPanelDetails-root {
+                padding: 0px 24px 35px;
+            }
 
+            .MuiSvgIcon-root {
+                fill: $white;
+                width: 30px;
+                height: 30px;
+            }
         }
 
+        .Mui-expanded {
+            &.MuiExpansionPanel-rounded {
+                background: $white;
+
+                .MuiExpansionPanelSummary-content {
+                    p {
+                        color: $theme-color;
+                    }
+                }
+
+                .MuiSvgIcon-root {
+                    fill: $theme-color;
+                }
+            }
+        }
     }
 
 }
@@ -1333,12 +1442,11 @@ svg {
         color: $white;
         margin-bottom: 100px;
 
-        h2 {
-            .shadow-text {
-                font-size: 180px;
-                top: 30px;
-            }
+
+        .shadow-text {
+            font-size: 185px;
         }
+
     }
 
     .contact-info {
@@ -1352,7 +1460,6 @@ svg {
             margin: 40px 0 40px;
 
             a {
-                display: block;
                 text-decoration: none;
                 color: $white;
 
@@ -1795,20 +1902,21 @@ svg {
     position: absolute;
 
     &.one-circle {
-        
+
         .circle-wrapper {
             position: relative;
 
             .orbit {
                 border: 8px solid $animation-border;
             }
+
             .circle-spin {
                 width: 142px;
                 height: 142px;
                 border-radius: 50%;
                 position: absolute;
-                bottom:0;
-                right:0;
+                bottom: 0;
+                right: 0;
                 animation: spin-right 5s linear infinite;
             }
         }
@@ -1833,11 +1941,12 @@ svg {
         left: 80px;
         bottom: 60px;
     }
-     &.right-circle{
+
+    &.right-circle {
         right: 80px;
         bottom: 60px;
-     }
-    
+    }
+
     &.two-circle {
         .circle-wrapper {
             position: relative;
@@ -1846,47 +1955,48 @@ svg {
         .orbit {
             border: 8px solid $animation-border;
         }
-            .circle-spin {
-                width: 208px;
-                height: 208px;
-                animation: spin-right 5s linear infinite;
-                position: absolute;
-                border: 8px solid $animation-border;
-                @include border-radius(50%);
-                bottom: 0;
 
-                .first-circle {
+        .circle-spin {
+            width: 208px;
+            height: 208px;
+            animation: spin-right 5s linear infinite;
+            position: absolute;
+            border: 8px solid $animation-border;
+            @include border-radius(50%);
+            bottom: 0;
+
+            .first-circle {
+                width: 64px;
+                height: 64px;
+                @include linear-gradient(to bottom, $gardient-blue1, $gardient-blue2);
+                border-radius: 50%;
+                top: 0;
+                right: 0;
+                position: absolute;
+
+                .outer-orbit-small {
                     width: 64px;
                     height: 64px;
-                    @include linear-gradient(to bottom, $gardient-blue1, $gardient-blue2);
                     border-radius: 50%;
                     top: 0;
                     right: 0;
                     position: absolute;
+                    animation: spin-right 2s linear infinite;
 
-                    .outer-orbit-small {
-                        width: 64px;
-                        height: 64px;
+                    .small {
+                        width: 20px;
+                        height: 20px;
+                        @include linear-gradient(to bottom, $gardient-blue1, $gardient-blue2);
                         border-radius: 50%;
-                        top: 0;
-                        right: 0;
                         position: absolute;
-                        animation: spin-right 2s linear infinite;
+                        left: 90px;
 
-                        .small {
-                            width: 20px;
-                            height: 20px;
-                            @include linear-gradient(to bottom, $gardient-blue1, $gardient-blue2);
-                            border-radius: 50%;
-                            position: absolute;
-                            left: 90px;
-                           
-                        }
                     }
-
                 }
+
             }
-        
+        }
+
     }
 }
 
@@ -1942,3 +2052,105 @@ svg {
     right: 100px;
     bottom: 0;
 }
+
+/*Start Responsive Code here it is written for Mobile, Tablet,iPad */
+@media (max-width: 767px) {
+    section {
+        padding: 40px 0;
+
+        h2 {
+            margin: 0 0 0 20px;
+            font-size: 30px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #intro {
+        padding: 80px 0 0 0;
+
+        h1 {
+            font-size: 30px;
+            line-height: 40px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        ul {
+            display: block;
+            text-align: center;
+            margin: 30px 0 50px;
+
+            li {
+                &:first-child {
+                    margin: 0 10px;
+                }
+
+                margin:0 10px;
+            }
+
+            img {
+                width: 120px;
+            }
+        }
+    }
+/*Get In Touch Section */
+    #getInTouch {
+        .title-inner {
+            margin-bottom: 0;
+            h2 {
+                font-size: 30px;
+    
+                .shadow-text {
+                    font-size: 40px;
+                }
+            }
+        }
+        .contact-info{
+            .weblink{
+                margin: 25px 0 30px;
+            }
+            .apps-logo{
+                margin-top: 0;
+                ul{
+                    li{
+                        &:first-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            }
+        }
+    }
+    /*End Get In Touch Section */
+    #footer {
+        .footer-menu {
+            ul {
+                text-align: center;
+                display: block;
+
+                li {
+                    display: inline-block;
+
+                    a {}
+                }
+            }
+        }
+
+        .social-icon {
+            ul {
+
+                li {
+                    
+                }
+            }
+        }
+}
+
+/*End Responsive Code here it is written for Mobile, Tablet,iPad */

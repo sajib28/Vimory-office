@@ -23,14 +23,15 @@ class Header extends Component {
         window.removeEventListener('scroll', this.handleScroll);
     }
     handleScroll() {
-
-        if (window.scrollY > 200) {
-            this.setState({
-                scrollingLock: true
-            });
-        } else if (window.scrollY < 100) {
+        let introSection = document.getElementById('intro').clientHeight;
+        let appFeature = document.getElementById('appFeature').clientHeight;
+        if (window.scrollY > introSection + appFeature-80) {
             this.setState({
                 scrollingLock: false
+            });
+        } else if (window.scrollY < introSection + appFeature-60) {
+            this.setState({
+                scrollingLock: true
             });
         }
 
@@ -120,7 +121,7 @@ class Header extends Component {
             </nav> */}
                 <Navbar id="mainMenu" collapseOnSelect expand="lg" style=
                 {{
-                    width: "100%", top: "0px", zIndex: "999", position: this.state.scrollingLock ? "static" : "absolute"
+                    width: "100%", top: "0px", zIndex: "999", position: this.state.scrollingLock ? "fixed" : "absolute"
                 }} className={this.state.scrollingLock ? 'fixedClass navbar navbar-expand-lg navbar-light header-area' : 'absoluteClass navbar navbar-expand-lg navbar-light header-area'}>
                     <div className="container">
                         <Navbar.Brand href="/"><img src={logo} alt="Vimory Logo" /></Navbar.Brand>
@@ -131,7 +132,7 @@ class Header extends Component {
                                     <li className="nav-item">
                                         <Link
                                             activeClass="active"
-                                            to="mainMenu"
+                                            to="root"
                                             spy={true}
                                             smooth={true}
                                             offset={0}

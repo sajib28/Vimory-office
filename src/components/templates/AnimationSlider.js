@@ -2,64 +2,66 @@ import React, { Component } from 'react'
 import Carousel from 'react-spring-3d-carousel';
 import uuidv4 from "uuid";
 import { config } from "react-spring";
-import Slide1 from '../../assets/img/template-1.gif';
-import Slide2 from '../../assets/img/template-2.gif';
-import Slide3 from '../../assets/img/template-2.gif';
 import { relative } from 'path';
-import videomp from '../../assets/media/400-400.mp4';
-import videoweb from '../../assets/media/30.Love_OK.webm';
+import Template1 from '../../assets/media/template/kids.mp4';
+import Template2 from '../../assets/media/template/girls.mp4';
+import Template3 from '../../assets/media/template/love.mp4';
+//import Template4 from '../../assets/media/template/love2.mp4';
+import Template5 from '../../assets/media/template/food.mp4';
+import Template6 from '../../assets/media/template/spring.mp4';
+
 let slides = [
     {
         key: uuidv4(),
         content: <div className="video-template">
-        <video autoPlay muted>
-            <source src={videomp} type="video/webm"/>
-            <source src={videomp} type="video/mp4"/>
+        <video autoPlay muted loop>
+            <source src={Template1} type="video/webm"/>
+            <source src={Template1} type="video/mp4"/>
             </video>
         </div>
     },
     {
         key: uuidv4(),
         content: <div className="video-template">
-        <video autoPlay muted>
-            <source src={videomp} type="video/webm"/>
-            <source src={videomp} type="video/mp4"/>
+        <video autoPlay muted loop>
+            <source src={Template2} type="video/webm"/>
+            <source src={Template2} type="video/mp4"/>
             </video>
         </div>
     },
     {
         key: uuidv4(),
         content: <div className="video-template">
-        <video autoPlay muted>
-            <source src={videomp} type="video/webm"/>
-            <source src={videomp} type="video/mp4"/>
+        <video autoPlay muted loop>
+            <source src={Template3} type="video/webm"/>
+            <source src={Template3} type="video/mp4"/>
+            </video>
+        </div>
+    },
+    // {
+    //     key: uuidv4(),
+    //     content: <div className="video-template">
+    //     <video autoPlay muted loop>
+    //         <source src={Template4} type="video/webm"/>
+    //         <source src={Template4} type="video/mp4"/>
+    //         </video>
+    //     </div>
+    // },
+    {
+        key: uuidv4(),
+        content: <div className="video-template">
+        <video autoPlay muted loop>
+            <source src={Template5} type="video/webm"/>
+            <source src={Template5} type="video/mp4"/>
             </video>
         </div>
     },
     {
         key: uuidv4(),
         content: <div className="video-template">
-        <video autoPlay muted>
-            <source src={videomp} type="video/webm"/>
-            <source src={videomp} type="video/mp4"/>
-            </video>
-        </div>
-    },
-    {
-        key: uuidv4(),
-        content: <div className="video-template">
-        <video autoPlay muted>
-            <source src={videomp} type="video/webm"/>
-            <source src={videomp} type="video/mp4"/>
-            </video>
-        </div>
-    },
-    {
-        key: uuidv4(),
-        content: <div className="video-template">
-        <video autoPlay muted>
-            <source src={videomp} type="video/webm"/>
-            <source src={videomp} type="video/mp4"/>
+        <video autoPlay muted loop>
+            <source src={Template6} type="video/webm"/>
+            <source src={Template6} type="video/mp4"/>
             </video>
         </div>
     }
@@ -107,7 +109,7 @@ class AnimationSlider extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <div id id="threedSlider" style={{ width: "80%", height: "480px", margin: "100px auto 70px", position: "relative" }}>
+                            <div id id="threedSlider" style={{ width: "80%", height: "600px", margin: "100px auto 70px", position: "relative" }}>
                                 <Carousel
                                     slides={slides}
                                     goToSlide={this.state.goToSlide}

@@ -113,11 +113,9 @@ section {
 .shadow-text {
   position: absolute;
   font-size: 200px;
-  left: 50%;
   top: 30px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: -1;
+  z-index: 0;
+  left: 0;
   color: rgba(238, 235, 207, 0.14);
   letter-spacing: 4px;
   font-weight: bold;
@@ -269,7 +267,19 @@ svg .cls-2 {
 
 .mobile-frame .mobile-frame-content video {
   border-radius: 36px;
+  -webkit-border-radius: 36px;
+  -moz-border-radius: 36px;
+  -ms-border-radius: 36px;
+  -o-border-radius: 36px;
   border-top: 3px solid #000;
+}
+
+.mobile-frame .mobile-frame-content img {
+  border-radius: 36px;
+  -webkit-border-radius: 36px;
+  -moz-border-radius: 36px;
+  -ms-border-radius: 36px;
+  -o-border-radius: 36px;
 }
 
 /*Start Common css for Apps logo*/
@@ -465,8 +475,25 @@ svg .cls-2 {
   float: right;
 }
 
+#getToday .mobile-frame-content {
+  top: 32px;
+}
+
 #mainMenu {
   padding: 25px 0;
+}
+
+#mainMenu.fixedClass {
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0;
+}
+
+#mainMenu .nav-item {
+  padding: 0 8px;
 }
 
 #mainMenu .nav-item .nav-link {
@@ -479,17 +506,35 @@ svg .cls-2 {
   color: #0C89D5;
 }
 
+#mainMenu .nav-item .nav-link.active {
+  position: relative;
+}
+
+#mainMenu .nav-item .nav-link.active:after {
+  content: '';
+  border-left: 2px solid #0584D1;
+  position: absolute;
+  height: 50px;
+  left: 50%;
+  -webkit-transform: rotate(36.5deg);
+          transform: rotate(36.5deg);
+  top: 0px;
+  margin-left: -5px;
+}
+
 /*Second Menu Css*/
 .modal-open .fixedClass {
   overflow-y: scroll;
 }
 
 .second-Menu .navbar {
-  padding: 0;
+  padding: 35px 0 35px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .second-Menu .navbar .nav-item {
-  padding: 0 16px;
+  padding: 0 22px;
 }
 
 .second-Menu .navbar .nav-item .nav-link {
@@ -506,6 +551,12 @@ svg .cls-2 {
   background: rgba(0, 0, 0, 0.8);
 }
 
+.second-Menu.fixedClass .navbar {
+  padding: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
 .second-Menu.fixedClass .navbar .nav-item .nav-link {
   font-size: 18px;
   color: #fff;
@@ -516,13 +567,49 @@ svg .cls-2 {
   color: #0584D1;
 }
 
-.second-Menu.fixedClass .fa-bars {
-  color: #fff;
+.second-Menu.fixedClass .navbar .nav-item .nav-link.active {
+  position: relative;
+}
+
+.second-Menu.fixedClass .navbar .nav-item .nav-link.active:after {
+  content: '';
+  border-left: 2px solid #0584D1;
+  position: absolute;
+  height: 50px;
+  left: 50%;
+  -webkit-transform: rotate(36.5deg);
+          transform: rotate(36.5deg);
+  top: 0px;
+  margin-left: -5px;
+}
+
+.second-Menu.fixedClass .mb-dropdown {
   opacity: 1;
 }
 
-.second-Menu.fixedClass img {
-  opacity: 1;
+.second-Menu.fixedClass .mb-dropdown.btn {
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.second-Menu.fixedClass .mb-dropdown:after {
+  display: none;
+}
+
+.second-Menu.fixedClass .mb-dropdown:hover, .second-Menu.fixedClass .mb-dropdown:active, .second-Menu.fixedClass .mb-dropdown:focus {
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.second-Menu.fixedClass .fa-bars {
+  color: #fff;
+}
+
+.second-Menu.fixedClass .navbar-brand {
+  display: block;
 }
 
 .second-Menu.absoluteClass .navbar .nav-item .nav-link {
@@ -535,17 +622,17 @@ svg .cls-2 {
   color: #0584D1;
 }
 
-.second-Menu.absoluteClass .navbar img {
-  opacity: 0;
+.second-Menu.absoluteClass .navbar .navbar-brand {
+  display: none;
 }
 
-.second-Menu.absoluteClass .fa-bars {
+.second-Menu.absoluteClass .mb-dropdown {
   opacity: 0;
 }
 
 .second-Menu .fa-bars {
   color: #000;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 /*End Second Menu css*/
@@ -559,7 +646,7 @@ svg .cls-2 {
   font-size: 70px;
   line-height: 84px;
   margin-bottom: 30px;
-  text-align: justify;
+  text-align: left;
   font-weight: bold;
   letter-spacing: 5px;
 }
@@ -568,6 +655,7 @@ svg .cls-2 {
   color: #fff;
   font-size: 20px;
   line-height: 25px;
+  max-width: 540px;
 }
 
 #intro ul {
@@ -683,7 +771,7 @@ svg .cls-2 {
   line-height: 28px;
 }
 
-#threedSlider .slide-img {
+#threedSlider .video-template video {
   box-shadow: 0 0 20px black;
   -webkit-box-shadow: 0 0 20px black;
   -moz-box-shadow: 0 0 20px black;
@@ -862,6 +950,10 @@ svg .cls-2 {
 #filter {
   padding: 0;
   position: relative;
+}
+
+#filter .mobile-frame-content {
+  top: 32px;
 }
 
 #filter .tab-content .img-hover {
@@ -1107,42 +1199,60 @@ svg .cls-2 {
   position: relative;
 }
 
-#faqs .accordion-menu .card {
-  border: 0;
-}
-
-#faqs .accordion-menu .card .card-header {
+#faqs .accordion-menu .MuiExpansionPanel-rounded {
   background: #0584D1;
-  height: 50px;
   margin-bottom: 30px;
-  border-radius: 14x;
-  -webkit-border-radius: 14x;
-  -moz-border-radius: 14x;
-  -ms-border-radius: 14x;
-  -o-border-radius: 14x;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  box-shadow: 0 3px 6px rgba(0, 3, 6, 0.16);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 3, 6, 0.16);
+  -moz-box-shadow: 0 3px 6px rgba(0, 3, 6, 0.16);
+  -ms-box-shadow: 0 3px 6px rgba(0, 3, 6, 0.16);
+  -o-box-shadow: 0 3px 6px rgba(0, 3, 6, 0.16);
 }
 
-#faqs .accordion-menu .card .card-header h5 {
+#faqs .accordion-menu .MuiExpansionPanel-rounded:before {
+  background: none;
+}
+
+#faqs .accordion-menu .MuiExpansionPanel-rounded .MuiExpansionPanelSummary-content p {
   color: #fff;
-  height: 50px;
   font-size: 18px;
   font-weight: bold;
   line-height: 22px;
   letter-spacing: 1px;
+  font-family: "helveticaregular";
 }
 
-#faqs .accordion-menu .card .card-header i {
-  float: right;
-}
-
-#faqs .accordion-menu .card .card-body p {
+#faqs .accordion-menu .MuiExpansionPanel-rounded .MuiTypography-body1 {
   font-size: 15px;
   line-height: 22px;
+  font-family: "helveticaregular";
+}
+
+#faqs .accordion-menu .MuiExpansionPanel-rounded .MuiExpansionPanelDetails-root {
+  padding: 0px 24px 35px;
+}
+
+#faqs .accordion-menu .MuiExpansionPanel-rounded .MuiSvgIcon-root {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+}
+
+#faqs .accordion-menu .Mui-expanded.MuiExpansionPanel-rounded {
+  background: #fff;
+}
+
+#faqs .accordion-menu .Mui-expanded.MuiExpansionPanel-rounded .MuiExpansionPanelSummary-content p {
+  color: #0584D1;
+}
+
+#faqs .accordion-menu .Mui-expanded.MuiExpansionPanel-rounded .MuiSvgIcon-root {
+  fill: #0584D1;
 }
 
 /*End Faqs Css*/
@@ -1161,9 +1271,8 @@ svg .cls-2 {
   margin-bottom: 100px;
 }
 
-#getInTouch .title-inner h2 .shadow-text {
-  font-size: 180px;
-  top: 30px;
+#getInTouch .title-inner .shadow-text {
+  font-size: 185px;
 }
 
 #getInTouch .contact-info h3 {
@@ -1177,7 +1286,6 @@ svg .cls-2 {
 }
 
 #getInTouch .contact-info .weblink a {
-  display: block;
   text-decoration: none;
   color: #fff;
 }
@@ -1623,4 +1731,76 @@ svg .cls-2 {
   right: 100px;
   bottom: 0;
 }
+
+/*Start Responsive Code here it is written for Mobile, Tablet,iPad */
+@media (max-width: 767px) {
+  section {
+    padding: 40px 0;
+  }
+  section h2 {
+    margin: 0 0 0 20px;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #intro {
+    padding: 80px 0 0 0;
+  }
+  #intro h1 {
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  #intro p {
+    font-size: 16px;
+    text-align: center;
+  }
+  #intro ul {
+    display: block;
+    text-align: center;
+    margin: 30px 0 50px;
+  }
+  #intro ul li {
+    margin: 0 10px;
+  }
+  #intro ul li:first-child {
+    margin: 0 10px;
+  }
+  #intro ul img {
+    width: 120px;
+  }
+  /*Get In Touch Section */
+  #getInTouch .title-inner {
+    margin-bottom: 0;
+  }
+  #getInTouch .title-inner h2 {
+    font-size: 30px;
+  }
+  #getInTouch .title-inner h2 .shadow-text {
+    font-size: 40px;
+  }
+  #getInTouch .contact-info .weblink {
+    margin: 25px 0 30px;
+  }
+  #getInTouch .contact-info .apps-logo {
+    margin-top: 0;
+  }
+  #getInTouch .contact-info .apps-logo ul li:first-child {
+    margin: 0;
+  }
+}
+
+/*End Get In Touch Section */
+#footer .footer-menu ul {
+  text-align: center;
+  display: block;
+}
+
+#footer .footer-menu ul li {
+  display: inline-block;
+}
+
+/*End Responsive Code here it is written for Mobile, Tablet,iPad */
 /*# sourceMappingURL=main.css.map */

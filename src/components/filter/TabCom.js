@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import mobileFrame from '../../assets/img/mobile-frame.png';
-import mobileFrameFilter from '../../assets/img/mobile-frame-filter.png';
-import mobileFrameEffect from '../../assets/img/mobile-frame-effect.png';
-import tabIconImg from '../../assets/img/filter-img-icon.png';
-import videomp from '../../assets/media/304-641.mp4';
-import videoweb from '../../assets/media/30.Love_OK.webm';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
+import mobileFrame from '../../assets/img/mobile-frame.png';
+import tabIconImg from '../../assets/img/filter-img-icon.png';
+import Filter1 from '../../assets/img/filter/Hue-4.jpg';
+import Filter2 from '../../assets/img/filter/Mid-generation.jpg';
+import Filter3 from '../../assets/img/filter/Duotone.jpg';
+import Filter4 from '../../assets/img/filter/Perpetua.jpg';
+import Filter5 from '../../assets/img/filter/moon.jpg';
+
+
+
+
 class TabCom extends Component {
     render() {
         return (
@@ -17,14 +22,9 @@ class TabCom extends Component {
                         <TabPanel><div className="col-md-5">
 
                             <div className="mobile-frame">
-                                <img src={mobileFrame} alt="" />
+                                <img src={mobileFrame} alt="Vimory Filter" />
                                 <div className="mobile-frame-content">
-                                        <div className="video-template">
-                                            <video autoPlay muted loop>
-                                                <source src={videomp} type="video/webm" />
-                                                <source src={videoweb} type="video/mp4" />
-                                            </video>
-                                        </div>
+                                        <img src={Filter1} alt="Vimory Filter"/>
                                     </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@ class TabCom extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                    <img src={mobileFrameEffect} alt="" />
+                                <img src={Filter2} alt="Vimory Filter"/>
                                 </div>
                             </div>
                         </div>
@@ -52,7 +52,7 @@ class TabCom extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                    <img src={mobileFrameFilter} alt="" />
+                                <img src={Filter3} alt="Vimory Filter"/>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +66,7 @@ class TabCom extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                    <img src={mobileFrameEffect} alt="" />
+                                <img src={Filter4} alt="Vimory Filter"/>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@ class TabCom extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                    <img src={mobileFrameFilter} alt="" />
+                                <img src={Filter5} alt="Vimory Filter"/>
                                 </div>
                             </div>
                         </div>

@@ -12,11 +12,11 @@ class Welcome extends Component {
                     <div className="col-md-8">
                         <div className="title">
                             <div className="title-inner">
-                                <h1>Perfect Memory<br />Creator</h1>
+                                <h1>Perfect Memory Creator</h1>
                             </div>
                         </div>
-                        <p>Fun and fast, Vimory will help your social media posts<br />
-                            stand out from the crowd; perfect for Facebook news feed,<br />
+                        <p>Fun and fast, Vimory will help your social media posts
+                            stand out from the crowd; perfect for Facebook news feed,
                             stories & profile video and Instagram feed & story.</p>
 
                         <ul>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BackgroundWithText from '../CommonTools/BackgroundWithText';
 import BackgroundImage from '../../assets/img/effect-bg.jpg';
 import mobileFrame from '../../assets/img/mobile-frame.png';
-import mobileFrameEffect from '../../assets/img/mobile-frame-effect.png';
+import EffectVideo from '../../assets/media/effect/final.mp4';
 class Effect extends Component {
     render() {
         return (
@@ -28,7 +28,12 @@ class Effect extends Component {
                                     <div className="mobile-frame">
                                         <img src={mobileFrame} alt="" />
                                         <div className="mobile-frame-content">
-                                            <img src={mobileFrameEffect} alt="" />
+                                            <div className="video-template">
+                                                <video autoPlay muted loop>
+                                                    <source src={EffectVideo} type="video/webm" />
+                                                    <source src={EffectVideo} type="video/mp4" />
+                                                </video>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

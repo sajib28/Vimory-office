@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import mobileFrame from '../../assets/img/mobile-frame.png';
-import mobileFrameFilter from '../../assets/img/mobile-frame-filter.png';
-import mobileFrameEffect from '../../assets/img/mobile-frame-effect.png';
-import tabIconImg from '../../assets/img/filter-img-icon.png';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
+import mobileFrame from '../../assets/img/mobile-frame.png';
+import Crop from '../../assets/media/photo-edit/crop.mp4';
+import Filter from '../../assets/media/photo-edit/filter2.mp4';
+import Adjust from '../../assets/media/photo-edit/adjustment.mp4';
+import Focus from '../../assets/media/photo-edit/focus-final.mp4';
+import Emoji from '../../assets/media/photo-edit/Emoji2.mp4';
 class PhotoEditTab extends Component {
     render() {
         return (
@@ -17,7 +19,12 @@ class PhotoEditTab extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                    <img src={mobileFrameFilter} alt="" />
+                                <div className="video-template">
+                                            <video autoPlay muted loop>
+                                                <source src={Crop} type="video/webm" />
+                                                <source src={Crop} type="video/mp4" />
+                                            </video>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -37,14 +44,19 @@ class PhotoEditTab extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                    <img src={mobileFrameEffect} alt="" />
+                                <div className="video-template">
+                                            <video autoPlay muted loop>
+                                                <source src={Filter} type="video/webm" />
+                                                <source src={Filter} type="video/mp4" />
+                                            </video>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                             <div className="col-md-7">
                                 <h3>Photo Edit</h3>
                                 <p>Try professional photo editing tools to edit single or multiple photos for adjustments, beautify or an ideal photogenic outlook.</p>
-                                <ul className="list-unstyled">
+                                <ul className="list-unstyled content-list">
                                     <li><i className="far fa-clone"></i>Modern photo cropping tools allow you to crop your photo more easily.</li>
                                     <li><i className="far fa-clone"></i>Express the moment with emoji and do more with it.</li>
                                     <li><i className="far fa-clone"></i>So many options like Exposure, Brightness, Contrast, Saturation,Warmth, highlights that give you a professional photo editing experience.</li>
@@ -57,14 +69,19 @@ class PhotoEditTab extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                    <img src={mobileFrameFilter} alt="" />
+                                <div className="video-template">
+                                            <video autoPlay muted loop>
+                                                <source src={Adjust} type="video/webm" />
+                                                <source src={Adjust} type="video/mp4" />
+                                            </video>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                             <div className="col-md-7">
                                 <h3>Photo Edit</h3>
                                 <p>Try professional photo editing tools to edit single or multiple photos for adjustments, beautify or an ideal photogenic outlook.</p>
-                                <ul className="list-unstyled">
+                                <ul className="list-unstyled content-list">
                                     <li><i className="far fa-clone"></i>Modern photo cropping tools allow you to crop your photo more easily.</li>
                                     <li><i className="far fa-clone"></i>Express the moment with emoji and do more with it.</li>
                                     <li><i className="far fa-clone"></i>So many options like Exposure, Brightness, Contrast, Saturation,Warmth, highlights that give you a professional photo editing experience.</li>
@@ -77,14 +94,19 @@ class PhotoEditTab extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                    <img src={mobileFrameEffect} alt="" />
+                                <div className="video-template">
+                                            <video autoPlay muted loop>
+                                                <source src={Focus} type="video/webm" />
+                                                <source src={Focus} type="video/mp4" />
+                                            </video>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                             <div className="col-md-7">
                                 <h3>Photo Edit</h3>
                                 <p>Try professional photo editing tools to edit single or multiple photos for adjustments, beautify or an ideal photogenic outlook.</p>
-                                <ul className="list-unstyled">
+                                <ul className="list-unstyled content-list">
                                     <li><i className="far fa-clone"></i>Modern photo cropping tools allow you to crop your photo more easily.</li>
                                     <li><i className="far fa-clone"></i>Express the moment with emoji and do more with it.</li>
                                     <li><i className="far fa-clone"></i>So many options like Exposure, Brightness, Contrast, Saturation,Warmth, highlights that give you a professional photo editing experience.</li>
@@ -97,14 +119,19 @@ class PhotoEditTab extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                    <img src={mobileFrameFilter} alt="" />
+                                <div className="video-template">
+                                            <video autoPlay muted loop>
+                                                <source src={Emoji} type="video/webm" />
+                                                <source src={Emoji} type="video/mp4" />
+                                            </video>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                             <div className="col-md-7">
                                 <h3>Photo Edit</h3>
                                 <p>Try professional photo editing tools to edit single or multiple photos for adjustments, beautify or an ideal photogenic outlook.</p>
-                                <ul className="list-unstyled">
+                                <ul className="list-unstyled content-list">
                                     <li><i className="far fa-clone"></i>Modern photo cropping tools allow you to crop your photo more easily.</li>
                                     <li><i className="far fa-clone"></i>Express the moment with emoji and do more with it.</li>
                                     <li><i className="far fa-clone"></i>So many options like Exposure, Brightness, Contrast, Saturation,Warmth, highlights that give you a professional photo editing experience.</li>

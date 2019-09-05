@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import FaqAccordion from './FaqAccordion';
-import TestAccordion from '../TestAccordion';
 class Faq extends Component {
     render() {
         return (
@@ -36,8 +35,6 @@ class Faq extends Component {
                         <div className="col-md-6 offset-3">
                             <div className="accordion-menu">
                                 <FaqAccordion />
-                                {/* <TestAccordion/> */}
-
                             </div>
                         </div>
                     </div>

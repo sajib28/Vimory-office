@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import mobileFrame from '../../assets/img/mobile-frame.png';
-import mobileFrameFilter from '../../assets/img/mobile-frame-filter.png';
-import mobileFrameEffect from '../../assets/img/mobile-frame-effect.png';
-import tabIconImg from '../../assets/img/filter-img-icon.png';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
-import videomp from '../../assets/media/304-641.mp4';
-import videoweb from '../../assets/media/30.Love_OK.webm';
+import mobileFrame from '../../assets/img/mobile-frame.png';
+import fade from '../../assets/media/slide/fade.mp4';
+import heart from '../../assets/media/slide/heart.mp4';
+import slice from '../../assets/media/slide/slice.mp4';
+import flip from '../../assets/media/slide/Flip.mp4';
+import skew from '../../assets/media/slide/skew.mp4';
 class SlideTab extends Component {
     render() {
         return (
@@ -25,8 +25,8 @@ class SlideTab extends Component {
                                     <div className="mobile-frame-content">
                                         <div className="video-template">
                                             <video autoPlay muted loop>
-                                                <source src={videomp} type="video/webm" />
-                                                <source src={videoweb} type="video/mp4" />
+                                                <source src={fade} type="video/webm" />
+                                                <source src={fade} type="video/mp4" />
                                             </video>
                                         </div>
                                     </div>
@@ -44,8 +44,8 @@ class SlideTab extends Component {
                                     <div className="mobile-frame-content">
                                         <div className="video-template">
                                             <video autoPlay muted loop>
-                                                <source src={videomp} type="video/webm" />
-                                                <source src={videoweb} type="video/mp4" />
+                                                <source src={heart} type="video/webm" />
+                                                <source src={heart} type="video/mp4" />
                                             </video>
                                         </div>
                                     </div>
@@ -63,8 +63,8 @@ class SlideTab extends Component {
                                     <div className="mobile-frame-content">
                                         <div className="video-template">
                                             <video autoPlay muted loop>
-                                                <source src={videomp} type="video/webm" />
-                                                <source src={videoweb} type="video/mp4" />
+                                                <source src={slice} type="video/webm" />
+                                                <source src={slice} type="video/mp4" />
                                             </video>
                                         </div>
                                     </div>
@@ -82,8 +82,8 @@ class SlideTab extends Component {
                                     <div className="mobile-frame-content">
                                         <div className="video-template">
                                             <video autoPlay muted loop>
-                                                <source src={videomp} type="video/webm" />
-                                                <source src={videoweb} type="video/mp4" />
+                                                <source src={flip} type="video/webm" />
+                                                <source src={flip} type="video/mp4" />
                                             </video>
                                         </div>
                                     </div>
@@ -101,8 +101,8 @@ class SlideTab extends Component {
                                     <div className="mobile-frame-content">
                                         <div className="video-template">
                                             <video autoPlay muted loop>
-                                                <source src={videomp} type="video/webm" />
-                                                <source src={videoweb} type="video/mp4" />
+                                                <source src={skew} type="video/webm" />
+                                                <source src={skew} type="video/mp4" />
                                             </video>
                                         </div>
                                     </div>

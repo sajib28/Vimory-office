@@ -1,68 +1,118 @@
-import React, { Component } from 'react'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import { Accordion, Card } from 'react-bootstrap';
-class FaqAccordion extends Component {
+const useStyles = makeStyles(theme => ({
+  root: {
+    width: '100%',
+  },
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    flexBasis: '33.33%',
+    flexShrink: 0,
+  },
+  secondaryHeading: {
+    fontSize: theme.typography.pxToRem(15),
+    color: theme.palette.text.secondary,
+  },
+}));
 
-    render() {
-       
-        return (
-            <Accordion defaultActiveKey="2">
-                <Card>
-                    <Accordion.Toggle as={Card.Header} eventKey="0">
-                        <h5>Can I edit videos as well, or only pictures? <i className="fas fa-chevron-down"></i></h5>
-                    </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="0">
-                        <Card.Body>
-                            <p>You can use all the features of this app after subscription. Without any subscription you can't use some of the premium features.</p>
-                        </Card.Body>
-                    </Accordion.Collapse>
-                </Card>
-                <Card>
-                    <Accordion.Toggle as={Card.Header} eventKey="1">
-                        <h5>I have found a bug, what should I do now?
-                    <i className="fas fa-chevron-down"></i></h5>
-                    </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="1">
-                        <Card.Body>
-                            <p>You can use all the features of this app after subscription. Without any subscription you can't use some of the premium features.</p>
-                        </Card.Body>
-                    </Accordion.Collapse>
-                </Card>
-                <Card>
-                    <Accordion.Toggle as={Card.Header} eventKey="2">
-                        <h5>What are the benefits of subscription?
-                    <i className="fas fa-chevron-down"></i></h5>
-                    </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="2">
-                        <Card.Body>
-                            <p>You can use all the features of this app after subscription. Without any subscription you can't use some of the premium features.</p>
-                        </Card.Body>
-                    </Accordion.Collapse>
-                </Card>
-                <Card>
-                    <Accordion.Toggle as={Card.Header} eventKey="3">
-                        <h5>How can i cancel my subscription?
-                    <i className="fas fa-chevron-down"></i></h5>
-                    </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="3">
-                        <Card.Body>
-                            <p>You can use all the features of this app after subscription. Without any subscription you can't use some of the premium features.</p>
-                        </Card.Body>
-                    </Accordion.Collapse>
-                </Card>
-                <Card>
-                    <Accordion.Toggle as={Card.Header} eventKey="4">
-                        <h5>Is there an option to modify the speed?
-                    <i className="fas fa-chevron-down"></i></h5>
-                    </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="4">
-                        <Card.Body>
-                            <p>You can use all the features of this app after subscription. Without any subscription you can't use some of the premium features.</p>
-                        </Card.Body>
-                    </Accordion.Collapse>
-                </Card>
-            </Accordion>
-        )
-    }
+function FaqAccordion() {
+  const classes = useStyles();
+  const [expanded, setExpanded] = React.useState('panel3');
+
+  const handleChange = panel => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
+  return (
+    <div className={classes.root}>
+      <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1bh-content"
+          id="panel1bh-header"
+        >
+          
+          <Typography className={classes.secondaryHeading}>Can I edit videos as well, or only pictures?</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+          You can use all the features of this app after subscription. Without any subscription you can't use some of the premium features.
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2bh-content"
+          id="panel2bh-header"
+        >
+          
+          <Typography className={classes.secondaryHeading}>
+          I have found a bug, what should I do now?
+          </Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+          You can use all the features of this app after subscription. Without any subscription you can't use some of the premium features.
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel3bh-content"
+          id="panel3bh-header"
+        >
+        
+          <Typography className={classes.secondaryHeading}>
+          What are the benefits of subscription?
+          </Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+          You can use all the features of this app after subscription. Without any subscription you can't use some of the premium features.
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel4bh-content"
+          id="panel4bh-header"
+        >
+          <Typography className={classes.secondaryHeading} headingtitle>
+          How can i cancel my subscription?
+          </Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography className="description">
+          You can use all the features of this app after subscription. Without any subscription you can't use some of the premium features.
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel5bh-content"
+          id="panel5bh-header"
+        >
+          <Typography className={classes.secondaryHeading}>
+          Is there an option to modify the speed?
+          </Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+          You can use all the features of this app after subscription. Without any subscription you can't use some of the premium features.
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+    </div>
+  );
 }
 export default FaqAccordion;
