@@ -710,21 +710,28 @@ svg {
                 }
             }
         }
-        .mb-dropdown{
+
+        .mb-dropdown {
             opacity: 1;
-            &.btn{
+
+            &.btn {
                 background: none;
                 border: none;
                 box-shadow: none;
             }
-            &:after{
+
+            &:after {
                 display: none;
             }
-            &:hover,&:active,&:focus{
+
+            &:hover,
+            &:active,
+            &:focus {
                 outline: 0;
                 box-shadow: none;
             }
         }
+
         .fa-bars {
             color: $white;
         }
@@ -753,7 +760,7 @@ svg {
             }
         }
 
-        .mb-dropdown{
+        .mb-dropdown {
             opacity: 0;
         }
 
@@ -776,7 +783,7 @@ svg {
         font-size: 70px;
         line-height: 84px;
         margin-bottom: 30px;
-        text-align:left;
+        text-align: left;
         font-weight: bold;
         letter-spacing: 5px;
     }
@@ -913,7 +920,20 @@ svg {
             width: 15px;
             height: 20px;
             cursor: pointer;
+            border: solid $theme-color;
+            border-width: 0 5px 5px 0;
+            display: inline-block;
+            padding: 8px;
 
+            &:first-child {
+                transform: rotate(135deg);
+                -webkit-transform: rotate(135deg);
+            }
+
+            &:last-child {
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+            }
         }
     }
 
@@ -2099,58 +2119,62 @@ svg {
             }
         }
     }
-/*Get In Touch Section */
+
+    /*Get In Touch Section */
     #getInTouch {
         .title-inner {
             margin-bottom: 0;
+
             h2 {
                 font-size: 30px;
-    
+
                 .shadow-text {
                     font-size: 40px;
                 }
             }
         }
-        .contact-info{
-            .weblink{
+
+        .contact-info {
+            .weblink {
                 margin: 25px 0 30px;
             }
-            .apps-logo{
+
+            .apps-logo {
                 margin-top: 0;
-                ul{
-                    li{
+
+                ul {
+                    li {
                         &:first-child {
                             margin: 0;
                         }
                     }
                 }
             }
+        }
+    }
+}
+
+/*End Get In Touch Section */
+#footer {
+    .footer-menu {
+        ul {
+            text-align: center;
+            display: block;
+
+            li {
+                display: inline-block;
+
+                a {}
             }
         }
     }
-    /*End Get In Touch Section */
-    #footer {
-        .footer-menu {
-            ul {
-                text-align: center;
-                display: block;
 
-                li {
-                    display: inline-block;
+    .social-icon {
+        ul {
 
-                    a {}
-                }
-            }
+            li {}
         }
-
-        .social-icon {
-            ul {
-
-                li {
-                    
-                }
-            }
-        }
+    }
 }
 
 /*End Responsive Code here it is written for Mobile, Tablet,iPad */

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Carousel from 'react-spring-3d-carousel';
 import uuidv4 from "uuid";
 import { config } from "react-spring";
+import $ from 'jquery';
 import { relative } from 'path';
 import Template1 from '../../assets/media/template/kids.mp4';
 import Template2 from '../../assets/media/template/girls.mp4';
@@ -14,27 +15,27 @@ let slides = [
     {
         key: uuidv4(),
         content: <div className="video-template">
-        <video autoPlay muted loop>
-            <source src={Template1} type="video/webm"/>
-            <source src={Template1} type="video/mp4"/>
+            <video muted loop>
+                <source src={Template1} type="video/webm" />
+                <source src={Template1} type="video/mp4" />
             </video>
         </div>
     },
     {
         key: uuidv4(),
         content: <div className="video-template">
-        <video autoPlay muted loop>
-            <source src={Template2} type="video/webm"/>
-            <source src={Template2} type="video/mp4"/>
+            <video muted loop>
+                <source src={Template2} type="video/webm" />
+                <source src={Template2} type="video/mp4" />
             </video>
         </div>
     },
     {
         key: uuidv4(),
         content: <div className="video-template">
-        <video autoPlay muted loop>
-            <source src={Template3} type="video/webm"/>
-            <source src={Template3} type="video/mp4"/>
+            <video muted loop>
+                <source src={Template3} type="video/webm" />
+                <source src={Template3} type="video/mp4" />
             </video>
         </div>
     },
@@ -50,18 +51,18 @@ let slides = [
     {
         key: uuidv4(),
         content: <div className="video-template">
-        <video autoPlay muted loop>
-            <source src={Template5} type="video/webm"/>
-            <source src={Template5} type="video/mp4"/>
+            <video muted loop>
+                <source src={Template5} type="video/webm" />
+                <source src={Template5} type="video/mp4" />
             </video>
         </div>
     },
     {
         key: uuidv4(),
         content: <div className="video-template">
-        <video autoPlay muted loop>
-            <source src={Template6} type="video/webm"/>
-            <source src={Template6} type="video/mp4"/>
+            <video muted loop>
+                <source src={Template6} type="video/webm" />
+                <source src={Template6} type="video/mp4" />
             </video>
         </div>
     }
@@ -79,6 +80,20 @@ let slides = [
     // }
 ];
 class AnimationSlider extends Component {
+    componentDidMount() {
+        $('div[style*="left: 50%"] video').trigger('play');
+        $(".css-1qzevvg img:last-child").click(function () {
+            $('div[style*="left: 50%"] video').trigger('pause');
+            $('div[style*="left: 75%"] video').trigger('play');
+
+        });
+        $(".css-1qzevvg img:first-child").click(function () {
+            $('div[style*="left: 50%"] video').trigger('pause');
+            $('div[style*="left: 25%"] video').trigger('play');
+
+        });
+    }
+
     state = {
         goToSlide: 1,
         offsetRadius: 2,

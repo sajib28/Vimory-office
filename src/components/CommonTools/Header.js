@@ -132,7 +132,7 @@ class Header extends Component {
                                     <li className="nav-item">
                                         <Link
                                             activeClass="active"
-                                            to="root"
+                                            to="intro"
                                             spy={true}
                                             smooth={true}
                                             offset={0}
