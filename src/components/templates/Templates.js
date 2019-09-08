@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import BackgroundWithText from '../CommonTools/BackgroundWithText';
-import SecondHeader from '../CommonTools/SecondHeader';
 import AnimationSlider from './AnimationSlider';
 import BackgroundImage from '../../assets/img/template-bg.jpg';
 class Templates extends Component {
@@ -8,7 +7,6 @@ class Templates extends Component {
         return (
             // Start Template Section
             <section id="template">
-<SecondHeader/>
                 <BackgroundWithText id ="templateBg" backgroundImage={BackgroundImage} title="Templates" shadowTitle="Templates"/>
                 <AnimationSlider/>
             </section>

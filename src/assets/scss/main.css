@@ -488,7 +488,7 @@ svg .cls-2 {
   top: 0;
   right: 0;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   padding: 0;
 }
 
@@ -499,6 +499,8 @@ svg .cls-2 {
 #mainMenu .nav-item .nav-link {
   font-size: 18px;
   color: #fff;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 #mainMenu .nav-item .nav-link.active,
@@ -527,51 +529,51 @@ svg .cls-2 {
   overflow-y: scroll;
 }
 
-.second-Menu .navbar {
+.second-menu .navbar {
   padding: 35px 0 35px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-.second-Menu .navbar .nav-item {
-  padding: 0 22px;
+.second-menu .navbar .nav-item {
+  padding: 0 16px;
 }
 
-.second-Menu .navbar .nav-item .nav-link {
+.second-menu .navbar .nav-item .nav-link {
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 400;
 }
 
-.second-Menu.fixedClass {
+.second-menu.fixedClass {
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
 }
 
-.second-Menu.fixedClass .navbar {
+.second-menu.fixedClass .navbar {
   padding: 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
-.second-Menu.fixedClass .navbar .nav-item .nav-link {
+.second-menu.fixedClass .navbar .nav-item .nav-link {
   font-size: 18px;
   color: #fff;
 }
 
-.second-Menu.fixedClass .navbar .nav-item .nav-link.active,
-.second-Menu.fixedClass .navbar .nav-item .nav-link:hover {
+.second-menu.fixedClass .navbar .nav-item .nav-link.active,
+.second-menu.fixedClass .navbar .nav-item .nav-link:hover {
   color: #0584D1;
 }
 
-.second-Menu.fixedClass .navbar .nav-item .nav-link.active {
+.second-menu.fixedClass .navbar .nav-item .nav-link.active {
   position: relative;
 }
 
-.second-Menu.fixedClass .navbar .nav-item .nav-link.active:after {
+.second-menu.fixedClass .navbar .nav-item .nav-link.active:after {
   content: '';
   border-left: 2px solid #0584D1;
   position: absolute;
@@ -583,54 +585,54 @@ svg .cls-2 {
   margin-left: -5px;
 }
 
-.second-Menu.fixedClass .mb-dropdown {
-  opacity: 1;
+.second-menu.fixedClass .mb-dropdown {
+  display: block;
 }
 
-.second-Menu.fixedClass .mb-dropdown.btn {
+.second-menu.fixedClass .mb-dropdown.btn {
   background: none;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.second-Menu.fixedClass .mb-dropdown:after {
+.second-menu.fixedClass .mb-dropdown:after {
   display: none;
 }
 
-.second-Menu.fixedClass .mb-dropdown:hover, .second-Menu.fixedClass .mb-dropdown:active, .second-Menu.fixedClass .mb-dropdown:focus {
+.second-menu.fixedClass .mb-dropdown:hover, .second-menu.fixedClass .mb-dropdown:active, .second-menu.fixedClass .mb-dropdown:focus {
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.second-Menu.fixedClass .fa-bars {
+.second-menu.fixedClass .fa-bars {
   color: #fff;
 }
 
-.second-Menu.fixedClass .navbar-brand {
+.second-menu.fixedClass .navbar-brand {
   display: block;
 }
 
-.second-Menu.absoluteClass .navbar .nav-item .nav-link {
+.second-menu.absoluteClass .navbar .nav-item .nav-link {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.23);
 }
 
-.second-Menu.absoluteClass .navbar .nav-item .nav-link.active,
-.second-Menu.absoluteClass .navbar .nav-item .nav-link:hover {
+.second-menu.absoluteClass .navbar .nav-item .nav-link.active,
+.second-menu.absoluteClass .navbar .nav-item .nav-link:hover {
   color: #0584D1;
 }
 
-.second-Menu.absoluteClass .navbar .navbar-brand {
+.second-menu.absoluteClass .navbar .navbar-brand {
   display: none;
 }
 
-.second-Menu.absoluteClass .mb-dropdown {
-  opacity: 0;
+.second-menu.absoluteClass .mb-dropdown {
+  display: none;
 }
 
-.second-Menu .fa-bars {
+.second-menu .fa-bars {
   color: #000;
   font-size: 20px;
 }
@@ -855,7 +857,7 @@ svg .cls-2 {
 }
 
 #slide .content-area .circle-position.right-circle {
-  display: block;
+  display: none;
 }
 
 #slide .content-area .circle-position.right-circle .circle-spin {
@@ -1027,15 +1029,49 @@ svg .cls-2 {
 }
 
 #review .slick-slider {
-  padding-bottom: 50px;
+  padding: 0 50px 50px 50px;
+}
+
+#review .slick-slider .slick-list {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#review .slick-slider .slick-prev {
+  background: url("../img/review-icon-prev.png");
+}
+
+#review .slick-slider .slick-prev:before {
+  content: '';
+}
+
+#review .slick-slider .slick-next {
+  background: url("../img/review-icon-next.png");
+}
+
+#review .slick-slider .slick-next:before {
+  content: '';
+}
+
+#review .slick-slider .slick-prev,
+#review .slick-slider .slick-next {
+  width: 60px;
+  height: 60px;
 }
 
 #review .slick-slider .slick-dots {
   bottom: 0;
+  left: 0;
+}
+
+#review .slick-slider .slick-dots li.slick-active button:before {
+  color: #0584D1;
 }
 
 #review .slick-slider .slick-dots li button::before {
   font-size: 12px;
+  color: #0584D1;
 }
 
 #review .slick-slider h3 {
@@ -1065,7 +1101,7 @@ svg .cls-2 {
 }
 
 #review .slick-slider ul.review-icon li i {
-  color: #0C89D5;
+  color: #FFF710;
 }
 
 #review .left-circle .circle-spin {
@@ -1422,6 +1458,48 @@ svg .cls-2 {
 
 /*End Footer Css*/
 /*Feature*/
+.clip-border {
+  background: linear-gradient(150deg, #aebcbf 0%, #6e7774 50%, #333 61%, #333 100%);
+  width: 160px;
+  height: 160px;
+  margin-top: 7px;
+  color: #222;
+}
+
+.clip-each {
+  display: block;
+  position: relative;
+  -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin: 0 auto;
+}
+
+.clip-caption {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.clip-border::after {
+  content: "";
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  right: 4%;
+  bottom: 4%;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  z-index: -1;
+}
+
 .feature-box {
   position: relative;
   z-index: 9;
@@ -1626,6 +1704,7 @@ svg .cls-2 {
 /*All Animation circle css*/
 .circle-position {
   position: absolute;
+  display: none;
 }
 
 .circle-position.one-circle .circle-wrapper {

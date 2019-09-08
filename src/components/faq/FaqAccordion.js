@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 
 function FaqAccordion() {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState('panel3');
+  const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = panel => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -86,7 +86,7 @@ function FaqAccordion() {
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-          <Typography className={classes.secondaryHeading} headingtitle>
+          <Typography className={classes.secondaryHeading}>
           How can i cancel my subscription?
           </Typography>
         </ExpansionPanelSummary>

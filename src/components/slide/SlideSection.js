@@ -42,7 +42,7 @@ class Slide extends Component {
                         <div className="first-circle orbit">
                         </div>
                         <div id="mercury" className="orbit">
-                            <div class="medium-circle">
+                            <div className="medium-circle">
                                 <div className="small-cicrcle"></div>
                             </div>
                         </div>

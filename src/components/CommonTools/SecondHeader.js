@@ -19,20 +19,20 @@ class SecondHeader extends Component {
         window.removeEventListener('scroll', this.handleScroll);
     }
     handleScroll() {
+        let secondMenu = document.getElementById('secondMenu').clientHeight;
         let introSection = document.getElementById('intro').clientHeight;
         let appFeature = document.getElementById('appFeature').clientHeight;
 
-
-        if (window.scrollY > (introSection + appFeature + 80)) {
+        if (window.scrollY == (introSection + appFeature + secondMenu)) {
             this.setState({
                 scrollingLock: true
             });
-        } else if (window.scrollY < introSection + appFeature + 80) {
+        }
+        else if (window.scrollY < introSection + appFeature + secondMenu) {
             this.setState({
                 scrollingLock: false
             });
         }
-
     }
 
     scrollToTop = () => {
@@ -40,7 +40,7 @@ class SecondHeader extends Component {
     };
     render() {
         return (
-            <div className={this.state.scrollingLock ? 'second-Menu fixedClass' : 'second-Menu absoluteClass'}>
+            <div id="secondMenu" className={this.state.scrollingLock ? 'second-menu fixedClass' : 'second-menu absoluteClass'}>
                 <Navbar collapseOnSelect expand="lg">
                     <div className="container">
                         <Navbar.Brand href="#home"><img src={logo} alt="" /></Navbar.Brand>
@@ -54,7 +54,7 @@ class SecondHeader extends Component {
                                             to="template"
                                             spy={true}
                                             smooth={true}
-                                            offset={0}
+                                            offset={-84}
                                             duration={2000}
                                             className="nav-link">Templates
                                         </Link>
@@ -65,7 +65,7 @@ class SecondHeader extends Component {
                                             to="photoEdit"
                                             spy={true}
                                             smooth={true}
-                                            offset={0}
+                                            offset={-84}
                                             duration={2000}
                                             className="nav-link">Photo Edit
                                          </Link>
@@ -76,7 +76,7 @@ class SecondHeader extends Component {
                                             to="slide"
                                             spy={true}
                                             smooth={true}
-                                            offset={0}
+                                            offset={-84}
                                             duration={2000}
                                             className="nav-link">Slide
                                         </Link>
@@ -87,7 +87,7 @@ class SecondHeader extends Component {
                                             to="effect"
                                             spy={true}
                                             smooth={true}
-                                            offset={0}
+                                            offset={-84}
                                             duration={2000}
                                             className="nav-link">Effect
                                        </Link>
@@ -98,7 +98,7 @@ class SecondHeader extends Component {
                                             to="frame"
                                             spy={true}
                                             smooth={true}
-                                            offset={0}
+                                            offset={-84}
                                             duration={2000}
                                             className="nav-link">Frame
                                 </Link>
@@ -109,14 +109,14 @@ class SecondHeader extends Component {
                                             to="filter"
                                             spy={true}
                                             smooth={true}
-                                            offset={0}
+                                            offset={-84}
                                             duration={2000}
                                             className="nav-link">Filter
                                         </Link>
                                     </li>
                                 </ul>
                             </Nav>
-                            <Nav className="ml-auto">
+                            <Nav className="ml-auto topMenu-icon">
                                 <li>
                                     <Dropdown alignRight>
                                         <Dropdown.Toggle variant="none" id="dropdown-basic" className="mb-dropdown">
@@ -182,7 +182,7 @@ class SecondHeader extends Component {
                                                         offset={0}
                                                         duration={2000}
                                                         className="dropdown-item">Home
-                                </Link>
+                                                   </Link>
                                                 </li>
                                                 <li>
                                                     <Link
@@ -228,7 +228,7 @@ class SecondHeader extends Component {
                                                         className="dropdown-item">Contact Us
                                 </Link>
                                                 </li>
-                                            </ul> 
+                                            </ul>
                                         </Dropdown.Menu>
 
                                     </Dropdown>

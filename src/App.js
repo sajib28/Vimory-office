@@ -8,6 +8,7 @@ import './assets/scss/main.css';
 import Header from './components/CommonTools/Header';
 import Welcome from './components/welcome/Welcome';
 import AppFeature from './components/feature/AppFeature';
+import SecondHeader from './components/CommonTools/SecondHeader';
 import Templates from './components/templates/Templates';
 import Effect from './components/effect/Effect';
 import PhotoEdit from './components/photoEdit/PhotoEdit';
@@ -30,10 +31,11 @@ function App() {
       <Header />
       <Welcome />
       <AppFeature />
+      <SecondHeader/>
       <Templates />
       <PhotoEdit />
       <SlideSection />
-      <Effect />
+     <Effect />
       <FrameSection />
       <Filter />
       <GetToday />

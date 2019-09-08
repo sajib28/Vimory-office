@@ -19,6 +19,7 @@ $grey-black:#f8f8f8;
 $blue:#0C89D5;
 $footer-bg:#161D24;
 $social-icon:#1DA1F2;
+$yellow:#FFF710;
 
 
 /*Animation Color Code*/
@@ -608,7 +609,7 @@ svg {
         top: 0;
         right: 0;
         z-index: 999;
-        background: rgba($black, .8);
+        background: rgba($black, .9);
         padding: 0;
     }
 
@@ -620,6 +621,8 @@ svg {
         .nav-link {
             font-size: 18px;
             color: #fff;
+            font-weight: 400;
+            letter-spacing: 1px;
         }
 
         .nav-link.active,
@@ -656,17 +659,17 @@ svg {
     }
 }
 
-.second-Menu {
+.second-menu {
     .navbar {
         padding: 35px 0 35px;
         @include transition(all 0.3s ease-in-out);
 
         .nav-item {
-            padding: 0 22px;
+            padding: 0 16px;
 
             .nav-link {
                 cursor: pointer;
-                font-weight: bold;
+                font-weight: 400;
             }
         }
     }
@@ -677,7 +680,7 @@ svg {
         top: 0;
         right: 0;
         z-index: 999;
-        background: rgba($black, .8);
+        background: rgba($black, .9);
 
         .navbar {
             padding: 0;
@@ -712,7 +715,7 @@ svg {
         }
 
         .mb-dropdown {
-            opacity: 1;
+            display:block;
 
             &.btn {
                 background: none;
@@ -761,7 +764,7 @@ svg {
         }
 
         .mb-dropdown {
-            opacity: 0;
+            display:none;
         }
 
     }
@@ -987,7 +990,7 @@ svg {
 
         .circle-position {
             &.right-circle {
-                display: block;
+                display: none;
 
                 .circle-spin {
                     right: 0;
@@ -1203,15 +1206,53 @@ svg {
     h2 {}
 
     .slick-slider {
-        padding-bottom: 50px;
+        padding: 0 50px 50px 50px;
+
+        .slick-list {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .slick-prev {
+            background: url("../img/review-icon-prev.png");
+
+            &:before {
+                content: '';
+            }
+        }
+
+        .slick-next {
+            background: url("../img/review-icon-next.png");
+
+            &:before {
+                content: '';
+            }
+        }
+
+        .slick-prev,
+        .slick-next {
+            width: 60px;
+            height: 60px;
+        }
 
         .slick-dots {
             bottom: 0;
+            left: 0;
 
             li {
+                &.slick-active {
+                    button {
+                        &:before {
+                            color: $theme-color;
+                        }
+                    }
+                }
+
                 button {
                     &::before {
                         font-size: 12px;
+                        color: $theme-color;
                     }
                 }
 
@@ -1243,7 +1284,7 @@ svg {
                 font-size: 20px;
 
                 i {
-                    color: $blue;
+                    color: $yellow;
                 }
             }
         }
@@ -1612,6 +1653,50 @@ svg {
 /*End Footer Css*/
 
 /*Feature*/
+.clip-border {
+    background: -webkit-linear-gradient(300deg, #aebcbf 0%, #6e7774 50%, #333 61%, #333 100%);
+    background: linear-gradient(150deg, #aebcbf 0%, #6e7774 50%, #333 61%, #333 100%);
+    width: 160px;
+    height: 160px;
+    margin-top: 7px;
+    color: #222;
+}
+
+.clip-each {
+    display: block;
+    position: relative;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    margin: 0 auto;
+}
+
+.clip-caption {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.clip-border::after {
+    content: "";
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    right: 4%;
+    bottom: 4%;
+    margin: 0 auto;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    z-index: -1;
+}
+
 .feature-box {
     position: relative;
     z-index: 9;
@@ -1920,6 +2005,7 @@ svg {
 /*All Animation circle css*/
 .circle-position {
     position: absolute;
+    display: none;
 
     &.one-circle {
 

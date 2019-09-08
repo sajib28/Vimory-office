@@ -23,20 +23,38 @@ class Header extends Component {
         window.removeEventListener('scroll', this.handleScroll);
     }
     handleScroll() {
+
         let introSection = document.getElementById('intro').clientHeight;
         let appFeature = document.getElementById('appFeature').clientHeight;
-        if (window.scrollY > introSection + appFeature-80) {
-            this.setState({
-                scrollingLock: false
-            });
-        } else if (window.scrollY < introSection + appFeature-60) {
+        let secondMenu = document.getElementById('secondMenu').clientHeight;
+        let template =document.getElementById('template').clientHeight;
+        let photoEdit =document.getElementById('photoEdit').clientHeight;
+        let slide =document.getElementById('slide').clientHeight;
+        let effect =document.getElementById('effect').clientHeight;
+        let frame =document.getElementById('frame').clientHeight;
+        let filter =document.getElementById('filter').clientHeight;
+        let getToday =document.getElementById('getToday').clientHeight;
+        let review =document.getElementById('review').clientHeight;
+        let pricing =document.getElementById('pricing').clientHeight;
+        let faqs =document.getElementById('faqs').clientHeight;
+        let getInTouch =document.getElementById('getInTouch').clientHeight;
+        if (window.scrollY > introSection + appFeature +secondMenu) {
             this.setState({
                 scrollingLock: true
             });
+        } 
+        // else if (window.scrollY > introSection + appFeature + template + photoEdit + slide + effect + frame + filter + getToday + review + pricing){
+        //     alert("test");
+        //     this.setState({
+        //         scrollingLock: false
+        //     });
+        // } 
+        else if (window.scrollY < introSection + appFeature) {
+            this.setState({
+                scrollingLock: false
+            });
         }
-
     }
-
     scrollToTop = () => {
         scroll.scrollToTop(300);
     };

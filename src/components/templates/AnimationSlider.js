@@ -100,7 +100,7 @@ class AnimationSlider extends Component {
         showNavigation: true,
         autoPlay: true,
         loop: true,
-        config: config.slow
+        // config: config.slow
 
 
     };

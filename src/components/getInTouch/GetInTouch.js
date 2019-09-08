@@ -12,15 +12,14 @@ class GetInTouch extends Component {
                         <div className="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
                             <div className="title">
                                 <div className="title-inner shadow-title text-center">
-
-                                    <h2 className="wow zoomIn" data-wow-delay="0.2s" data-wow-delay="0.2s">Get In Touch<span className="shadow-text wow zoomIn" data-wow-delay="0.4s" data-wow-delay="0.4s">Get In Touch</span></h2>
-
+                                    <h2 className="wow zoomIn" data-wow-delay="0.2s" data-wow-delay="0.2s">Get In Touch<span className="shadow-text wow zoomIn" data-wow-delay="0.4s" data-wow-delay="0.4s">Get In Touch</span>
+                                    </h2>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="row">
-                    <div className="col-sm-7 col-md-7 col-lg-7 col-xl-7">
+                        <div className="col-sm-7 col-md-7 col-lg-7 col-xl-7">
                             <div className="contact-info text-center">
                                 <h3 className="wow" data-wow-delay="0.4s" data-wow-delay="0.4s">Contact Us</h3>
                                 <img className="wow" data-wow-delay="0.6s" data-wow-delay="0.6s" src={appilianLogo} alt="Appilian Logo" />
@@ -36,7 +35,7 @@ class GetInTouch extends Component {
                         </div>
                         <div className="col-sm-5 col-md-5 col-lg-5 col-xl-5">
                             <div className="contact-form">
-                                <form>
+                                <form action="">
                                     <div className="form-group">
                                         <input type="text" className="form-control" placeholder="Name" />
                                     </div>

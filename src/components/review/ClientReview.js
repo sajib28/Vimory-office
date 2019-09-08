@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReviewSlider from './ReviewSlider';
+import ClientSlider from './ClientSlider';
 class ClientReview extends Component {
     render() {
         return (
@@ -21,7 +22,7 @@ class ClientReview extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-8 offset-2 text-center">
+                        <div className="col-md-10 offset-md-1 text-center">
                             <ReviewSlider/>
                         </div>
                     </div>

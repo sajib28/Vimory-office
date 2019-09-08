@@ -9,9 +9,8 @@ class ReviewSlider extends Component {
         var settings = {
             dots: true,
             infinite: true,
-            fade: true,
-            autoplay: false,
-            speed: 500,
+            autoplay: true,
+            speed: 2000,
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows:true
