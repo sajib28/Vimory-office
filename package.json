@@ -2,7 +2,7 @@
   "name": "vimory-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sajib28.github.io/Vimory-office",
+  "homepage": "https://sajib28.github.io/Vimory-office/",
   "dependencies": {
     "@bumaga/tabs": "^0.1.3",
     "@material-ui/core": "^4.4.0",
