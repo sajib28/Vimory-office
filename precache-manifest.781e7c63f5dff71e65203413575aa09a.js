@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4829399a7a0dfca5f5d3cdeac2bbf1e9",
+    "revision": "300bb99d730a3a6e0ed0f9482320110e",
     "url": "/Vimory-office/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Vimory-office/static/css/2.68a1a279.chunk.css"
   },
   {
-    "revision": "a2963073047d074b273e",
-    "url": "/Vimory-office/static/css/main.5db394da.chunk.css"
+    "revision": "737aec0b967acb8064df",
+    "url": "/Vimory-office/static/css/main.d4dd2eca.chunk.css"
   },
   {
     "revision": "eb7429fb503f8bbbec17",
     "url": "/Vimory-office/static/js/2.70da1914.chunk.js"
   },
   {
-    "revision": "a2963073047d074b273e",
-    "url": "/Vimory-office/static/js/main.a83d2a63.chunk.js"
+    "revision": "737aec0b967acb8064df",
+    "url": "/Vimory-office/static/js/main.13fe6174.chunk.js"
   },
   {
     "revision": "b0763d18a6b8a8b233f5",
