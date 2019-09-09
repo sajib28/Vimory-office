@@ -23,7 +23,7 @@ class SecondHeader extends Component {
         let introSection = document.getElementById('intro').clientHeight;
         let appFeature = document.getElementById('appFeature').clientHeight;
 
-        if (window.scrollY == (introSection + appFeature + secondMenu)) {
+        if (window.scrollY > (introSection + appFeature + secondMenu)) {
             this.setState({
                 scrollingLock: true
             });

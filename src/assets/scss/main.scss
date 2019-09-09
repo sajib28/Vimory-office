@@ -715,7 +715,7 @@ svg {
         }
 
         .mb-dropdown {
-            display:block;
+            display: block;
 
             &.btn {
                 background: none;
@@ -764,7 +764,7 @@ svg {
         }
 
         .mb-dropdown {
-            display:none;
+            display: none;
         }
 
     }
@@ -1136,58 +1136,52 @@ svg {
     }
 
     .tab-content {
-        .img-hover {
-            border: 2px solid #fff;
-            @include border-radius(10px);
-        }
-
-        #filter-1 {
-            &:after {
-                background: rgba(#3e82f0, .36);
-            }
-        }
-
-        #filter-2 {
-            &:after {
-                background: rgba(#CF3C3C, .36);
-            }
-        }
-
-        #filter-3 {
-            &:after {
-                background: rgba(#CFC53C, .36);
-            }
-        }
-
-        #filter-4 {
-            &:after {
-                background: rgba(#3CCF59, .36);
-            }
-        }
-
-        #filter-5 {
-            &:after {
-                background: rgba(#3C55CF, .36);
-            }
-        }
-
-        .react-tabs__tab--selected {
-
-            #filter-1,
-            #filter-2,
-            #filter-3,
-            #filter-4,
-            #filter-5 {
-                &.img-hover {
-                    border: 2px solid #0C89D5;
+        .react-tabs__tab-list {
+            .react-tabs__tab {
+                &.react-tabs__tab--selected {
+                    img {
+                        border: 2px solid $theme-color;
+                    }
                 }
 
-                &:after {
-                    background: none;
+                img {
+                    border: 2px solid $white;
                 }
-            }
 
+            }
         }
+
+        // .tab-content .react-tabs__tab-list .react-tabs__tab img // #filter-1 {
+        //     &:after {
+        //         background: rgba(#3e82f0, .36);
+        //     }
+        // }
+
+        // #filter-2 {
+        //     &:after {
+        //         background: rgba(#CF3C3C, .36);
+        //     }
+        // }
+
+        // #filter-3 {
+        //     &:after {
+        //         background: rgba(#CFC53C, .36);
+        //     }
+        // }
+
+        // #filter-4 {
+        //     &:after {
+        //         background: rgba(#3CCF59, .36);
+        //     }
+        // }
+
+        // #filter-5 {
+        //     &:after {
+        //         background: rgba(#3C55CF, .36);
+        //     }
+        // }
+
+
     }
 
     .left-circle {

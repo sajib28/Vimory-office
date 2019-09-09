@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
 import mobileFrame from '../../assets/img/mobile-frame.png';
-import tabIconImg from '../../assets/img/filter-img-icon.png';
+import tabIconImg1 from '../../assets/img/filter/filter-icon1.png';
+import tabIconImg2 from '../../assets/img/filter/filter-icon2.png';
+import tabIconImg3 from '../../assets/img/filter/filter-icon3.png';
+import tabIconImg4 from '../../assets/img/filter/filter-icon4.png';
+import tabIconImg5 from '../../assets/img/filter/filter-icon5.png';
 import Filter1 from '../../assets/img/filter/Hue-4.jpg';
 import Filter2 from '../../assets/img/filter/Mid-generation.jpg';
 import Filter3 from '../../assets/img/filter/Duotone.jpg';
@@ -91,11 +95,11 @@ class TabCom extends Component {
                             </div>
                         </TabPanel>
                         <TabList>
-                            <Tab><div id="filter-1" className="img-hover"><img src={tabIconImg} alt="Aglow" /></div><span>Aglow</span></Tab>
-                            <Tab><div id="filter-2" className="img-hover"><img src={tabIconImg} alt="Tring" /></div><span>Tring</span></Tab>
-                            <Tab><div id="filter-3" className="img-hover"><img src={tabIconImg} alt="Duotone" /></div><span>Duotone</span></Tab>
-                            <Tab><div id="filter-4" className="img-hover"><img src={tabIconImg} alt="Floral" /></div><span>Floral</span></Tab>
-                            <Tab><div id="filter-5" className="img-hover"><img src={tabIconImg} alt="Sunday" /></div><span>Sunday</span></Tab>
+                            <Tab><div id="filter-1" className="img-hover"><img src={tabIconImg1} alt="Aglow" /></div><span>Aglow</span></Tab>
+                            <Tab><div id="filter-2" className="img-hover"><img src={tabIconImg2} alt="Tring" /></div><span>Tring</span></Tab>
+                            <Tab><div id="filter-3" className="img-hover"><img src={tabIconImg3} alt="Duotone" /></div><span>Duotone</span></Tab>
+                            <Tab><div id="filter-4" className="img-hover"><img src={tabIconImg4} alt="Floral" /></div><span>Floral</span></Tab>
+                            <Tab><div id="filter-5" className="img-hover"><img src={tabIconImg5} alt="Sunday" /></div><span>Sunday</span></Tab>
                         </TabList>
                     </div>
                 </Tabs>

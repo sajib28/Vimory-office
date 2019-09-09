@@ -40,7 +40,7 @@ class Header extends Component {
         let getInTouch =document.getElementById('getInTouch').clientHeight;
         if (window.scrollY > introSection + appFeature +secondMenu) {
             this.setState({
-                scrollingLock: true
+                scrollingLock: false
             });
         } 
         // else if (window.scrollY > introSection + appFeature + template + photoEdit + slide + effect + frame + filter + getToday + review + pricing){

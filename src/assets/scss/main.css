@@ -972,49 +972,12 @@ svg .cls-2 {
   top: 32px;
 }
 
-#filter .tab-content .img-hover {
+#filter .tab-content .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected img {
+  border: 2px solid #0584D1;
+}
+
+#filter .tab-content .react-tabs__tab-list .react-tabs__tab img {
   border: 2px solid #fff;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-
-#filter .tab-content #filter-1:after {
-  background: rgba(62, 130, 240, 0.36);
-}
-
-#filter .tab-content #filter-2:after {
-  background: rgba(207, 60, 60, 0.36);
-}
-
-#filter .tab-content #filter-3:after {
-  background: rgba(207, 197, 60, 0.36);
-}
-
-#filter .tab-content #filter-4:after {
-  background: rgba(60, 207, 89, 0.36);
-}
-
-#filter .tab-content #filter-5:after {
-  background: rgba(60, 85, 207, 0.36);
-}
-
-#filter .tab-content .react-tabs__tab--selected #filter-1.img-hover,
-#filter .tab-content .react-tabs__tab--selected #filter-2.img-hover,
-#filter .tab-content .react-tabs__tab--selected #filter-3.img-hover,
-#filter .tab-content .react-tabs__tab--selected #filter-4.img-hover,
-#filter .tab-content .react-tabs__tab--selected #filter-5.img-hover {
-  border: 2px solid #0C89D5;
-}
-
-#filter .tab-content .react-tabs__tab--selected #filter-1:after,
-#filter .tab-content .react-tabs__tab--selected #filter-2:after,
-#filter .tab-content .react-tabs__tab--selected #filter-3:after,
-#filter .tab-content .react-tabs__tab--selected #filter-4:after,
-#filter .tab-content .react-tabs__tab--selected #filter-5:after {
-  background: none;
 }
 
 #filter .left-circle {
