@@ -4,12 +4,11 @@ import uuidv4 from "uuid";
 import { config } from "react-spring";
 import $ from 'jquery';
 import { relative } from 'path';
-import Template1 from '../../assets/media/template/kids.mp4';
+import Template1 from '../../assets/media/template/love.mp4';
 import Template2 from '../../assets/media/template/girls.mp4';
-import Template3 from '../../assets/media/template/love.mp4';
-//import Template4 from '../../assets/media/template/love2.mp4';
-import Template5 from '../../assets/media/template/food.mp4';
-import Template6 from '../../assets/media/template/spring.mp4';
+import Template3 from '../../assets/media/template/spring.mp4';
+import Template4 from '../../assets/media/template/kids.mp4';
+import Template5 from '../../assets/media/template/love2.mp4';
 
 let slides = [
     {
@@ -52,8 +51,8 @@ let slides = [
         key: uuidv4(),
         content: <div className="video-template">
             <video muted loop>
-                <source src={Template5} type="video/webm" />
-                <source src={Template5} type="video/mp4" />
+                <source src={Template4} type="video/webm" />
+                <source src={Template4} type="video/mp4" />
             </video>
         </div>
     },
@@ -61,8 +60,8 @@ let slides = [
         key: uuidv4(),
         content: <div className="video-template">
             <video muted loop>
-                <source src={Template6} type="video/webm" />
-                <source src={Template6} type="video/mp4" />
+                <source src={Template5} type="video/webm" />
+                <source src={Template5} type="video/mp4" />
             </video>
         </div>
     }
@@ -87,7 +86,7 @@ class AnimationSlider extends Component {
         // $('div[style*="left: 75%"]').addClass('afterActive');
 
         $('div.active video').trigger('play');
-        
+
         $(".css-1qzevvg img:last-child").click(function () {
             $("div.active video").trigger('pause');
             $("div.active").next().addClass('active');
@@ -99,7 +98,7 @@ class AnimationSlider extends Component {
             // $('div.afterActive').removeClass('afterActive').addClass('active');
             // $('div.active').first().removeClass('active').addClass('beforeActive');
             // $('div.active video').trigger('play');
-            
+
             //$('div.afterActive video').trigger('play');
             //$('div[style*="left: 75%"] video').trigger('play');
 
@@ -120,26 +119,26 @@ class AnimationSlider extends Component {
         offsetRadius: 2,
         showNavigation: true,
         autoPlay: true,
-        play:true,
-        autoplay:true,
+        play: true,
+        autoplay: true,
         loop: true,
-        config:  config.slow
+        config: config.slow
     };
     render() {
 
         return (
             <div className="slider-section">
-                {/* <div class="orbit venus-orbit"></div>
-                    <div class="venus-spin">
-                        <div id="venus"></div>
-                    </div> */}
-                {/* <div class="orbit earth-orbit"></div> */}
-                {/* <div class="earth-spin">
-                        <div class="orbit moon-orbit"></div>
-                        <div class="moon-spin">
-                            <div id="moon"></div>
-                        </div>
-                    </div> */}
+                <div class="orbit venus-orbit"></div>
+                <div class="venus-spin">
+                    <div id="venus"></div>
+                </div>
+                <div class="orbit earth-orbit"></div> */}
+                 <div class="earth-spin">
+                    <div class="orbit moon-orbit"></div>
+                    <div class="moon-spin">
+                        <div id="moon"></div>
+                    </div>
+                </div>
 
 
                 <div className="container">

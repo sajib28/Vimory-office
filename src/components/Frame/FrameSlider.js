@@ -6,7 +6,7 @@ import frame1 from '../../assets/img/frame/1.png';
 import frame2 from '../../assets/img/frame/2.png';
 import frame3 from '../../assets/img/frame/3.png';
 import frame4 from '../../assets/img/frame/4.png';
-import frame5 from '../../assets/img/frame/5.png';
+import frame5 from '../../assets/img/frame/6.png';
 class FrameSlider extends Component {
 
     render() {

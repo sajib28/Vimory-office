@@ -402,7 +402,7 @@ svg .cls-2 {
   font-size: 20px;
   line-height: 30px;
   margin-top: 25px;
-  font-weight: bold;
+  font-family: "helveticabold";
 }
 
 .tab-content .react-tabs__tab-list .react-tabs__tab:focus {
@@ -455,6 +455,10 @@ svg .cls-2 {
   position: relative;
 }
 
+#getToday .pic-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
 #getToday .shadow-text {
   top: 185px;
   z-index: 1;
@@ -498,11 +502,19 @@ svg .cls-2 {
 }
 
 #getToday .mobile-frame-content {
-  top: 32px;
+  top: 29px;
 }
 
 #mainMenu {
   padding: 25px 0;
+}
+
+#mainMenu .navbar-brand {
+  margin-left: -175px;
+}
+
+#mainMenu .navbar-brand img {
+  width: 150px;
 }
 
 #mainMenu.fixedClass {
@@ -511,7 +523,7 @@ svg .cls-2 {
   right: 0;
   z-index: 999;
   background: rgba(0, 0, 0, 0.9);
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 #mainMenu .nav-item {
@@ -557,6 +569,14 @@ svg .cls-2 {
   transition: all 0.3s ease-in-out;
 }
 
+.second-menu .navbar .navbar-brand {
+  margin-left: -175px;
+}
+
+.second-menu .navbar .navbar-brand img {
+  width: 150px;
+}
+
 .second-menu .navbar .nav-item {
   padding: 0 16px;
 }
@@ -576,7 +596,7 @@ svg .cls-2 {
 }
 
 .second-menu.fixedClass .navbar {
-  padding: 0;
+  padding: 10px 0 10px 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -663,6 +683,7 @@ svg .cls-2 {
 #intro {
   background-image: url("../img/intro-bg.png");
   padding: 250px 0 200px;
+  min-height: 100vh;
 }
 
 #intro h1 {
@@ -1111,6 +1132,10 @@ svg .cls-2 {
 /*Start pricing Review Css*/
 #pricing {
   background-image: url("../img/pricing-bg.jpg");
+}
+
+#pricing .pic-overlay {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 #pricing .shadow-text {

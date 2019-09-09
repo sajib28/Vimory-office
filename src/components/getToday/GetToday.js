@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import appleStore from '../../assets/img/apple-app-store.png';
 import googlePlay from '../../assets/img/google-play.png';
 import mobileFrame from '../../assets/img/mobile-frame.png';
-import mobileFrameToday from '../../assets/img/mobile-frame-get-today.png';
+import mobileFrameToday from '../../assets/media/Main.mp4';
 class GetToday extends Component {
     render() {
         return (
@@ -30,7 +30,12 @@ class GetToday extends Component {
                                 <div className="mobile-frame">
                                     <img src={mobileFrame} alt="" />
                                     <div className="mobile-frame-content">
-                                        <img src={mobileFrameToday} alt="" />
+                                        <div className="video-template">
+                                            <video autoPlay muted loop>
+                                                <source src={mobileFrameToday} type="video/webm" />
+                                                <source src={mobileFrameToday} type="video/mp4" />
+                                            </video>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

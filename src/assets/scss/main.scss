@@ -8,6 +8,7 @@
     font-style: normal;
 
 }
+
 @font-face {
     font-family: 'helveticaregular';
     src: url('../../assets/fonts/helvetica-webfont.woff2') format('woff2'),
@@ -17,11 +18,12 @@
     font-style: normal;
 
 }
+
 @font-face {
     font-family: 'helveticaneuemedium';
     src: url('../../assets/fonts/helveticaneue_medium-webfont.ttf') format('ttf'),
-         url('../../assets/fonts/helveticaneue_medium-webfont.woff2') format('woff2'),
-         url('../../assets/fonts/helveticaneue_medium-webfont.woff') format('woff');
+        url('../../assets/fonts/helveticaneue_medium-webfont.woff2') format('woff2'),
+        url('../../assets/fonts/helveticaneue_medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -505,7 +507,7 @@ svg {
                 font-size: 20px;
                 line-height: 30px;
                 margin-top: 25px;
-                font-weight: bold;
+                font-family: $heading-font;
             }
 
             &:focus {
@@ -552,7 +554,11 @@ svg {
     background-image: url("../img/get-today-bg.png");
     padding: 150px 0 150px;
     position: relative;
-    
+
+    .pic-overlay {
+        background: rgba($black, 0.6);
+    }
+
     .shadow-text {
         top: 185px;
         z-index: 1;
@@ -560,9 +566,11 @@ svg {
         left: 60px;
         width: auto;
     }
-    h2{
+
+    h2 {
         font-size: 86px;
     }
+
     // h2 {
     //     font-size: 90px;
     //     line-height: 108px;
@@ -620,7 +628,7 @@ svg {
     }
 
     .mobile-frame-content {
-        top: 32px;
+        top: 29px;
     }
 
 }
@@ -629,13 +637,21 @@ svg {
 #mainMenu {
     padding: 25px 0;
 
+    .navbar-brand {
+        margin-left: -175px;
+
+        img {
+            width: 150px;
+        }
+    }
+
     &.fixedClass {
         left: 0;
         top: 0;
         right: 0;
         z-index: 999;
         background: rgba($black, .9);
-        padding: 15px 0;
+        padding: 10px 0;
     }
 
     .absoluteClass {}
@@ -689,6 +705,14 @@ svg {
         padding: 35px 0 35px;
         @include transition(all 0.3s ease-in-out);
 
+        .navbar-brand {
+            margin-left: -175px;
+
+            img {
+                width: 150px;
+            }
+        }
+
         .nav-item {
             padding: 0 16px;
 
@@ -708,7 +732,7 @@ svg {
         background: rgba($black, .9);
 
         .navbar {
-            padding: 0;
+            padding: 10px 0 10px 0;
             @include transition(all 0.5s ease-in-out);
 
             .nav-item {
@@ -805,6 +829,7 @@ svg {
 #intro {
     background-image: url("../img/intro-bg.png");
     padding: 250px 0 200px;
+    min-height: 100vh;
 
     h1 {
         color: $blue;
@@ -1338,6 +1363,10 @@ svg {
 /*Start pricing Review Css*/
 #pricing {
     background-image: url("../img/pricing-bg.jpg");
+
+    .pic-overlay {
+        background: rgba($black, 0.6);
+    }
 
     .shadow-text {
         top: 120px;

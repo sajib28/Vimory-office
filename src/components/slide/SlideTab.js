@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
 import mobileFrame from '../../assets/img/mobile-frame.png';
-import fade from '../../assets/media/slide/fade.mp4';
+import move from '../../assets/media/slide/move.mp4';
 import heart from '../../assets/media/slide/heart.mp4';
 import slice from '../../assets/media/slide/slice.mp4';
-import flip from '../../assets/media/slide/Flip.mp4';
+import flip from '../../assets/media/slide/flip.mp4';
 import skew from '../../assets/media/slide/skew.mp4';
 class SlideTab extends Component {
     render() {
@@ -25,8 +25,8 @@ class SlideTab extends Component {
                                     <div className="mobile-frame-content">
                                         <div className="video-template">
                                             <video autoPlay muted loop>
-                                                <source src={fade} type="video/webm" />
-                                                <source src={fade} type="video/mp4" />
+                                                <source src={move} type="video/webm" />
+                                                <source src={move} type="video/mp4" />
                                             </video>
                                         </div>
                                     </div>
@@ -119,7 +119,7 @@ class SlideTab extends Component {
                                 </g>
                             </svg>
                             </div>
-                                <span>Crop</span>
+                                <span>Move</span>
                             </Tab>
                             <Tab>
                                 <div className="img-hover slide-heart">

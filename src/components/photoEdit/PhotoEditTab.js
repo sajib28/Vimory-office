@@ -3,10 +3,10 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
 import mobileFrame from '../../assets/img/mobile-frame.png';
 import Crop from '../../assets/media/photo-edit/crop.mp4';
-import Filter from '../../assets/media/photo-edit/filter2.mp4';
+import Filter from '../../assets/media/photo-edit/filter.mp4';
 import Adjust from '../../assets/media/photo-edit/adjustment.mp4';
-import Focus from '../../assets/media/photo-edit/focus-final.mp4';
-import Emoji from '../../assets/media/photo-edit/Emoji2.mp4';
+import Focus from '../../assets/media/photo-edit/focus.mp4';
+import Emoji from '../../assets/media/photo-edit/Emoji.mp4';
 class PhotoEditTab extends Component {
     render() {
         return (
