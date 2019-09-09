@@ -81,28 +81,49 @@ let slides = [
 ];
 class AnimationSlider extends Component {
     componentDidMount() {
-        $('div[style*="left: 50%"] video').trigger('play');
+
+        $('div[style*="left: 50%"]').addClass('active');
+        // $('div[style*="left: 25%"]').addClass('beforeActive');
+        // $('div[style*="left: 75%"]').addClass('afterActive');
+
+        $('div.active video').trigger('play');
+        
         $(".css-1qzevvg img:last-child").click(function () {
-            $('div[style*="left: 50%"] video').trigger('pause');
-            $('div[style*="left: 75%"] video').trigger('play');
+            $("div.active video").trigger('pause');
+            $("div.active").next().addClass('active');
+            $("div.active").first().removeClass('active');
+            $("div.active video").trigger('play');
+
+
+            // $('div.active video').trigger('pause');
+            // $('div.afterActive').removeClass('afterActive').addClass('active');
+            // $('div.active').first().removeClass('active').addClass('beforeActive');
+            // $('div.active video').trigger('play');
+            
+            //$('div.afterActive video').trigger('play');
+            //$('div[style*="left: 75%"] video').trigger('play');
 
         });
         $(".css-1qzevvg img:first-child").click(function () {
-            $('div[style*="left: 50%"] video').trigger('pause');
-            $('div[style*="left: 25%"] video').trigger('play');
+            // $('div[style*="left: 50%"] video').trigger('pause');
+            // $('div[style*="left: 25%"] video').trigger('play');
+
+            $("div.active video").trigger('pause');
+            $("div.active").prev().addClass('active');
+            $("div.active:eq(1)").removeClass('active');
+            $("div.active video").trigger('play');
 
         });
     }
-
     state = {
         goToSlide: 1,
         offsetRadius: 2,
         showNavigation: true,
         autoPlay: true,
+        play:true,
+        autoplay:true,
         loop: true,
-        // config: config.slow
-
-
+        config:  config.slow
     };
     render() {
 
@@ -124,7 +145,7 @@ class AnimationSlider extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <div id id="threedSlider" style={{ width: "80%", height: "600px", margin: "100px auto 70px", position: "relative" }}>
+                            <div id id="threedSlider" style={{ width: "80%", height: "594px", margin: "100px auto 70px", position: "relative" }}>
                                 <Carousel
                                     slides={slides}
                                     goToSlide={this.state.goToSlide}

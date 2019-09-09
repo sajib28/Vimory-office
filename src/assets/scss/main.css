@@ -1,7 +1,21 @@
 /*theme Setting*/
 @font-face {
+  font-family: 'helveticabold';
+  src: url("../../assets/fonts/helveticabold-webfont.woff2") format("woff2"), url("../../assets/fonts/helveticabold-webfont.ttf") format("ttf"), url("../../assets/fonts/helveticabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'helveticaregular';
   src: url("../../assets/fonts/helvetica-webfont.woff2") format("woff2"), url("../../assets/fonts/helvetica-webfont.ttf") format("ttf"), url("../../assets/fonts/helvetica-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'helveticaneuemedium';
+  src: url("../../assets/fonts/helveticaneue_medium-webfont.ttf") format("ttf"), url("../../assets/fonts/helveticaneue_medium-webfont.woff2") format("woff2"), url("../../assets/fonts/helveticaneue_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -22,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "helveticaregular";
+  font-family: "helveticabold";
   margin: 0 0 15px 0;
   padding: 0;
   font-weight: bold;
@@ -444,6 +458,13 @@ svg .cls-2 {
 #getToday .shadow-text {
   top: 185px;
   z-index: 1;
+  z-index: 1;
+  left: 60px;
+  width: auto;
+}
+
+#getToday h2 {
+  font-size: 86px;
 }
 
 #getToday p {
@@ -452,6 +473,7 @@ svg .cls-2 {
   color: #fff;
   margin-top: 90px;
   text-align: justify;
+  font-family: "helveticaneuemedium";
 }
 
 #getToday ul {
@@ -489,7 +511,7 @@ svg .cls-2 {
   right: 0;
   z-index: 999;
   background: rgba(0, 0, 0, 0.9);
-  padding: 0;
+  padding: 15px 0;
 }
 
 #mainMenu .nav-item {
@@ -758,8 +780,8 @@ svg .cls-2 {
 .content-area .photo-content p {
   font-size: 20px;
   line-height: 28px;
-  font-weight: 500;
   color: #000;
+  font-family: "helveticaneuemedium";
   text-align: justify;
 }
 
@@ -991,6 +1013,11 @@ svg .cls-2 {
   position: relative;
 }
 
+#review .section-title p {
+  font-family: "helveticaneuemedium";
+  color: #13181e;
+}
+
 #review .slick-slider {
   padding: 0 50px 50px 50px;
 }
@@ -1029,12 +1056,19 @@ svg .cls-2 {
 }
 
 #review .slick-slider .slick-dots li.slick-active button:before {
-  color: #0584D1;
+  background: #0584D1;
+  opacity: 1;
+  border: 1px solid #0584D1;
 }
 
 #review .slick-slider .slick-dots li button::before {
   font-size: 12px;
-  color: #0584D1;
+  content: '';
+  border-radius: 50%;
+  border: 1px solid #707070;
+  width: 12PX;
+  height: 12px;
+  opacity: 1;
 }
 
 #review .slick-slider h3 {
@@ -1046,6 +1080,7 @@ svg .cls-2 {
   font-size: 16px;
   line-height: 25px;
   margin-bottom: 20px;
+  color: #13181e;
 }
 
 #review .slick-slider span {
@@ -1076,6 +1111,11 @@ svg .cls-2 {
 /*Start pricing Review Css*/
 #pricing {
   background-image: url("../img/pricing-bg.jpg");
+}
+
+#pricing .shadow-text {
+  top: 120px;
+  text-align: center;
 }
 
 #pricing .title-inner {

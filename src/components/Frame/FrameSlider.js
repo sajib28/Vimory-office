@@ -12,10 +12,10 @@ class FrameSlider extends Component {
     render() {
         var settings = {
             dots: true,
-            fade: true,
+            fade: false,
             infinite: true,
             autoplay: true,
-            speed: 3000,
+            speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false

@@ -1,5 +1,14 @@
 /*theme Setting*/
 @font-face {
+    font-family: 'helveticabold';
+    src: url('../../assets/fonts/helveticabold-webfont.woff2') format('woff2'),
+        url('../../assets/fonts/helveticabold-webfont.ttf') format('ttf'),
+        url('../../assets/fonts/helveticabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
     font-family: 'helveticaregular';
     src: url('../../assets/fonts/helvetica-webfont.woff2') format('woff2'),
         url('../../assets/fonts/helvetica-webfont.ttf') format('ttf'),
@@ -8,9 +17,19 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'helveticaneuemedium';
+    src: url('../../assets/fonts/helveticaneue_medium-webfont.ttf') format('ttf'),
+         url('../../assets/fonts/helveticaneue_medium-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/helveticaneue_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-$heading-font:'helveticaregular';
+}
+
+$heading-font:'helveticabold';
 $body-font: 'helveticaregular';
+$medium-font: 'helveticaneuemedium';
 $theme-color:#0584D1;
 $white:#fff;
 $black:#000;
@@ -533,12 +552,17 @@ svg {
     background-image: url("../img/get-today-bg.png");
     padding: 150px 0 150px;
     position: relative;
-
+    
     .shadow-text {
         top: 185px;
         z-index: 1;
+        z-index: 1;
+        left: 60px;
+        width: auto;
     }
-
+    h2{
+        font-size: 86px;
+    }
     // h2 {
     //     font-size: 90px;
     //     line-height: 108px;
@@ -571,6 +595,7 @@ svg {
         color: $white;
         margin-top: 90px;
         text-align: justify;
+        font-family: $medium-font;
     }
 
     ul {
@@ -610,7 +635,7 @@ svg {
         right: 0;
         z-index: 999;
         background: rgba($black, .9);
-        padding: 0;
+        padding: 15px 0;
     }
 
     .absoluteClass {}
@@ -884,8 +909,8 @@ svg {
         p {
             font-size: 20px;
             line-height: 28px;
-            font-weight: 500;
             color: $black;
+            font-family: $medium-font;
             text-align: justify;
         }
     }
@@ -1197,6 +1222,13 @@ svg {
     background: $white;
     position: relative;
 
+    .section-title {
+        p {
+            font-family: $medium-font;
+            color: #13181e;
+        }
+    }
+
     h2 {}
 
     .slick-slider {
@@ -1238,7 +1270,9 @@ svg {
                 &.slick-active {
                     button {
                         &:before {
-                            color: $theme-color;
+                            background: $theme-color;
+                            opacity: 1;
+                            border: 1px solid $theme-color;
                         }
                     }
                 }
@@ -1246,7 +1280,12 @@ svg {
                 button {
                     &::before {
                         font-size: 12px;
-                        color: $theme-color;
+                        content: '';
+                        border-radius: 50%;
+                        border: 1px solid #707070;
+                        width: 12PX;
+                        height: 12px;
+                        opacity: 1;
                     }
                 }
 
@@ -1262,6 +1301,7 @@ svg {
             font-size: 16px;
             line-height: 25px;
             margin-bottom: 20px;
+            color: #13181e;
         }
 
         span {
@@ -1298,6 +1338,11 @@ svg {
 /*Start pricing Review Css*/
 #pricing {
     background-image: url("../img/pricing-bg.jpg");
+
+    .shadow-text {
+        top: 120px;
+        text-align: center;
+    }
 
     .title-inner {
         color: $white;
@@ -1501,7 +1546,6 @@ svg {
         .shadow-text {
             font-size: 185px;
         }
-
     }
 
     .contact-info {

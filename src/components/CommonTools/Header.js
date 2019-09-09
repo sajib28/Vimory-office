@@ -51,7 +51,7 @@ class Header extends Component {
         // } 
         else if (window.scrollY < introSection + appFeature) {
             this.setState({
-                scrollingLock: false
+                scrollingLock: true
             });
         }
     }

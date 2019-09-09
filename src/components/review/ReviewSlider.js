@@ -9,8 +9,8 @@ class ReviewSlider extends Component {
         var settings = {
             dots: true,
             infinite: true,
-            autoplay: true,
-            speed: 2000,
+            autoplay: false,
+            speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows:true
@@ -26,7 +26,6 @@ class ReviewSlider extends Component {
                         <li><i className="fas fa-star"></i></li>
                         <li><i className="fas fa-star"></i></li>
                         <li><i className="fas fa-star"></i></li>
-
                     </ul>
                     <p>Etiam sapien sem at sagittis congue an augue massa varius egestas a suscipit magna tempus an aliquet porta</p>
                     <span className="author-name">M.John - @ms_brooklyn</span>

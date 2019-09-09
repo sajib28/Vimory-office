@@ -5,13 +5,14 @@ class Pricing extends Component {
     render() {
         return (
             <section id="pricing" className="photo-with-content">
+                <span className="shadow-text  wow zoomIn" data-wow-delay="0.4s" data-wow-delay="0.4s">Our Pricing Plan</span>
                 <div className="pic-overlay"></div>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
                             <div className="title">
                                 <div className="title-inner shadow-title text-center">
-                                    <h2>Our Pricing Plan<span className="shadow-text">Our Pricing Plan</span></h2>
+                                    <h2  className="wow zoomIn" data-wow-delay="0.2s" data-wow-delay="0.2s">Our Pricing Plan</h2>
                                 </div>
                             </div>
                             <div className="text-center subconetnt">
