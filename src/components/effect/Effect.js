@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import BackgroundWithText from '../CommonTools/BackgroundWithText';
 import BackgroundImage from '../../assets/img/effect-bg.jpg';
 import mobileFrame from '../../assets/img/mobile-frame.png';
+import triangle from '../../assets/img/icon/triangle.png';
 import EffectVideo from '../../assets/media/effect/final.mp4';
 class Effect extends Component {
     render() {
         return (
             // Start Effect Section
             <section id="effect">
+                {/* animation */}
+
+                {/* end animation */}
                 <BackgroundWithText id="effectBg" backgroundImage={BackgroundImage} title="Effect" shadowTitle="Effect" />
                 <div className="content-area">
                     <div className="circle-position two-circle top-circle-left">
@@ -19,6 +23,12 @@ class Effect extends Component {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div className="vimory-animation animation-type-3 bottom-right">
+                        <div className="vimory-animated-circle"></div>
+                        <div className="vimory-animated-circle-container">
+                            <img src={triangle} alt="Vimory" />
                         </div>
                     </div>
                     <div className="container">

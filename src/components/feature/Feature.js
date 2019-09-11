@@ -19,8 +19,8 @@ class Feature extends Component {
                 <li className="feature-1 brk-sc-honeycomb-one brk-sc-honeycomb-one_wide-shadow brk-sc-honeycomb-one_hide-btn brk-sc-honeycomb-one_left">
                     <div className="brk-sc-honeycomb-one__content">
                         <h4 className="font__family-montserrat font__weight-bold font__size-24 brk-sc-honeycomb-one__header">Photo Edit</h4>
-                        <p className="font__family-open-sans font__size-16 mt-20 brk-dark-font-color brk-sc-honeycomb-one__p">Lots of frame, So that you can make a video more easily.</p>
-                        <a href="#" className="vimory-btn btn">See More</a>
+                        {/* <p className="font__family-open-sans font__size-16 mt-20 brk-dark-font-color brk-sc-honeycomb-one__p">Lots of frame, So that you can make a video more easily.</p>
+                        <a href="#" className="vimory-btn btn">See More</a> */}
                     </div>
                     <div className="brk-sc-honeycomb-one__layer brk-base-bg-gradient-14"></div>
                     <div className="brk-sc-honeycomb-one__hex-1"></div>
@@ -29,8 +29,8 @@ class Feature extends Component {
                 <li className="feature-2 brk-sc-honeycomb-one brk-sc-honeycomb-one_wide-shadow brk-sc-honeycomb-one_hide-btn brk-sc-honeycomb-one_left">
                     <div className="brk-sc-honeycomb-one__content">
                         <h4 className="font__family-montserrat font__weight-bold font__size-24 brk-sc-honeycomb-one__header">Effect</h4>
-                        <p className="font__family-open-sans font__size-16 mt-20 brk-dark-font-color brk-sc-honeycomb-one__p">Lots of frame, So that you can make a video more easily.</p>
-                        <a href="#" className="vimory-btn btn">See More</a>
+                        {/* <p className="font__family-open-sans font__size-16 mt-20 brk-dark-font-color brk-sc-honeycomb-one__p">Lots of frame, So that you can make a video more easily.</p>
+                        <a href="#" className="vimory-btn btn">See More</a> */}
                     </div>
                     <div className="brk-sc-honeycomb-one__layer brk-base-bg-gradient-14"></div>
                     <div className="brk-sc-honeycomb-one__hex-1"></div>
@@ -39,8 +39,8 @@ class Feature extends Component {
                 <li className="feature-3 brk-sc-honeycomb-one brk-sc-honeycomb-one_wide-shadow brk-sc-honeycomb-one_hide-btn brk-sc-honeycomb-one_left">
                     <div className="brk-sc-honeycomb-one__content">
                         <h4 className="font__family-montserrat font__weight-bold font__size-24 brk-sc-honeycomb-one__header">Slide</h4>
-                        <p className="font__family-open-sans font__size-16 mt-20 brk-dark-font-color brk-sc-honeycomb-one__p">Lots of frame, So that you can make a video more easily.</p>
-                        <a href="#" className="vimory-btn btn">See More</a>
+                        {/* <p className="font__family-open-sans font__size-16 mt-20 brk-dark-font-color brk-sc-honeycomb-one__p">Lots of frame, So that you can make a video more easily.</p>
+                        <a href="#" className="vimory-btn btn">See More</a> */}
                     </div>
                     <div className="brk-sc-honeycomb-one__layer brk-base-bg-gradient-14"></div>
                     <div className="brk-sc-honeycomb-one__hex-1"></div>

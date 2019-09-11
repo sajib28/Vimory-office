@@ -11,7 +11,7 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            scrollingLock: false
+            scrollingLock: true
         };
         // example how to bind object in React ES6
         this.handleScroll = this.handleScroll.bind(this)
@@ -38,9 +38,9 @@ class Header extends Component {
         let pricing =document.getElementById('pricing').clientHeight;
         let faqs =document.getElementById('faqs').clientHeight;
         let getInTouch =document.getElementById('getInTouch').clientHeight;
-        if (window.scrollY > introSection + appFeature +secondMenu) {
+        if (window.scrollY) {
             this.setState({
-                scrollingLock: false
+                scrollingLock: true
             });
         } 
         // else if (window.scrollY > introSection + appFeature + template + photoEdit + slide + effect + frame + filter + getToday + review + pricing){
@@ -49,9 +49,9 @@ class Header extends Component {
         //         scrollingLock: false
         //     });
         // } 
-        else if (window.scrollY < introSection + appFeature) {
+        else if (window.scrollY = introSection + appFeature +secondMenu) {
             this.setState({
-                scrollingLock: true
+                scrollingLock: false
             });
         }
     }

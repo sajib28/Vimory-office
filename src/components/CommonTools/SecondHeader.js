@@ -176,7 +176,7 @@ class SecondHeader extends Component {
                                                 <li>
                                                     <Link
                                                         activeClass="active"
-                                                        to="root"
+                                                        to="intro"
                                                         spy={true}
                                                         smooth={true}
                                                         offset={0}

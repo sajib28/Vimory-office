@@ -40,13 +40,13 @@ $grey-black:#f8f8f8;
 $blue:#0C89D5;
 $footer-bg:#161D24;
 $social-icon:#1DA1F2;
-$yellow:#FFF710;
+$yellow:#FFDB19;
 
 
 /*Animation Color Code*/
 $animation-border:rgba(#99C9E6, .13);
-$gardient-pink1:#B56EEB;
-$gardient-pink2:#5400FF;
+$gardient-pink1:#7700FF;
+$gardient-pink2:#3C0080;
 $gardient-blue1:#6EBCEB;
 $gardient-blue2:#0066FF;
 $gardient-frame1:#5BB1E5;
@@ -545,8 +545,19 @@ svg {
 }
 
 #appFeature {
+    position: relative;
+
     h2 {
         letter-spacing: 3px;
+    }
+
+    .circle-position {
+        &.top-right {
+            .circle-spin {
+                right: 0;
+                top: 0;
+            }
+        }
     }
 }
 
@@ -645,12 +656,20 @@ svg {
         }
     }
 
+    .nav-link {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 400;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+
     &.fixedClass {
         left: 0;
         top: 0;
         right: 0;
         z-index: 999;
-        background: rgba($black, .9);
+        background: rgba($black, .95);
         padding: 10px 0;
     }
 
@@ -659,12 +678,12 @@ svg {
     .nav-item {
         padding: 0 8px;
 
-        .nav-link {
-            font-size: 18px;
-            color: #fff;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
+        // .nav-link {
+        //     font-size: 18px;
+        //     color: #fff;
+        //     font-weight: 400;
+        //     letter-spacing: 1px;
+        // }
 
         .nav-link.active,
         .nav-link:hover {
@@ -715,11 +734,6 @@ svg {
 
         .nav-item {
             padding: 0 16px;
-
-            .nav-link {
-                cursor: pointer;
-                font-weight: 400;
-            }
         }
     }
 
@@ -729,7 +743,7 @@ svg {
         top: 0;
         right: 0;
         z-index: 999;
-        background: rgba($black, .9);
+        background: rgba($black, .95);
 
         .navbar {
             padding: 10px 0 10px 0;
@@ -821,6 +835,30 @@ svg {
     .fa-bars {
         color: $black;
         font-size: 20px;
+    }
+
+    .dropdown-menu-right {
+        right: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .dropdown-item {
+            font-family: $body-font;
+            font-size: 18px;
+            color: $black;
+
+            &.active {
+                color: $white;
+                background: $theme-color;
+            }
+
+            &:hover,
+            &:focus,
+                {
+                background: rgba($theme-color, 0.9);
+                color: $white;
+            }
+        }
     }
 }
 
@@ -916,6 +954,7 @@ svg {
 
 .content-area {
     padding: 80px 0;
+    position: relative;
 
     .photo-content {
         display: flex;
@@ -970,29 +1009,22 @@ svg {
         margin: 0;
 
         img {
-            width: 15px;
-            height: 20px;
+            width: 40px;
+            height: 40px;
             cursor: pointer;
-            border: solid $theme-color;
-            border-width: 0 5px 5px 0;
-            display: inline-block;
-            padding: 8px;
 
             &:first-child {
-                transform: rotate(135deg);
-                -webkit-transform: rotate(135deg);
+                position: absolute;
+                left: -160px;
             }
 
             &:last-child {
-                transform: rotate(-45deg);
-                -webkit-transform: rotate(-45deg);
+                position: absolute;
+                right: -160px;
             }
         }
     }
 
-    div.css-1qzevvg img:first-child {
-        margin-right: 30rem !important;
-    }
 }
 
 /*End Filter section*/
@@ -1040,8 +1072,6 @@ svg {
 
         .circle-position {
             &.right-circle {
-                display: none;
-
                 .circle-spin {
                     right: 0;
                 }
@@ -1098,7 +1128,7 @@ svg {
                 }
 
                 i {
-                    font-size: 30px;
+                    font-size: 34px;
                 }
             }
 
@@ -1118,6 +1148,7 @@ svg {
 /*Start Effect section*/
 #effect {
     padding: 0;
+    position: relative;
 
     .content-area {
         position: relative;
@@ -1140,12 +1171,16 @@ svg {
 
     .content-area {
         .mobile-frame {
-            width: 418px;
+            width: 400px;
             float: right;
         }
     }
 
     .frame-slider {
+        .slick-dots {
+            position: inherit;
+            bottom: inherit;
+        }
 
         video {
             max-width: 100%;
@@ -1266,7 +1301,9 @@ svg {
         }
 
         .slick-prev {
-            background: url("../img/review-icon-prev.png");
+            background: url("../img/icon/prev.png");
+            background-size: 40px 40px;
+            background-repeat: no-repeat;
 
             &:before {
                 content: '';
@@ -1274,7 +1311,9 @@ svg {
         }
 
         .slick-next {
-            background: url("../img/review-icon-next.png");
+            background: url("../img/icon/next.png");
+            background-size: 40px 40px;
+            background-repeat: no-repeat;
 
             &:before {
                 content: '';
@@ -1283,8 +1322,8 @@ svg {
 
         .slick-prev,
         .slick-next {
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
         }
 
         .slick-dots {
@@ -1564,7 +1603,7 @@ svg {
     background-size: auto;
 
     .pic-overlay {
-        background: rgba(1, 1, 1, 0.5);
+        background: rgba(1, 1, 1, 0.6);
     }
 
     .title-inner {
@@ -1771,7 +1810,7 @@ svg {
     list-style-type: none;
 
     h4 {
-        font-size: 30px;
+        font-size: 28px;
         font-weight: bold;
     }
 
@@ -2055,12 +2094,13 @@ svg {
     @include linear-gradient(to right, $gardient-frame1, $gardient-frame2);
 }
 
-.btn-prime {
-    border: 0;
-    box-shadow: 0 5px 16px rgba(0, 0, 0, .2);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
+.feature-box .vimory-btn {
+    border: 2px solid #000;
+}
+
+.feature-box .brk-sc-honeycomb-one_hide-btn:hover .vimory-btn {
+    border: 2px solid #fff;
+    color: #fff;
 }
 
 .btn-prime-primary-transparent,
@@ -2072,9 +2112,10 @@ svg {
 /*All Animation circle css*/
 .circle-position {
     position: absolute;
-    display: none;
 
     &.one-circle {
+        width: 142px;
+        height: 142px;
 
         .circle-wrapper {
             position: relative;
@@ -2089,7 +2130,7 @@ svg {
                 border-radius: 50%;
                 position: absolute;
                 bottom: 0;
-                right: 0;
+                left: 0;
                 animation: spin-right 5s linear infinite;
             }
         }
@@ -2121,12 +2162,15 @@ svg {
     }
 
     &.two-circle {
+        width: 208px;
+        height: 208px;
+
         .circle-wrapper {
             position: relative;
         }
 
         .orbit {
-            border: 8px solid $animation-border;
+            border: 10px solid $animation-border;
         }
 
         .circle-spin {
@@ -2134,9 +2178,10 @@ svg {
             height: 208px;
             animation: spin-right 5s linear infinite;
             position: absolute;
-            border: 8px solid $animation-border;
+            border: 10px solid $animation-border;
             @include border-radius(50%);
             bottom: 0;
+            left: 0;
 
             .first-circle {
                 width: 64px;
@@ -2331,3 +2376,115 @@ svg {
 }
 
 /*End Responsive Code here it is written for Mobile, Tablet,iPad */
+.vimory-animation {
+    position: absolute;
+    z-index: 1;
+}
+
+.top-left {
+    top: 100px;
+    left: 80px;
+}
+
+.top-right {
+    right: 80px;
+    top: 100px;
+}
+
+.bottom-right {
+    right: 80px;
+    bottom: 100px;
+}
+
+.bottom-left {
+    left: 80px;
+    bottom: 100px;
+}
+
+// type 3
+.animation-type-3 .vimory-animated-circle {
+    width: 146px;
+    height: 146px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    @include linear-gradient(to bottom, $gardient-pink1, $gardient-pink2);
+    -webkit-animation: rotate 30s linear infinite;
+    animation: rotate 30s linear infinite;
+}
+
+.animation-type-3 .vimory-animated-circle-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 100%;
+}
+
+.animation-type-3 .vimory-animated-circle-container img {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    -webkit-animation: orbit-8 5s linear infinite;
+    animation: orbit-8 3s linear infinite;
+}
+
+// End Type 3
+
+// Type 4
+.animation-type-4 .brk-animated-circle__container {
+    // display: inline-block;
+    position: absolute;
+    // -webkit-animation: orbit-6 6s linear infinite;
+    animation: orbit-6 6s linear infinite;
+}
+
+// End Type 4
+@keyframes orbit-6 {
+    0% {
+        top: -25px;
+        left: 10px;
+        transform: rotate(0);
+    }
+
+    20% {
+        top: 0;
+        left: 59px;
+        transform: rotate(45deg);
+    }
+
+    40% {
+        top: 55%;
+        left: 47px;
+        transform: rotate(-12deg);
+    }
+
+    60% {
+        top: 60px;
+        left: -7px;
+        transform: rotate(-120deg);
+    }
+
+    80% {
+        top: 9px;
+        left: -29px;
+        transform: rotate(60deg);
+    }
+
+    100% {
+        top: -25px;
+        left: 10px;
+        transform: rotate(0);
+    }
+}
+
+@keyframes orbit-8 {
+    from {
+        transform: rotate(0deg) translate(calc(105px - 50%), -50%) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translate(calc(105px - 50%), -50%) rotate(-360deg);
+    }
+}

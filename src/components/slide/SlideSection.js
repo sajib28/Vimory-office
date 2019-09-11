@@ -37,17 +37,6 @@ class Slide extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="circle-left-bottom">
-                    <div className="circle-slide">
-                        <div className="first-circle orbit">
-                        </div>
-                        <div id="mercury" className="orbit">
-                            <div className="medium-circle">
-                                <div className="small-cicrcle"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </section>
             // End Effect Section

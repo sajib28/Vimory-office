@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReviewSlider from './ReviewSlider';
 import ClientSlider from './ClientSlider';
+import triangle from '../../assets/img/icon/triangle.png';
 class ClientReview extends Component {
     render() {
         return (
@@ -12,6 +13,12 @@ class ClientReview extends Component {
                             </div>
                     </div>
                 </div>
+                <div className="vimory-animation animation-type-3 top-right">
+                        <div className="vimory-animated-circle"></div>
+                        <div className="vimory-animated-circle-container">
+                            <img src={triangle} alt="Vimory" />
+                        </div>
+                    </div>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8 offset-2">

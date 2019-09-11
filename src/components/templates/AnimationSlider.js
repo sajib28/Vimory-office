@@ -4,11 +4,15 @@ import uuidv4 from "uuid";
 import { config } from "react-spring";
 import $ from 'jquery';
 import { relative } from 'path';
+import prev from '../../assets/img/icon/prev.png';
+import next from '../../assets/img/icon/next.png';
 import Template1 from '../../assets/media/template/love.mp4';
 import Template2 from '../../assets/media/template/girls.mp4';
 import Template3 from '../../assets/media/template/spring.mp4';
 import Template4 from '../../assets/media/template/kids.mp4';
 import Template5 from '../../assets/media/template/love2.mp4';
+import pentagon from '../../assets/img/icon/pentagon.png';
+import triangleIndigo from '../../assets/img/icon/triangle-indigo.png';
 
 let slides = [
     {
@@ -20,6 +24,7 @@ let slides = [
             </video>
         </div>
     },
+  
     {
         key: uuidv4(),
         content: <div className="video-template">
@@ -38,6 +43,7 @@ let slides = [
             </video>
         </div>
     },
+    
     // {
     //     key: uuidv4(),
     //     content: <div className="video-template">
@@ -80,7 +86,10 @@ let slides = [
 ];
 class AnimationSlider extends Component {
     componentDidMount() {
-
+        // let prev='../../assets/img/icon/prev.png';
+        // let next='../../assets/img/icon/next.png';
+        $('.css-1qzevvg img:first-child').attr("src", prev);
+        $('.css-1qzevvg img:last-child').attr("src", next);
         $('div[style*="left: 50%"]').addClass('active');
         // $('div[style*="left: 25%"]').addClass('beforeActive');
         // $('div[style*="left: 75%"]').addClass('afterActive');
@@ -115,7 +124,7 @@ class AnimationSlider extends Component {
         });
     }
     state = {
-        goToSlide: 1,
+        goToSlide: 0,
         offsetRadius: 2,
         showNavigation: true,
         autoPlay: true,
@@ -128,23 +137,41 @@ class AnimationSlider extends Component {
 
         return (
             <div className="slider-section">
-                <div class="orbit venus-orbit"></div>
-                <div class="venus-spin">
-                    <div id="venus"></div>
-                </div>
-                <div class="orbit earth-orbit"></div> */}
-                 <div class="earth-spin">
-                    <div class="orbit moon-orbit"></div>
-                    <div class="moon-spin">
-                        <div id="moon"></div>
+                <div className="circle-position two-circle bottom-left">
+                    <div className="circle-wrapper">
+                        <div className="orbit circle-spin">
+                            <div className="first-circle">
+                                <div className="outer-orbit-small">
+                                    <div className="small">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div className="vimory-animation animation-type-4 top-right">
+                        <img src={pentagon} alt="" />
+                        <div className="brk-animated-circle__container">
+                            <img src={triangleIndigo} alt="" />
+                        </div>
+                    </div>
+                {/* <div className="orbit venus-orbit"></div>
+                <div className="venus-spin">
+                    <div id="venus"></div>
+                </div>
+                <div className="orbit earth-orbit"></div>
+                 <div className="earth-spin">
+                    <div className="orbit moon-orbit"></div>
+                    <div className="moon-spin">
+                        <div id="moon"></div>
+                    </div>
+                </div> */}
 
 
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <div id id="threedSlider" style={{ width: "80%", height: "594px", margin: "100px auto 70px", position: "relative" }}>
+                            <div id id="threedSlider" style={{ width: "70%", height: "594px", margin: "100px auto 70px", position: "relative" }}>
                                 <Carousel
                                     slides={slides}
                                     goToSlide={this.state.goToSlide}

@@ -19,12 +19,12 @@ class PhotoEditTab extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                <div className="video-template">
-                                            <video autoPlay muted loop>
-                                                <source src={Crop} type="video/webm" />
-                                                <source src={Crop} type="video/mp4" />
-                                            </video>
-                                        </div>
+                                    <div className="video-template">
+                                        <video autoPlay muted loop>
+                                            <source src={Crop} type="video/webm" />
+                                            <source src={Crop} type="video/mp4" />
+                                        </video>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -44,12 +44,12 @@ class PhotoEditTab extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                <div className="video-template">
-                                            <video autoPlay muted loop>
-                                                <source src={Filter} type="video/webm" />
-                                                <source src={Filter} type="video/mp4" />
-                                            </video>
-                                        </div>
+                                    <div className="video-template">
+                                        <video autoPlay muted loop>
+                                            <source src={Filter} type="video/webm" />
+                                            <source src={Filter} type="video/mp4" />
+                                        </video>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -69,12 +69,12 @@ class PhotoEditTab extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                <div className="video-template">
-                                            <video autoPlay muted loop>
-                                                <source src={Adjust} type="video/webm" />
-                                                <source src={Adjust} type="video/mp4" />
-                                            </video>
-                                        </div>
+                                    <div className="video-template">
+                                        <video autoPlay muted loop>
+                                            <source src={Adjust} type="video/webm" />
+                                            <source src={Adjust} type="video/mp4" />
+                                        </video>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -94,12 +94,12 @@ class PhotoEditTab extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                <div className="video-template">
-                                            <video autoPlay muted loop>
-                                                <source src={Focus} type="video/webm" />
-                                                <source src={Focus} type="video/mp4" />
-                                            </video>
-                                        </div>
+                                    <div className="video-template">
+                                        <video autoPlay muted loop>
+                                            <source src={Focus} type="video/webm" />
+                                            <source src={Focus} type="video/mp4" />
+                                        </video>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -119,12 +119,12 @@ class PhotoEditTab extends Component {
                             <div className="mobile-frame">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
-                                <div className="video-template">
-                                            <video autoPlay muted loop>
-                                                <source src={Emoji} type="video/webm" />
-                                                <source src={Emoji} type="video/mp4" />
-                                            </video>
-                                        </div>
+                                    <div className="video-template">
+                                        <video autoPlay muted loop>
+                                            <source src={Emoji} type="video/webm" />
+                                            <source src={Emoji} type="video/mp4" />
+                                        </video>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +156,7 @@ class PhotoEditTab extends Component {
                             </Tab>
                             <Tab>
                                 <div className="img-hover">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 44.833 44.833">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 44.833 44.833">
                                         <g id="Group_2052" data-name="Group 2052" transform="translate(-727.334 -5456.334)">
                                             <g id="Group_2001" data-name="Group 2001" transform="translate(727.334 5456.334)">
                                                 <g id="Group_2000" data-name="Group 2000" transform="translate(2.69 2.152)">
@@ -172,7 +172,27 @@ class PhotoEditTab extends Component {
                                 <span>Filter</span>
                             </Tab>
                             <Tab><div className="img-hover">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 71.739 71.74">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 71.739 71.739">
+                                    <g id="adjustment" transform="translate(-6855.928 -1443.927)">
+                                        <g id="Group_2005" data-name="Group 2005" transform="translate(6855.927 1443.927)">
+                                            <path id="Path_1736" data-name="Path 1736" d="M71.739,71.739H0V0H71.739ZM1.722,70.018h68.3V1.722H1.722Z" fill="none" />
+                                            <g id="Group_2004" data-name="Group 2004" transform="translate(16.63 21.268)">
+                                                <g id="Group_2002" data-name="Group 2002" transform="translate(0 23.055)">
+                                                    <path id="Path_1737" data-name="Path 1737" d="M10.325,25.451a5.325,5.325,0,1,1,5.325-5.325A5.352,5.352,0,0,1,10.325,25.451Zm0-8.589a3.264,3.264,0,1,0,3.264,3.264A3.379,3.379,0,0,0,10.325,16.861Z" transform="translate(2.77 -14.8)" stroke="#000" strokeWidth="1.5" />
+                                                    <rect id="Rectangle_1258" data-name="Rectangle 1258" width="19.927" height="2.061" transform="translate(21.364 4.295)" stroke="#000" strokeWidth="1.5" />
+                                                    <rect id="Rectangle_1259" data-name="Rectangle 1259" width="4.81" height="2.061" transform="translate(0 4.295)" stroke="#000" strokeWidth="1.5" />
+                                                </g>
+                                                <g id="Group_2003" data-name="Group 2003">
+                                                    <rect id="Rectangle_1260" data-name="Rectangle 1260" width="4.81" height="2.061" transform="translate(36.481 4.295)" stroke="#000" strokeWidth="1.5" />
+                                                    <rect id="Rectangle_1261" data-name="Rectangle 1261" width="19.755" height="2.061" transform="translate(0 4.295)" stroke="#000" strokeWidth="1.5" />
+                                                    <path id="Path_1738" data-name="Path 1738" d="M19.125,14.651a5.325,5.325,0,1,1,5.325-5.325A5.352,5.352,0,0,1,19.125,14.651Zm0-8.589a3.264,3.264,0,1,0,3.264,3.264A3.509,3.509,0,0,0,19.125,6.061Z" transform="translate(9.071 -4)" stroke="#000" strokeWidth="1.5" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+
+                                {/* <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 71.739 71.74">
                                     <g id="Group_2053" data-name="Group 2053" transform="translate(-6855.927 -1443.927)">
                                         <g id="Group_2005" data-name="Group 2005" transform="translate(6855.927 1443.927)">
                                             <g id="Group_2004" className="cls-2" data-name="Group 2004" transform="translate(16.63 21.268)">
@@ -189,7 +209,7 @@ class PhotoEditTab extends Component {
                                             </g>
                                         </g>
                                     </g>
-                                </svg>
+                                </svg> */}
 
 
                             </div>

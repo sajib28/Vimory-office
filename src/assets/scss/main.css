@@ -445,8 +445,17 @@ svg .cls-2 {
           justify-content: center;
 }
 
+#appFeature {
+  position: relative;
+}
+
 #appFeature h2 {
   letter-spacing: 3px;
+}
+
+#appFeature .circle-position.top-right .circle-spin {
+  right: 0;
+  top: 0;
 }
 
 #getToday {
@@ -517,24 +526,25 @@ svg .cls-2 {
   width: 150px;
 }
 
+#mainMenu .nav-link {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
 #mainMenu.fixedClass {
   left: 0;
   top: 0;
   right: 0;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
   padding: 10px 0;
 }
 
 #mainMenu .nav-item {
   padding: 0 8px;
-}
-
-#mainMenu .nav-item .nav-link {
-  font-size: 18px;
-  color: #fff;
-  font-weight: 400;
-  letter-spacing: 1px;
 }
 
 #mainMenu .nav-item .nav-link.active,
@@ -581,18 +591,13 @@ svg .cls-2 {
   padding: 0 16px;
 }
 
-.second-menu .navbar .nav-item .nav-link {
-  cursor: pointer;
-  font-weight: 400;
-}
-
 .second-menu.fixedClass {
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
 }
 
 .second-menu.fixedClass .navbar {
@@ -677,6 +682,28 @@ svg .cls-2 {
 .second-menu .fa-bars {
   color: #000;
   font-size: 20px;
+}
+
+.second-menu .dropdown-menu-right {
+  right: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.second-menu .dropdown-menu-right .dropdown-item {
+  font-family: "helveticaregular";
+  font-size: 18px;
+  color: #000;
+}
+
+.second-menu .dropdown-menu-right .dropdown-item.active {
+  color: #fff;
+  background: #0584D1;
+}
+
+.second-menu .dropdown-menu-right .dropdown-item:hover, .second-menu .dropdown-menu-right .dropdown-item:focus {
+  background: rgba(5, 132, 209, 0.9);
+  color: #fff;
 }
 
 /*End Second Menu css*/
@@ -776,6 +803,7 @@ svg .cls-2 {
 
 .content-area {
   padding: 80px 0;
+  position: relative;
 }
 
 .content-area .photo-content {
@@ -839,27 +867,19 @@ svg .cls-2 {
 }
 
 #threedSlider .css-1qzevvg img {
-  width: 15px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  border: solid #0584D1;
-  border-width: 0 5px 5px 0;
-  display: inline-block;
-  padding: 8px;
 }
 
 #threedSlider .css-1qzevvg img:first-child {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
+  position: absolute;
+  left: -160px;
 }
 
 #threedSlider .css-1qzevvg img:last-child {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-#threedSlider div.css-1qzevvg img:first-child {
-  margin-right: 30rem !important;
+  position: absolute;
+  right: -160px;
 }
 
 /*End Filter section*/
@@ -897,10 +917,6 @@ svg .cls-2 {
 #slide .content-area .react-tabs__tab--selected .cls-2,
 #slide .content-area .react-tabs__tab--selected .cls-3 {
   stroke: #0584D1;
-}
-
-#slide .content-area .circle-position.right-circle {
-  display: none;
 }
 
 #slide .content-area .circle-position.right-circle .circle-spin {
@@ -944,7 +960,7 @@ svg .cls-2 {
 }
 
 #photoEdit .content-area .photo-content .img-hover i {
-  font-size: 30px;
+  font-size: 34px;
 }
 
 #photoEdit .content-area .photo-content .react-tabs__tab--selected .img-hover i {
@@ -955,6 +971,7 @@ svg .cls-2 {
 /*Start Effect section*/
 #effect {
   padding: 0;
+  position: relative;
 }
 
 #effect .content-area {
@@ -976,8 +993,13 @@ svg .cls-2 {
 }
 
 #frame .content-area .mobile-frame {
-  width: 418px;
+  width: 400px;
   float: right;
+}
+
+#frame .frame-slider .slick-dots {
+  position: inherit;
+  bottom: inherit;
 }
 
 #frame .frame-slider video {
@@ -1050,7 +1072,9 @@ svg .cls-2 {
 }
 
 #review .slick-slider .slick-prev {
-  background: url("../img/review-icon-prev.png");
+  background: url("../img/icon/prev.png");
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
 }
 
 #review .slick-slider .slick-prev:before {
@@ -1058,7 +1082,9 @@ svg .cls-2 {
 }
 
 #review .slick-slider .slick-next {
-  background: url("../img/review-icon-next.png");
+  background: url("../img/icon/next.png");
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
 }
 
 #review .slick-slider .slick-next:before {
@@ -1067,8 +1093,8 @@ svg .cls-2 {
 
 #review .slick-slider .slick-prev,
 #review .slick-slider .slick-next {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 
 #review .slick-slider .slick-dots {
@@ -1120,7 +1146,7 @@ svg .cls-2 {
 }
 
 #review .slick-slider ul.review-icon li i {
-  color: #FFF710;
+  color: #FFDB19;
 }
 
 #review .left-circle .circle-spin {
@@ -1341,7 +1367,7 @@ svg .cls-2 {
 }
 
 #getInTouch .pic-overlay {
-  background: rgba(1, 1, 1, 0.5);
+  background: rgba(1, 1, 1, 0.6);
 }
 
 #getInTouch .title-inner {
@@ -1536,7 +1562,7 @@ svg .cls-2 {
 }
 
 .feature-box h4 {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -1714,13 +1740,13 @@ svg .cls-2 {
   background: linear-gradient(to right, #5BB1E5, #002BFF);
 }
 
-.btn-prime {
-  border: 0;
-  -webkit-box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
+.feature-box .vimory-btn {
+  border: 2px solid #000;
+}
+
+.feature-box .brk-sc-honeycomb-one_hide-btn:hover .vimory-btn {
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .btn-prime-primary-transparent,
@@ -1732,7 +1758,11 @@ svg .cls-2 {
 /*All Animation circle css*/
 .circle-position {
   position: absolute;
-  display: none;
+}
+
+.circle-position.one-circle {
+  width: 142px;
+  height: 142px;
 }
 
 .circle-position.one-circle .circle-wrapper {
@@ -1749,7 +1779,7 @@ svg .cls-2 {
   border-radius: 50%;
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
   -webkit-animation: spin-right 5s linear infinite;
           animation: spin-right 5s linear infinite;
 }
@@ -1757,8 +1787,8 @@ svg .cls-2 {
 .circle-position.one-circle .first-circle {
   height: 34px;
   width: 34px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#B56EEB), to(#5400FF));
-  background: linear-gradient(to bottom, #B56EEB, #5400FF);
+  background: -webkit-gradient(linear, left top, left bottom, from(#7700FF), to(#3C0080));
+  background: linear-gradient(to bottom, #7700FF, #3C0080);
   position: absolute;
   border-radius: 50%;
   top: 0;
@@ -1776,12 +1806,17 @@ svg .cls-2 {
   bottom: 60px;
 }
 
+.circle-position.two-circle {
+  width: 208px;
+  height: 208px;
+}
+
 .circle-position.two-circle .circle-wrapper {
   position: relative;
 }
 
 .circle-position.two-circle .orbit {
-  border: 8px solid rgba(153, 201, 230, 0.13);
+  border: 10px solid rgba(153, 201, 230, 0.13);
 }
 
 .circle-position.two-circle .circle-spin {
@@ -1790,13 +1825,14 @@ svg .cls-2 {
   -webkit-animation: spin-right 5s linear infinite;
           animation: spin-right 5s linear infinite;
   position: absolute;
-  border: 8px solid rgba(153, 201, 230, 0.13);
+  border: 10px solid rgba(153, 201, 230, 0.13);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   bottom: 0;
+  left: 0;
 }
 
 .circle-position.two-circle .circle-spin .first-circle {
@@ -1924,4 +1960,163 @@ svg .cls-2 {
 }
 
 /*End Responsive Code here it is written for Mobile, Tablet,iPad */
+.vimory-animation {
+  position: absolute;
+  z-index: 1;
+}
+
+.top-left {
+  top: 100px;
+  left: 80px;
+}
+
+.top-right {
+  right: 80px;
+  top: 100px;
+}
+
+.bottom-right {
+  right: 80px;
+  bottom: 100px;
+}
+
+.bottom-left {
+  left: 80px;
+  bottom: 100px;
+}
+
+.animation-type-3 .vimory-animated-circle {
+  width: 146px;
+  height: 146px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#7700FF), to(#3C0080));
+  background: linear-gradient(to bottom, #7700FF, #3C0080);
+  -webkit-animation: rotate 30s linear infinite;
+  animation: rotate 30s linear infinite;
+}
+
+.animation-type-3 .vimory-animated-circle-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 100%;
+}
+
+.animation-type-3 .vimory-animated-circle-container img {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  -webkit-animation: orbit-8 5s linear infinite;
+  animation: orbit-8 3s linear infinite;
+}
+
+.animation-type-4 .brk-animated-circle__container {
+  position: absolute;
+  -webkit-animation: orbit-6 6s linear infinite;
+          animation: orbit-6 6s linear infinite;
+}
+
+@-webkit-keyframes orbit-6 {
+  0% {
+    top: -25px;
+    left: 10px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  20% {
+    top: 0;
+    left: 59px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  40% {
+    top: 55%;
+    left: 47px;
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  60% {
+    top: 60px;
+    left: -7px;
+    -webkit-transform: rotate(-120deg);
+            transform: rotate(-120deg);
+  }
+  80% {
+    top: 9px;
+    left: -29px;
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  100% {
+    top: -25px;
+    left: 10px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes orbit-6 {
+  0% {
+    top: -25px;
+    left: 10px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  20% {
+    top: 0;
+    left: 59px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  40% {
+    top: 55%;
+    left: 47px;
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  60% {
+    top: 60px;
+    left: -7px;
+    -webkit-transform: rotate(-120deg);
+            transform: rotate(-120deg);
+  }
+  80% {
+    top: 9px;
+    left: -29px;
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  100% {
+    top: -25px;
+    left: 10px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@-webkit-keyframes orbit-8 {
+  from {
+    -webkit-transform: rotate(0deg) translate(calc(105px - 50%), -50%) rotate(0deg);
+            transform: rotate(0deg) translate(calc(105px - 50%), -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(calc(105px - 50%), -50%) rotate(-360deg);
+            transform: rotate(360deg) translate(calc(105px - 50%), -50%) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-8 {
+  from {
+    -webkit-transform: rotate(0deg) translate(calc(105px - 50%), -50%) rotate(0deg);
+            transform: rotate(0deg) translate(calc(105px - 50%), -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(calc(105px - 50%), -50%) rotate(-360deg);
+            transform: rotate(360deg) translate(calc(105px - 50%), -50%) rotate(-360deg);
+  }
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,6 @@
 import React from 'react';
 import './assets/css/bootstrap.min.css';
-//import './assets/css/solar.css';
+import './assets/css/solar.css';
 import './assets/css/animate.min.css';
 import './assets/fontAwesome/css/fontawesome.min.css';
 import './assets/fontAwesome/css/all.min.css';
