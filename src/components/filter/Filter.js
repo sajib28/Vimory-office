@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BackgroundWithText from '../CommonTools/BackgroundWithText';
 import BackgroundImage from '../../assets/img/filter-bg.jpg';
-import TabCom from './TabCom';
+import FilterTab from './FilterTab';
 import rectangle from '../../assets/img/icon/rectangle.png';
 import round from '../../assets/img/icon/round.png';
 class Filter extends Component {
@@ -30,7 +30,7 @@ class Filter extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="photo-content">
-                                <TabCom />
+                                <FilterTab />
                             </div>
                         </div>
                     </div>

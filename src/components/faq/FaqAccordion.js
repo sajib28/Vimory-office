@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 
 function FaqAccordion() {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState('panel1');
+  const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = panel => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -31,7 +31,7 @@ function FaqAccordion() {
 
   return (
     <div className={classes.root}>
-      <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+      <ExpansionPanel className="wow fadeInUp" data-wow-delay="0.3s" animation-delay="0.3s" expanded={expanded === 'panel1'} onChange={handleChange('panel1')} TransitionProps={{ unmountOnExit: true }}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1bh-content"
@@ -46,7 +46,7 @@ function FaqAccordion() {
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+      <ExpansionPanel className="wow fadeInUp" data-wow-delay="0.5s" animation-delay="0.5s" expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2bh-content"
@@ -63,7 +63,7 @@ function FaqAccordion() {
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+      <ExpansionPanel className="wow fadeInUp" data-wow-delay="0.7s" animation-delay="0.7s" expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3bh-content"
@@ -80,7 +80,7 @@ function FaqAccordion() {
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+      <ExpansionPanel className="wow fadeInUp" data-wow-delay="0.9s" animation-delay="0.9s" expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel4bh-content"
@@ -96,7 +96,7 @@ function FaqAccordion() {
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+      <ExpansionPanel className="wow fadeInUp" data-wow-delay="1.1s" animation-delay="1.1s" expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel5bh-content"

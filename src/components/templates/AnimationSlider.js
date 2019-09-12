@@ -3,7 +3,7 @@ import Carousel from 'react-spring-3d-carousel';
 import uuidv4 from "uuid";
 import { config } from "react-spring";
 import $ from 'jquery';
-import { relative } from 'path';
+// import { relative } from 'path';
 import prev from '../../assets/img/icon/prev.png';
 import next from '../../assets/img/icon/next.png';
 import Template1 from '../../assets/media/template/love.mp4';
@@ -24,7 +24,7 @@ let slides = [
             </video>
         </div>
     },
-  
+
     {
         key: uuidv4(),
         content: <div className="video-template">
@@ -43,7 +43,7 @@ let slides = [
             </video>
         </div>
     },
-    
+
     // {
     //     key: uuidv4(),
     //     content: <div className="video-template">
@@ -88,6 +88,8 @@ class AnimationSlider extends Component {
     componentDidMount() {
         // let prev='../../assets/img/icon/prev.png';
         // let next='../../assets/img/icon/next.png';
+        $('div[style*="z-index: 0"]').css({ opacity: 0 });
+        $('div[style*="z-index: 0"]').css({ opacity: 0 });
         $('.css-1qzevvg img:first-child').attr("src", prev);
         $('.css-1qzevvg img:last-child').attr("src", next);
         $('div[style*="left: 50%"]').addClass('active');
@@ -97,6 +99,8 @@ class AnimationSlider extends Component {
         $('div.active video').trigger('play');
 
         $(".css-1qzevvg img:last-child").click(function () {
+            $('div[style*="z-index: 0"]').css({ opacity: 0 });
+            $('div[style*="z-index: 0"]').css({ opacity: 0 });
             $("div.active video").trigger('pause');
             $("div.active").next().addClass('active');
             $("div.active").first().removeClass('active');
@@ -113,6 +117,8 @@ class AnimationSlider extends Component {
 
         });
         $(".css-1qzevvg img:first-child").click(function () {
+            $('div[style*="z-index: 0"]').css({ opacity: 0 });
+            $('div[style*="z-index: 0"]').css({ opacity: 0 });
             // $('div[style*="left: 50%"] video').trigger('pause');
             // $('div[style*="left: 25%"] video').trigger('play');
 
@@ -150,11 +156,11 @@ class AnimationSlider extends Component {
                     </div>
                 </div>
                 <div className="vimory-animation animation-type-4 top-right">
-                        <img src={pentagon} alt="" />
-                        <div className="brk-animated-circle__container">
-                            <img src={triangleIndigo} alt="" />
-                        </div>
+                    <img src={pentagon} alt="" />
+                    <div className="brk-animated-circle__container">
+                        <img src={triangleIndigo} alt="" />
                     </div>
+                </div>
                 {/* <div className="orbit venus-orbit"></div>
                 <div className="venus-spin">
                     <div id="venus"></div>
@@ -171,7 +177,7 @@ class AnimationSlider extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <div id id="threedSlider" style={{ width: "70%", height: "594px", margin: "100px auto 70px", position: "relative" }}>
+                            <div id="threedSlider" style={{ width: "70%", height: "594px", margin: "100px auto 70px", position: "relative" }}>
                                 <Carousel
                                     slides={slides}
                                     goToSlide={this.state.goToSlide}
@@ -185,7 +191,7 @@ class AnimationSlider extends Component {
                     </div>
                     <div className="row">
                         <div className="col-md-8 offset-2 text-center">
-                            <p>Create and share your memory more easily with the help of lots of templates. We have created so many templates for many purposes, just select a template and some photos and vimory will make it ready for you.</p>
+                            <p className="wow fadeInUp" data-wow-delay="0.2s" animation-delay="0.2s">Create and share your memory more easily with the help of lots of templates. We have created so many templates for many purposes, just select a template and some photos and vimory will make it ready for you.</p>
                         </div>
                     </div>
                 </div>

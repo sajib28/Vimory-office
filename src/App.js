@@ -24,7 +24,8 @@ import Footer from './components/CommonTools/Footer';
 import WOW from 'wowjs';
 function App() {
   new WOW.WOW({
-    live: false
+    live: false,
+    mobile:false,
   }).init();
   return (
     <div className="App">

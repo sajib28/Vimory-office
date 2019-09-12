@@ -50,7 +50,7 @@ class Feature extends Component {
                     <div className="brk-sc-honeycomb-one__content">
                         <h4 className="font__family-montserrat font__weight-bold font__size-24 brk-sc-honeycomb-one__header">Frame</h4>
                         <p className="font__family-open-sans font__size-16 mt-20 brk-dark-font-color brk-sc-honeycomb-one__p">Lots of frame, So that you can make a video more easily.</p>
-                        <a href="#" className="vimory-btn btn">See More</a>
+                        <a href="/" className="vimory-btn btn">See More</a>
                     </div>
                     <div className="brk-sc-honeycomb-one__layer brk-base-bg-gradient-14"></div>
                     <div className="brk-sc-honeycomb-one__hex-1"></div>

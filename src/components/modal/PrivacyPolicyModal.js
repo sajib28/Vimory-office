@@ -31,8 +31,8 @@ class PrivacyPolicyModal extends Component {
           <p>The app does use third party services that may collect information used to identify you.</p>
           <p>Link to privacy policy of third party service providers used by the app</p>
           <ul>
-            <li><a href="">Google Play Services</a></li>
-            <li><a href="">App store</a></li>
+            <li><a href="/">Google Play Services</a></li>
+            <li><a href="/">App store</a></li>
           </ul>
           <h5>Log Data</h5>
           <p>We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>

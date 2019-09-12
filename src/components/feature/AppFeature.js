@@ -34,8 +34,8 @@ export default class AppFeature extends Component {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="section-title text-center">
-                                <h2>App Features</h2>
-                                <p>We have created a lot of Templates, So that you can make a video more easily.</p>
+                                <h2 className="wow fadeInUp" animation-delay="0.2s" data-wow-delay="0.2s">App Features</h2>
+                                <p className="wow fadeInUp" animation-delay="0.4s" data-wow-delay="0.4s">We have created a lot of Templates, So that you can make a video more easily.</p>
                             </div>
                         </div>
                     </div>

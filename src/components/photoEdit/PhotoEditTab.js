@@ -9,9 +9,11 @@ import Focus from '../../assets/media/photo-edit/focus.mp4';
 import Emoji from '../../assets/media/photo-edit/Emoji.mp4';
 class PhotoEditTab extends Component {
     render() {
+let title = "Photo Edit";
+let description  = "Try professional photo editing tools to edit single or multiple photos for adjustments, beautify or an ideal photogenic outlook.";
         return (
             <div>
-                <Tabs defaultIndex={0}>
+                <Tabs forceRenderTabPanel={true} defaultIndex={0}>
 
                     <div className="tab-content">
                         <TabPanel><div className="col-md-5">
@@ -29,8 +31,8 @@ class PhotoEditTab extends Component {
                             </div>
                         </div>
                             <div className="col-md-7">
-                                <h3>Photo Edit</h3>
-                                <p>Try professional photo editing tools to edit single or multiple photos for adjustments, beautify or an ideal photogenic outlook.</p>
+                                <h3>{title}</h3>
+                                <p>{description}</p>
                                 <ul className="list-unstyled content-list">
                                     <li><i className="far fa-clone"></i>Modern photo cropping tools allow you to crop your photo more easily.</li>
                                     <li><i className="far fa-clone"></i>Express the moment with emoji and do more with it.</li>
@@ -178,14 +180,14 @@ class PhotoEditTab extends Component {
                                             <path id="Path_1736" data-name="Path 1736" d="M71.739,71.739H0V0H71.739ZM1.722,70.018h68.3V1.722H1.722Z" fill="none" />
                                             <g id="Group_2004" data-name="Group 2004" transform="translate(16.63 21.268)">
                                                 <g id="Group_2002" data-name="Group 2002" transform="translate(0 23.055)">
-                                                    <path id="Path_1737" data-name="Path 1737" d="M10.325,25.451a5.325,5.325,0,1,1,5.325-5.325A5.352,5.352,0,0,1,10.325,25.451Zm0-8.589a3.264,3.264,0,1,0,3.264,3.264A3.379,3.379,0,0,0,10.325,16.861Z" transform="translate(2.77 -14.8)" stroke="#000" strokeWidth="1.5" />
-                                                    <rect id="Rectangle_1258" data-name="Rectangle 1258" width="19.927" height="2.061" transform="translate(21.364 4.295)" stroke="#000" strokeWidth="1.5" />
-                                                    <rect id="Rectangle_1259" data-name="Rectangle 1259" width="4.81" height="2.061" transform="translate(0 4.295)" stroke="#000" strokeWidth="1.5" />
+                                                    <path id="Path_1737" className ="adjust-icon" data-name="Path 1737" d="M10.325,25.451a5.325,5.325,0,1,1,5.325-5.325A5.352,5.352,0,0,1,10.325,25.451Zm0-8.589a3.264,3.264,0,1,0,3.264,3.264A3.379,3.379,0,0,0,10.325,16.861Z" transform="translate(2.77 -14.8)" stroke="#000" strokeWidth="1.5" />
+                                                    <rect id="Rectangle_1258" className ="adjust-icon" data-name="Rectangle 1258" width="19.927" height="2.061" transform="translate(21.364 4.295)" stroke="#000" strokeWidth="1.5" />
+                                                    <rect id="Rectangle_1259" className ="adjust-icon" data-name="Rectangle 1259" width="4.81" height="2.061" transform="translate(0 4.295)" stroke="#000" strokeWidth="1.5" />
                                                 </g>
                                                 <g id="Group_2003" data-name="Group 2003">
-                                                    <rect id="Rectangle_1260" data-name="Rectangle 1260" width="4.81" height="2.061" transform="translate(36.481 4.295)" stroke="#000" strokeWidth="1.5" />
-                                                    <rect id="Rectangle_1261" data-name="Rectangle 1261" width="19.755" height="2.061" transform="translate(0 4.295)" stroke="#000" strokeWidth="1.5" />
-                                                    <path id="Path_1738" data-name="Path 1738" d="M19.125,14.651a5.325,5.325,0,1,1,5.325-5.325A5.352,5.352,0,0,1,19.125,14.651Zm0-8.589a3.264,3.264,0,1,0,3.264,3.264A3.509,3.509,0,0,0,19.125,6.061Z" transform="translate(9.071 -4)" stroke="#000" strokeWidth="1.5" />
+                                                    <rect id="Rectangle_1260" className ="adjust-icon" data-name="Rectangle 1260" width="4.81" height="2.061" transform="translate(36.481 4.295)" stroke="#000" strokeWidth="1.5" />
+                                                    <rect id="Rectangle_1261" className ="adjust-icon" data-name="Rectangle 1261" width="19.755" height="2.061" transform="translate(0 4.295)" stroke="#000" strokeWidth="1.5" />
+                                                    <path id="Path_1738" className ="adjust-icon" data-name="Path 1738" d="M19.125,14.651a5.325,5.325,0,1,1,5.325-5.325A5.352,5.352,0,0,1,19.125,14.651Zm0-8.589a3.264,3.264,0,1,0,3.264,3.264A3.509,3.509,0,0,0,19.125,6.061Z" transform="translate(9.071 -4)" stroke="#000" strokeWidth="1.5" />
                                                 </g>
                                             </g>
                                         </g>

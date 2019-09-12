@@ -8,10 +8,14 @@ import slice from '../../assets/media/slide/slice.mp4';
 import flip from '../../assets/media/slide/flip.mp4';
 import skew from '../../assets/media/slide/skew.mp4';
 class SlideTab extends Component {
+    constructor() {
+        super();
+        this.state = { tabIndex: 0 };
+      }
     render() {
         return (
             <div>
-                <Tabs defaultIndex={0}>
+                <Tabs forceRenderTabPanel={true} selectedIndex={this.state.tabIndex} onSelect={tabIndex => this.setState({ tabIndex })}>
 
                     <div className="tab-content">
                         <TabPanel>
@@ -162,14 +166,38 @@ class SlideTab extends Component {
                                 <span>Flip</span></Tab>
                             <Tab>
                                 <div className="img-hover slide-kernel">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 40 40.276">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+                                        <g id="skew" transform="translate(-1332 -6680)">
+                                            <g id="Group_2144" data-name="Group 2144">
+                                                <g id="Group_2143" data-name="Group 2143" transform="translate(0 -3)">
+                                                    <g id="Rectangle_1403" className ="skew-icon" data-name="Rectangle 1403" transform="translate(1332 6683)" fill="#fff" stroke="#aeaeae" strokeWidth="1.2">
+                                                        <rect width="38" height="38" stroke="none" />
+                                                        <rect x="0.6" y="0.6" width="36.8" height="36.8" fill="none" />
+                                                    </g>
+                                                    <g id="Rectangle_1402" className ="skew-icon" data-name="Rectangle 1402" transform="translate(1336 6687)" fill="#fff" stroke="#9a9a9a" strokeWidth="1.2">
+                                                        <rect width="30" height="30" stroke="none" />
+                                                        <rect x="0.6" y="0.6" width="28.8" height="28.8" fill="none" />
+                                                    </g>
+                                                    <g id="Rectangle_1401" className ="skew-icon" data-name="Rectangle 1401" transform="translate(1341 6692)" fill="#fff" stroke="#1a1a1a" strokeWidth="1.3" opacity="0.6">
+                                                        <rect width="20" height="20" stroke="none" />
+                                                        <rect x="0.65" y="0.65" width="18.7" height="18.7" fill="none" />
+                                                    </g>
+                                                    <g id="Rectangle_1400" className ="skew-icon" data-name="Rectangle 1400" transform="translate(1346 6697)" fill="#fff" stroke="#000" strokeWidth="1.5">
+                                                        <rect width="10" height="10" stroke="none" />
+                                                        <rect x="0.75" y="0.75" width="8.5" height="8.5" fill="none" />
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    {/* <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 40 40.276">
                                         <g id="Group_2110" data-name="Group 2110" transform="translate(-2023.3 -7303.08)">
                                             <path id="Path_21990" data-name="Path 21990" className="cls-1" d="M1717.091,2433.938l-18.591-18.719,18.591-18.719,18.591,18.719Z" transform="translate(326.21 4907.999)" />
                                             <path id="Path_21991" data-name="Path 21991" className="cls-2" d="M1725.222,2432.507l-10.087-10.1,10.032-10.156,10.087,10.1Z" transform="translate(318.105 4900.326)" />
                                         </g>
-                                    </svg>
+                                    </svg> */}
                                 </div>
-                                <span>Kernel</span></Tab>
+                                <span>Skew</span></Tab>
                         </TabList>
                     </div>
                 </Tabs>

@@ -636,6 +636,11 @@ svg {
 
     .mobile-frame {
         float: right;
+
+        .frame-get-it-today {
+            position: relative;
+            z-index: 2;
+        }
     }
 
     .mobile-frame-content {
@@ -647,6 +652,7 @@ svg {
 // Navbar  css
 #mainMenu {
     padding: 25px 0;
+    @include transition(all 0.3s ease-out);
 
     .navbar-brand {
         margin-left: -175px;
@@ -882,7 +888,7 @@ svg {
     p {
         color: $white;
         font-size: 20px;
-        line-height: 25px;
+        line-height: 28px;
         max-width: 540px;
     }
 
@@ -1065,7 +1071,8 @@ svg {
 
             .cls-1,
             .cls-2,
-            .cls-3 {
+            .cls-3,
+            .skew-icon {
                 stroke: $theme-color;
             }
         }
@@ -1136,6 +1143,10 @@ svg {
                 .img-hover {
                     i {
                         color: $theme-color;
+                    }
+
+                    .adjust-icon {
+                        stroke: $theme-color;
                     }
                 }
             }
@@ -1231,6 +1242,7 @@ svg {
 
                 img {
                     border: 2px solid $white;
+                    @include transition(all 0.3s ease-out);
                 }
 
             }
@@ -1714,6 +1726,17 @@ svg {
                     line-height: 32px;
                     cursor: pointer;
 
+                }
+
+                button {
+                    background: none;
+                    color: #fff;
+                    box-shadow: none;
+
+                    &:focus {
+                        outline: 0;
+                        box-shadow: none;
+                    }
                 }
             }
         }
@@ -2437,11 +2460,147 @@ svg {
     // display: inline-block;
     position: absolute;
     // -webkit-animation: orbit-6 6s linear infinite;
-    animation: orbit-6 6s linear infinite;
+    animation: orbit-7 6s linear infinite;
 }
 
 // End Type 4
+
+// Type 5
+.vimory-animation {
+    &.animation-type-5 {
+        left: -100px;
+        bottom: 100px;
+        width: 575px;
+        height: 575px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .cir-1 {
+        position: absolute;
+        width: 485px;
+        height: 485px;
+        bottom: 0;
+        border: 3px solid rgba(#F5F2D5, .70);
+        border-radius: 50%;
+        top: 0;
+        margin-left: 45px;
+        margin-top: 45px;
+        z-index: -5;
+        animation: spin-right 5s linear infinite;
+    }
+
+    .cir-2 {
+        position: absolute;
+        width: 575px;
+        height: 575px;
+        bottom: 0;
+        // border: 3px solid #ADAC96;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        z-index: -5;
+        animation: spin-right 10s linear infinite;
+
+        &.cir-3 {
+            border: 3px solid rgba(#F5F2D5, .70);
+            z-index: -5;
+            animation: spin-right 10s linear infinite;
+        }
+    }
+
+    .red-small {
+        position: absolute;
+        left: 0;
+        top: 154px;
+        z-index: 1; // -webkit-animation: orbit-3 5s linear infinite;
+        // animation: orbit-3 5s linear infinite;
+    }
+
+    .triangle-small {
+        position: absolute;
+        bottom: 131px;
+        right: 0;
+        z-index: 1;
+        // -webkit-animation: orbit-3 5s linear infinite;
+        // animation: orbit-3 5s linear infinite;
+    }
+
+    .redBig {
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        z-index: 1;
+    }
+
+    .rectangleBlue {
+        position: absolute;
+        bottom: -19px;
+        left: 50%;
+        z-index: 1;
+        transform: rotate(17deg);
+    }
+
+    .rectangleBlue-inside {
+        position: absolute;
+        top: 30%;
+        right: 0px;
+        width: 30px;
+        z-index: 1;
+    }
+
+    .triangle-small-outside {
+        position: absolute;
+        top: 66%;
+        left: 51px;
+        width: 45px;
+        z-index: 1;
+    }
+
+}
+
+
+
+
+// End Type 5
 @keyframes orbit-6 {
+    0% {
+        top: -25px;
+        left: 10px;
+        transform: rotate(0);
+    }
+
+    20% {
+        top: 0;
+        left: 59px;
+        transform: rotate(45deg);
+    }
+
+    40% {
+        top: 55%;
+        left: 47px;
+        transform: rotate(-12deg);
+    }
+
+    60% {
+        top: 60px;
+        left: -7px;
+        transform: rotate(-120deg);
+    }
+
+    80% {
+        top: 9px;
+        left: -29px;
+        transform: rotate(60deg);
+    }
+
+    100% {
+        top: -25px;
+        left: 10px;
+        transform: rotate(0);
+    }
+}
+@keyframes orbit-7 {
     0% {
         top: -25px;
         left: 10px;
@@ -2486,5 +2645,25 @@ svg {
 
     to {
         transform: rotate(360deg) translate(calc(105px - 50%), -50%) rotate(-360deg);
+    }
+}
+
+@keyframes orbit-2 {
+    from {
+        transform: rotate(0deg) translateX(calc(200px - 50%)) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg) translateX(calc(200px - 50%)) rotate(360deg);
+    }
+}
+
+@keyframes orbit-3 {
+    from {
+        transform: rotate(0deg) translate(calc(200px - 50%), -50%) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg) translate(calc(200px - 50%), -50%) rotate(360deg);
     }
 }

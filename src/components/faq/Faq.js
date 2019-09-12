@@ -26,8 +26,8 @@ class Faq extends Component {
                     <div className="row">
                         <div className="col-md-10 offset-1">
                             <div className="section-title text-center">
-                                <h2>Frequently Asked Questions</h2>
-                                <p>WExpenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
+                                <h2 className="wow fadeInUp" data-wow-delay="0.1s" animation-delay="0.1s">Frequently Asked Questions</h2>
+                                <p className="wow fadeInUp" data-wow-delay="0.2s" animation-delay="0.2s">Our Mobile App can be downloaded and installed on your compatible mobile device easily. If you have any question - please look through the most frequently asked questions or contact us for more details </p>
                             </div>
                         </div>
                     </div>
@@ -37,8 +37,8 @@ class Faq extends Component {
                                 <FaqAccordion />
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div >
+                </div >
             </section >
         )
     }

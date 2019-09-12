@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
-import { Navbar, Nav, NavDropdown, Dropdown, Button, ButtonToolbar, DropdownButton } from 'react-bootstrap';
+import { Navbar, Nav, Dropdown } from 'react-bootstrap';
 import logo from '../../assets/img/vimory-logo.png';
 class SecondHeader extends Component {
 
@@ -19,16 +19,33 @@ class SecondHeader extends Component {
         window.removeEventListener('scroll', this.handleScroll);
     }
     handleScroll() {
-        let secondMenu = document.getElementById('secondMenu').clientHeight;
         let introSection = document.getElementById('intro').clientHeight;
         let appFeature = document.getElementById('appFeature').clientHeight;
-
-        if (window.scrollY > (introSection + appFeature + secondMenu)) {
+        let secondMenu = document.getElementById('secondMenu').clientHeight;
+        let template =document.getElementById('template').clientHeight;
+        let photoEdit =document.getElementById('photoEdit').clientHeight;
+        // let slide =document.getElementById('slide').clientHeight;
+        // let effect =document.getElementById('effect').clientHeight;
+        // let frame =document.getElementById('frame').clientHeight;
+        // let filter =document.getElementById('filter').clientHeight;
+        // let getToday =document.getElementById('getToday').clientHeight;
+        // let review =document.getElementById('review').clientHeight;
+        // let pricing =document.getElementById('pricing').clientHeight;
+        // let faqs =document.getElementById('faqs').clientHeight;
+        // let getInTouch =document.getElementById('getInTouch').clientHeight;
+        // let footer =document.getElementById('footer').clientHeight;
+        let HeaderShow = introSection + appFeature + secondMenu;
+        if (window.scrollY > (HeaderShow)) {
             this.setState({
                 scrollingLock: true
             });
         }
-        else if (window.scrollY < introSection + appFeature + secondMenu) {
+        else if (HeaderShow <(introSection + appFeature + secondMenu + template + photoEdit)) {
+            this.setState({
+                scrollingLock: false
+            });
+        }
+        else {
             this.setState({
                 scrollingLock: false
             });

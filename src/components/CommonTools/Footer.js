@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AboutModal from '../modal/AboutModal';
 import PrivacyPolicyModal from '../modal/PrivacyPolicyModal';
 import TermConditionModal from '../modal/TermConditionModal';
-import { Button, ButtonToolbar } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 // import BackTop from './BackTop';
 class Footer extends Component {
     constructor(props) {
@@ -23,15 +23,15 @@ class Footer extends Component {
                             <div className="footer-menu">
                                 <ul className="nav list-inline list-unstyled">
                                     <li>
-                                        <a onClick={() => this.setState({ aboutModal: true })}>About us</a>
+                                        <Button variant="" onClick={() => this.setState({ aboutModal: true })}>About us</Button>
                                     </li>
                                     <li>
-                                        <a onClick={() => this.setState({ privacyModal: true })}>Privacy policy</a>
+                                        <Button variant="" onClick={() => this.setState({ privacyModal: true })}>Privacy policy</Button>
                                     </li>
                                     <li>
-                                        <a onClick={() => this.setState({ termConditionModal: true })}>Terms & Condition</a>
+                                        <Button variant="" onClick={() => this.setState({ termConditionModal: true })}>Terms & Condition</Button>
                                     </li>
-                                    <li><a href="/">Blog</a></li>
+                                    <li><a href="/" >Blog</a></li>
 
                                 </ul>
                             </div>
