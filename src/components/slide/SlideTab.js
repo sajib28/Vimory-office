@@ -20,11 +20,11 @@ class SlideTab extends Component {
                     <div className="tab-content">
                         <TabPanel>
                             <div className="col-md-7">
-                                <h3>Slide</h3>
-                                <p>Vimory understands your need for animation slides to create looping slideshow video moments. Select a video animation slide that suits your needs and the story you want to give an impact.Try it now and share it with your friends.</p>
+                                <h3 className="wow fadeInUp" animation-delay="0.4s" data-wow-delay="0.4s">Slide</h3>
+                                <p className="wow fadeInUp" animation-delay="0.4s" data-wow-delay="0.4s">Vimory understands your need for animation slides to create looping slideshow video moments. Select a video animation slide that suits your needs and the story you want to give an impact.Try it now and share it with your friends.</p>
                             </div>
                             <div className="col-md-5">
-                                <div className="mobile-frame">
+                                <div className="mobile-frame wow fadeInRight" animation-delay="0.6s" data-wow-delay="0.6s">
                                     <img src={mobileFrame} alt="" />
                                     <div className="mobile-frame-content">
                                         <div className="video-template">

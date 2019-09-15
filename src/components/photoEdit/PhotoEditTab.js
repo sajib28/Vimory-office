@@ -18,7 +18,7 @@ let description  = "Try professional photo editing tools to edit single or multi
                     <div className="tab-content">
                         <TabPanel><div className="col-md-5">
 
-                            <div className="mobile-frame">
+                            <div className="mobile-frame  wow fadeInLeft" animation-delay="0.4s" data-wow-delay="0.4s">
                                 <img src={mobileFrame} alt="" />
                                 <div className="mobile-frame-content">
                                     <div className="video-template">
@@ -31,9 +31,9 @@ let description  = "Try professional photo editing tools to edit single or multi
                             </div>
                         </div>
                             <div className="col-md-7">
-                                <h3>{title}</h3>
-                                <p>{description}</p>
-                                <ul className="list-unstyled content-list">
+                                <h3 className="wow fadeInUp" animation-delay="0.6s" data-wow-delay="0.6s">{title}</h3>
+                                <p className="wow fadeInUp" animation-delay="0.8s" data-wow-delay="0.8s">{description}</p>
+                                <ul className="list-unstyled content-list wow fadeInUp" animation-delay=".9s" data-wow-delay=".9s">
                                     <li><i className="far fa-clone"></i>Modern photo cropping tools allow you to crop your photo more easily.</li>
                                     <li><i className="far fa-clone"></i>Express the moment with emoji and do more with it.</li>
                                     <li><i className="far fa-clone"></i>So many options like Exposure, Brightness, Contrast, Saturation,Warmth, highlights that give you a professional photo editing experience.</li>

@@ -22,12 +22,16 @@ import Faq from './components/faq/Faq';
 import GetInTouch from './components/getInTouch/GetInTouch';
 import Footer from './components/CommonTools/Footer';
 import WOW from 'wowjs';
+
 function App() {
   new WOW.WOW({
     live: false,
     mobile:false,
   }).init();
+
   return (
+    
+
     <div className="App">
       <Header />
       <Welcome />

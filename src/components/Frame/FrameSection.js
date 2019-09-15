@@ -27,11 +27,11 @@ class FrameSection extends Component {
                         <div className="row">
                             <div className="photo-content">
                                 <div className="col-md-7">
-                                    <h3>Frame</h3>
-                                    <p>Frame your captive looping film with a specified and colorful looking frame. Choose the frame (birthdays, weddings, friendship, seasonal, traveling or others) from Vimory that fits perfectly for your story or film and makes it interesting.</p>
+                                    <h3 className="wow fadeInUp" animation-delay="0.4s" data-wow-delay="0.4s">Frame</h3>
+                                    <p className="wow fadeInUp" animation-delay="0.6s" data-wow-delay="0.6s">Frame your captive looping film with a specified and colorful looking frame. Choose the frame (birthdays, weddings, friendship, seasonal, traveling or others) from Vimory that fits perfectly for your story or film and makes it interesting.</p>
                                 </div>
                                 <div className="col-md-5">
-                                    <div className="mobile-frame frame-slider">
+                                    <div className="mobile-frame frame-slider wow fadeInUp" animation-delay="0.8s" data-wow-delay="0.8s">
                                         <FrameSlider />
                                     </div>
                                 </div>

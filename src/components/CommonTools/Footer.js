@@ -21,7 +21,7 @@ class Footer extends Component {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="footer-menu">
-                                <ul className="nav list-inline list-unstyled">
+                                <ul className="nav list-inline list-unstyled wow fadeInUp" animation-delay="0.2s" data-wow-delay="0.2s">
                                     <li>
                                         <Button variant="" onClick={() => this.setState({ aboutModal: true })}>About us</Button>
                                     </li>
@@ -31,21 +31,26 @@ class Footer extends Component {
                                     <li>
                                         <Button variant="" onClick={() => this.setState({ termConditionModal: true })}>Terms & Condition</Button>
                                     </li>
-                                    <li><a href="/" >Blog</a></li>
-
+                                    {/* <p className="text-center">© 2019 APPILIAN.All Rights Reserved.</p> */}
+                                    {/* <li><a href="/" >Blog</a></li> */}
+                                   
                                 </ul>
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="social-icon pull-right">
-                                <ul className="list-inline list-unstyled float-right">
+                                <ul className="list-inline list-unstyled float-right wow fadeInUp" animation-delay="0.4s" data-wow-delay="0.4s">
                                     <li><a className="follows" href="/">Follows Us: </a></li>
-                                    <li><a href="/"><i className="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="/"><i className="fab fa-twitter"></i></a></li>
-                                    <li><a href="/"><i className="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCi684JzyD-21_xl2WvKoElA" rel="noopener noreferrer" target="_blank"><i className="fab fa-youtube"></i></a></li>
+                                    <li><a href="https://www.facebook.com/appilian/" rel="noopener noreferrer" target="_blank"><i className="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://twitter.com/appilianapps" rel="noopener noreferrer" target="_blank"><i className="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/appilian/" rel="noopener noreferrer" target="_blank"><i className="fab fa-instagram"></i></a></li>
+                                    
 
                                 </ul>
                             </div>
+                        </div>
+                        <div className="col-md-12">
                         </div>
                     </div>
                 </div>

@@ -21,8 +21,8 @@ class Welcome extends Component {
 
                         <ul>
                         
-                            <li className="wow fadeInUp" animation-delay="0.8s" data-wow-delay="0.8s"><a href="/"><img src={appleStore} alt="" /></a></li>
-                            <li className="wow fadeInUp" animation-delay="0.8s" data-wow-delay="0.8s"><a href="/"><img src={googlePlay} alt="" /></a></li>
+                            <li className="wow zoomIn" animation-delay="0.4s" data-wow-delay="0.4s"><a rel="noopener noreferrer" href="https://apps.apple.com/us/app/vimory-photo-video-maker/id1359573092" target="_blank"><img src={appleStore} alt="Apple Store" /></a></li>
+                            <li className="wow zoomIn" animation-delay="0.4s" data-wow-delay="0.4s"><a rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.appilian.vimory" target="_blank"><img src={googlePlay} alt="Google Play Store" /></a></li>
                         </ul>
                     </div>
                     </div>

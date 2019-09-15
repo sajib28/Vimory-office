@@ -35,7 +35,7 @@ class Effect extends Component {
                         <div className="row">
                             <div className="photo-content">
                                 <div className="col-md-5">
-                                    <div className="mobile-frame">
+                                    <div className="mobile-frame wow fadeInLeft" animation-delay="0.4s" data-wow-delay="0.4s">
                                         <img src={mobileFrame} alt="" />
                                         <div className="mobile-frame-content">
                                             <div className="video-template">
@@ -48,8 +48,8 @@ class Effect extends Component {
                                     </div>
                                 </div>
                                 <div className="col-md-7">
-                                    <h3>Effect</h3>
-                                    <p>Vimory grasps the sense of your own expectations and has a variety of Particle Effects for you to choose to make your video more lucrative. We've created lots of particle effects so you can show off what you can do with your photos.</p>
+                                    <h3 className="wow fadeInUp" animation-delay="0.6s" data-wow-delay="0.6s">Effect</h3>
+                                    <p className="wow fadeInUp" animation-delay="0.8s" data-wow-delay="0.8s">Vimory grasps the sense of your own expectations and has a variety of Particle Effects for you to choose to make your video more lucrative. We've created lots of particle effects so you can show off what you can do with your photos.</p>
                                 </div>
                             </div>
                         </div>

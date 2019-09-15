@@ -132,7 +132,9 @@ class Header extends Component {
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navtogglerItemItem"
                         aria-controls="navtogglerItemItem" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        <i class="fas fa-minus"></i>
+                        <i class="fas fa-minus"></i>
+                        <i class="fas fa-minus"></i>
                     </button>
                     <div className="collapse navbar-collapse" id="navtogglerItemItem">
                         <ul className="navbar-nav ml-auto mt-2 mt-lg-0" id="main-menu">

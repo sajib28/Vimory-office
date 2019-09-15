@@ -16,7 +16,8 @@ class Feature extends Component {
                         <div className="content">Slide</div>
                         <div className="hover"></div>
                     </li> */}
-                <li className="feature-1 brk-sc-honeycomb-one brk-sc-honeycomb-one_wide-shadow brk-sc-honeycomb-one_hide-btn brk-sc-honeycomb-one_left">
+                    <div className="demo wow slideInLeft" data-wow-delay="0.4s" animation-delay="0.4s">
+                    <li className="feature-1 brk-sc-honeycomb-one brk-sc-honeycomb-one_wide-shadow brk-sc-honeycomb-one_hide-btn brk-sc-honeycomb-one_left">
                     <div className="brk-sc-honeycomb-one__content">
                         <h4 className="font__family-montserrat font__weight-bold font__size-24 brk-sc-honeycomb-one__header">Photo Edit</h4>
                         {/* <p className="font__family-open-sans font__size-16 mt-20 brk-dark-font-color brk-sc-honeycomb-one__p">Lots of frame, So that you can make a video more easily.</p>
@@ -26,6 +27,8 @@ class Feature extends Component {
                     <div className="brk-sc-honeycomb-one__hex-1"></div>
                     <div className="brk-sc-honeycomb-one__hex-2"></div>
                 </li>
+                    </div>
+                    <div className="demo wow slideInUp" data-wow-delay="0.4s" animation-delay="0.4s">
                 <li className="feature-2 brk-sc-honeycomb-one brk-sc-honeycomb-one_wide-shadow brk-sc-honeycomb-one_hide-btn brk-sc-honeycomb-one_left">
                     <div className="brk-sc-honeycomb-one__content">
                         <h4 className="font__family-montserrat font__weight-bold font__size-24 brk-sc-honeycomb-one__header">Effect</h4>
@@ -36,6 +39,8 @@ class Feature extends Component {
                     <div className="brk-sc-honeycomb-one__hex-1"></div>
                     <div className="brk-sc-honeycomb-one__hex-2"></div>
                 </li>
+                </div>
+                <div className="demo wow slideInRight" data-wow-delay="0.4s" animation-delay="0.4s">
                 <li className="feature-3 brk-sc-honeycomb-one brk-sc-honeycomb-one_wide-shadow brk-sc-honeycomb-one_hide-btn brk-sc-honeycomb-one_left">
                     <div className="brk-sc-honeycomb-one__content">
                         <h4 className="font__family-montserrat font__weight-bold font__size-24 brk-sc-honeycomb-one__header">Slide</h4>
@@ -46,6 +51,8 @@ class Feature extends Component {
                     <div className="brk-sc-honeycomb-one__hex-1"></div>
                     <div className="brk-sc-honeycomb-one__hex-2"></div>
                 </li>
+                </div>
+                <div className="demo wow slideInDown" data-wow-delay="0.4s" animation-delay="0.4s">
                 <li className="feature-4 brk-sc-honeycomb-one brk-sc-honeycomb-one_wide-shadow brk-sc-honeycomb-one_hide-btn brk-sc-honeycomb-one_left">
                     <div className="brk-sc-honeycomb-one__content">
                         <h4 className="font__family-montserrat font__weight-bold font__size-24 brk-sc-honeycomb-one__header">Frame</h4>
@@ -56,6 +63,7 @@ class Feature extends Component {
                     <div className="brk-sc-honeycomb-one__hex-1"></div>
                     <div className="brk-sc-honeycomb-one__hex-2"></div>
                 </li>
+                </div>
                 {/* <li className="feature-4 wow slideInRight" data-wow-duration="2s" data-wow-delay="2s">
                         <div className="content">
                             <h3>Frame</h3>

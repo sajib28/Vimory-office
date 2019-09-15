@@ -36,18 +36,14 @@ class Pricing extends Component {
                                     <div className="price-inner">
                                         <img src={priceImg1} alt="" />
                                         <h5>Monthly Plan</h5>
-                                        <h4>Subscribe Now</h4>
                                         <p className="cost"><span>$</span> 2.99</p>
-                                        <a className="btn" href="/">Buy</a>
                                     </div>
                                 </div>
                                 <div className="price-panel  wow pulse" animation-delay="0.8s" data-wow-delay="0.8s">
                                     <div className="price-inner">
                                         <img src={priceImg2} alt="" />
                                         <h5>Annual plan</h5>
-                                        <h4>Subscribe Now</h4>
                                         <p className="cost"><span>$</span>19.99</p>
-                                        <a className="btn" href="/">Buy</a>
                                     </div>
                                 </div>
                             </div>

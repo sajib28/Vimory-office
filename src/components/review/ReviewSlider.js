@@ -19,16 +19,16 @@ class ReviewSlider extends Component {
 
             <Slider {...settings}>
                 <div>
-                    <h3>Awesome Design!</h3>
-                    <ul className="list-unstyled list-inline review-icon">
+                    <h3 className="wow fadeInUp" animation-delay="0.4s" data-wow-delay="0.4s">Awesome Design!</h3>
+                    <ul className="list-unstyled list-inline review-icon wow fadeInUp" animation-delay="0.5s" data-wow-delay="0.5s">
                         <li><i className="fas fa-star"></i></li>
                         <li><i className="fas fa-star"></i></li>
                         <li><i className="fas fa-star"></i></li>
                         <li><i className="fas fa-star"></i></li>
                         <li><i className="fas fa-star"></i></li>
                     </ul>
-                    <p>Etiam sapien sem at sagittis congue an augue massa varius egestas a suscipit magna tempus an aliquet porta</p>
-                    <span className="author-name">M.John - @ms_brooklyn</span>
+                    <p className="wow fadeInUp" animation-delay="0.6s" data-wow-delay="0.6s">Etiam sapien sem at sagittis congue an augue massa varius egestas a suscipit magna tempus an aliquet porta</p>
+                    <span className="author-name wow fadeInUp" animation-delay="0.7s" data-wow-delay="0.7s">M.John - @ms_brooklyn</span>
                 </div>
                 <div>
                     <h3>Lovely Design!</h3>

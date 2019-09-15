@@ -24,8 +24,8 @@ class GetToday extends Component {
                             </div>
                             <p className="wow fadeInUp" animation-delay="0.6s" data-wow-delay="0.6s">Vimory understands your need for animation slides to create looping slideshow video moments. Select a video animation slide that suits your need and the story you want to give an impact.</p>
                             <ul className="wow fadeInUp" animation-delay="0.8s" data-wow-delay="0.8s">
-                                <li><a href="/"><img src={appleStore} alt="" /></a></li>
-                                <li><a href="/"><img src={googlePlay} alt="" /></a></li>
+                                <li><a rel="noopener noreferrer" href="https://apps.apple.com/us/app/vimory-photo-video-maker/id1359573092" target="_blank"><img src={appleStore} alt="Apple Store" /></a></li>
+                                <li><a rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.appilian.vimory" target="_blank"><img src={googlePlay} alt="Google Play Store" /></a></li>
                             </ul>
                         </div>
                         <div className="col-md-6">
@@ -37,7 +37,7 @@ class GetToday extends Component {
                                         </div>
                                     </div>
                                 </div> */}
-                            <div className="mobile-frame">
+                            <div className="mobile-frame wow fadeInUp" animation-delay="0.8s" data-wow-delay="0.8s">
                                 {/* animation */}
                                 <div className="vimory-animation animation-type-5">
                                     <div className="cir-1">

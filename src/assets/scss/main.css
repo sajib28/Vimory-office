@@ -519,6 +519,10 @@ svg .cls-2 {
   top: 29px;
 }
 
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
 #mainMenu {
   padding: 25px 0;
   -webkit-transition: all 0.3s ease-out;
@@ -747,7 +751,11 @@ svg .cls-2 {
 }
 
 #intro ul li:first-child {
-  margin-right: 50px;
+  margin-right: 30px;
+}
+
+#intro img {
+  max-width: 230px;
 }
 
 /*Template css code*/
@@ -932,7 +940,7 @@ svg .cls-2 {
 }
 
 #slide .content-area .circle-position.top-left-circle {
-  left: 80px;
+  left: 100px;
   top: 60px;
 }
 
@@ -991,7 +999,7 @@ svg .cls-2 {
 }
 
 #effect .content-area .top-circle-left {
-  left: 80px;
+  left: 100px;
 }
 
 #effect .content-area .top-circle-left .circle-spin {
@@ -1399,8 +1407,15 @@ svg .cls-2 {
   margin: 0px 0 25px;
 }
 
+#getInTouch .contact-info p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 25px;
+}
+
 #getInTouch .contact-info .weblink {
   margin: 40px 0 40px;
+  color: #fff;
 }
 
 #getInTouch .contact-info .weblink a {
@@ -1824,12 +1839,12 @@ svg .cls-2 {
 
 /*Animation With Two circle*/
 .circle-position.left-circle {
-  left: 80px;
+  left: 100px;
   bottom: 60px;
 }
 
 .circle-position.right-circle {
-  right: 80px;
+  right: 100px;
   bottom: 60px;
 }
 
@@ -1916,66 +1931,6 @@ svg .cls-2 {
   bottom: 0;
 }
 
-/*Start Responsive Code here it is written for Mobile, Tablet,iPad */
-@media (max-width: 767px) {
-  section {
-    padding: 40px 0;
-  }
-  section h2 {
-    margin: 0 0 0 20px;
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  #intro {
-    padding: 80px 0 0 0;
-  }
-  #intro h1 {
-    font-size: 30px;
-    line-height: 40px;
-    text-align: center;
-    margin-top: 30px;
-  }
-  #intro p {
-    font-size: 16px;
-    text-align: center;
-  }
-  #intro ul {
-    display: block;
-    text-align: center;
-    margin: 30px 0 50px;
-  }
-  #intro ul li {
-    margin: 0 10px;
-  }
-  #intro ul li:first-child {
-    margin: 0 10px;
-  }
-  #intro ul img {
-    width: 120px;
-  }
-  /*Get In Touch Section */
-  #getInTouch .title-inner {
-    margin-bottom: 0;
-  }
-  #getInTouch .title-inner h2 {
-    font-size: 30px;
-  }
-  #getInTouch .title-inner h2 .shadow-text {
-    font-size: 40px;
-  }
-  #getInTouch .contact-info .weblink {
-    margin: 25px 0 30px;
-  }
-  #getInTouch .contact-info .apps-logo {
-    margin-top: 0;
-  }
-  #getInTouch .contact-info .apps-logo ul li:first-child {
-    margin: 0;
-  }
-}
-
 /*End Get In Touch Section */
 #footer .footer-menu ul {
   text-align: center;
@@ -1998,17 +1953,17 @@ svg .cls-2 {
 }
 
 .top-right {
-  right: 80px;
+  right: 100px;
   top: 100px;
 }
 
 .bottom-right {
-  right: 80px;
+  right: 100px;
   bottom: 100px;
 }
 
 .bottom-left {
-  left: 80px;
+  left: 100px;
   bottom: 100px;
 }
 
@@ -2357,6 +2312,81 @@ svg .cls-2 {
   to {
     -webkit-transform: rotate(-360deg) translate(calc(200px - 50%), -50%) rotate(360deg);
             transform: rotate(-360deg) translate(calc(200px - 50%), -50%) rotate(360deg);
+  }
+}
+
+/*Start Responsive Code here it is written for Mobile, Tablet,iPad */
+@media (max-width: 767px) {
+  section {
+    padding: 40px 0;
+  }
+  section h2 {
+    margin: 0 0 0 20px;
+    font-size: 30px;
+  }
+  .second-menu .navbar-brand {
+    margin: 0 0 0 15px;
+  }
+  #mainMenu .navbar-brand {
+    margin: 0 0 0 15px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #intro {
+    padding: 80px 0 0 0;
+  }
+  #intro h1 {
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  #intro p {
+    font-size: 16px;
+    text-align: center;
+  }
+  #intro ul {
+    display: block;
+    text-align: center;
+    margin: 30px 0 50px;
+  }
+  #intro ul li {
+    margin: 0 10px;
+  }
+  #intro ul li:first-child {
+    margin: 0 10px;
+  }
+  #intro ul img {
+    width: 120px;
+  }
+  /*Template Section */
+  #template .title-inner h2 {
+    font-size: 50px;
+  }
+  #template .title-inner span {
+    font-size: 85px;
+    top: 38px;
+  }
+  /*End Template Section */
+  /*Get In Touch Section */
+  #getInTouch .title-inner {
+    margin-bottom: 0;
+  }
+  #getInTouch .title-inner h2 {
+    font-size: 30px;
+  }
+  #getInTouch .title-inner h2 .shadow-text {
+    font-size: 40px;
+  }
+  #getInTouch .contact-info .weblink {
+    margin: 25px 0 30px;
+  }
+  #getInTouch .contact-info .apps-logo {
+    margin-top: 0;
+  }
+  #getInTouch .contact-info .apps-logo ul li:first-child {
+    margin: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

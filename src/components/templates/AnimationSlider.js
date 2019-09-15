@@ -190,7 +190,7 @@ class AnimationSlider extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-8 offset-2 text-center">
+                        <div className="col-md-8 offset-md-2 text-center">
                             <p className="wow fadeInUp" data-wow-delay="0.2s" animation-delay="0.2s">Create and share your memory more easily with the help of lots of templates. We have created so many templates for many purposes, just select a template and some photos and vimory will make it ready for you.</p>
                         </div>
                     </div>

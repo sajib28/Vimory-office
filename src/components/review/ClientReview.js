@@ -24,7 +24,7 @@ class ClientReview extends Component {
                         <div className="col-md-8 offset-2">
                             <div className="section-title text-center">
                                 <h2 className="wow fadeInUp" animation-delay="0.2s" data-wow-delay="0.2s">Our Clients Say</h2>
-                                <p className="wow fadeInUp" animation-delay="0.4s" data-wow-delay="0.4s">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
+                                <p className="wow fadeInUp" animation-delay="0.3s" data-wow-delay="0.3s">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
                             </div>
                         </div>
                     </div>

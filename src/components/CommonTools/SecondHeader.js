@@ -60,7 +60,7 @@ class SecondHeader extends Component {
             <div id="secondMenu" className={this.state.scrollingLock ? 'second-menu fixedClass' : 'second-menu absoluteClass'}>
                 <Navbar collapseOnSelect expand="lg">
                     <div className="container">
-                        <Navbar.Brand href="#home"><img src={logo} alt="" /></Navbar.Brand>
+                        <Navbar.Brand href="/"><img src={logo} alt="" /></Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="ml-auto">
